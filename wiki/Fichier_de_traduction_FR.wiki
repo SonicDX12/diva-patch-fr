@@ -1,0 +1,9 @@
+#summary Comment aider pour la traduction?
+
+Vous souhaitez aider à la traduction?  Vous trouverez ici les fichiers textes nécéssaires.
+
+
+*Project DIVA Extend*
+
+||divaext_translation.txt||[https://diva-patch-fr.googlecode.com/svn/trunk/fichiers%20fr/divaext_translation.txt ICI]||
+||divaext_embedded.txt||[https://diva-patch-fr.googlecode.com/svn/trunk/fichiers%20fr/divaext_embedded.txt ICI]||
