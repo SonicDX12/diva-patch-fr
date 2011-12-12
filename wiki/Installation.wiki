@@ -1,0 +1,33 @@
+#summary Comment installer le Diva Patch FR?
+
+= Introduction =
+
+Tutorial pour installer le Diva Patch FR.
+
+Pour cela, nous allons utiliser l'Installer fournis pour faciliter l'installation du plugin.
+
+
+= Pré-requis =
+
+  * Une PSP en CFW/LCFW du style PRO ou ME
+  * Un UMD/ISO du jeu (ou bientôt la version PSN)
+  * Le Patch dispo dans la partie "Downloads"
+
+= Screenshots de l'Installer =
+(_Images issus de la version 1_)
+
+http://img856.imageshack.us/img856/7729/pic0001z.png
+http://img204.imageshack.us/img204/7383/pic0000z.png
+
+= Installation =
+
+    # Décompressez l'archive. Vous obiendrez un dossier "DivaPatchInstaller" (ce dossier contient l'installer)
+    # Placez ce dossier dans le dossier GAME de votre PSP (X:/PSP/GAME où X est la lettre assigné à votre PSP par votre PC)
+    # Lancer l'installer et appuyez sur "Installer le Patch FR XX/XX/XX"
+    # Quittez l'installer et jouez!
+
+*ATTENTION!:* Si vous utiliser le NPloader, il doit être en 1er dans votre GAME.txt avant le patch FR
+
+Exemple:
+  * ms0:/seplugins/nploader.prx 1
+  * ms0:/seplugins/divapatch/divapatch.prx 1
