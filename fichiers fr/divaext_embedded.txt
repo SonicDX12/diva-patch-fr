@@ -1931,95 +1931,95 @@
 
 # Sekiranun Graffiti
 
-0x08C6519C Passing through a shower of rain
-0x08C651CF We remain standing even when wet
+0x08C6519C niwakaame ga toorisugiteku
+0x08C651CF zubunure no bokura wa tachitsukushite
 0x08C65202 NULL
-0x08C65235 I can smell summer just a bit
-0x08C65268 so why don't we go on a journey
-0x08C6529B To any distance
+0x08C65235 natsu no nioi ga sukoshi shita
+0x08C65268 nee kono mama tabi ni dekakeyou yo
+0x08C6529B dokoka tooku
 0x08C652CE NULL
-0x08C65301 No matter how much time passes
-0x08C65334 These feelings will remain in my heart
-0x08C65367 As long as I'm alive
-0x08C6539A Love and music are all I need
-0x08C653CD Everything that I want is right here
-0x08C65400 It's here inside of me
+0x08C65301 dore kurai toki ga sugitatte
+0x08C65334 kono omoi o mune ni shimatte
+0x08C65367 bokura wa ikiteyukunda
+0x08C6539A ai to music sore dake de iin da
+0x08C653CD hoshii mono wa subete aru kara
+0x08C65400 boku no naka ni
 0x08C65433 NULL
-0x08C65466 The sea is just nearby
-0x08C65499 It makes me want to swim
+0x08C65466 umi ga chikazuku
+0x08C65499 kono mama oyogeru kamo ne
 0x08C654CC NULL
-0x08C654FF When the windows open
-0x08C65532 I'll ride the wind just like that
+0x08C654FF mado wa zenbu akechatte sa
+0x08C65532 kaze ni notte ki no muku mama ikou
 0x08C65565  
-0x08C65598 Humming out of tune
-0x08C655CB or saying lame jokes
-0x08C655FE Aren't that bad
+0x08C65598 choushihazure no hanauta mo
+0x08C655CB kudaranai sono joudan mo sou ne
+0x08C655FE warukunai
 0x08C65631 NULL
-0x08C65664 If this world changes someday
-0x08C65697 We've got to make sure that
-0x08C656CA Everything returns by night
-0x08C656FD You were laughing like silly
-0x08C65730 Bringing back the days gone by
-0x08C65763 Was just too much
+0x08C65664 kono sekai wa itsuka kawatte mo
+0x08C65697 yoru o koete koko ni modotte
+0x08C656CA bokura wa tashikamerunda
+0x08C656FD odoketa you ni kimi ga waratte
+0x08C65730 sukoshi kidotte boku ga kaeshita
+0x08C65763 sugiyuku hi o
 0x08C65796 NULL
-0x08C657C9 Time continues to move forward
-0x08C657FC What should you believe in?
-0x08C6582F That is...
+0x08C657C9 tokei no hari wa mawaritsuzukeru
+0x08C657FC kimi wa nani o shinjiteiku no
+0x08C6582F sore wa ne
 0x08C65862 NULL
-0x08C65895 No matter how much time passes
-0x08C658C8 These feelings will remain in my heart
-0x08C658FB As long as I'm alive
-0x08C6592E Love and music are all I need
-0x08C65961 Everything I treasure is right here
-0x08C65994 from the very beginning
-0x08C659C7 It's there inside of you
+0x08C65895 dore kurai toki ga sugitatte
+0x08C658C8 kono omoi o mune ni shimatte
+0x08C658FB bokura wa ikiteyukunda
+0x08C6592E ai to music sore dake de iin da
+0x08C65961 daiji na mono wa subete aru no sa
+0x08C65994 saisho kara
+0x08C659C7 kimi no naka ni
 0x08C659FA NULL
 
 # Rin Rin Signal -Append Mix-
 
-0x08C65A2D いつも待ち合わせの時間に
-0x08C65A60 早く着きすぎてしまうよ
-0x08C65A93 あなたが来るのはいつだって
-0x08C65AC6 時間通りじゃないのにね
-0x08C65AF9 そっけない態度をしたって
-0x08C65B2C 我慢できずににやけちゃう
-0x08C65B5F あなたのペースにはかなわないね
-0x08C65B92 ちょっとくやしい
+0x08C65A2D itsumo machiawase no jikan ni
+0x08C65A60 hayaku tsukisugite shimau yo
+0x08C65A93 anata ga kuru no wa itsu datte
+0x08C65AC6 jikan-doori ja nai no ni ne
+0x08C65AF9 sokkenai taido o shita tte
+0x08C65B2C gaman dekizu ni niyakechau
+0x08C65B5F anata no peesu ni wa kanawanai ne
+0x08C65B92 chotto kuyashii
 0x08C65BC5 NULL
-0x08C65BF8 こんな　気持ちはきっと
-0x08C65C2B 初めての　事かもしれない
-0x08C65C5E どうしよ　そんな無邪気な目で
-0x08C65C91 私を見ないで
+0x08C65BF8 konna kimochi wa kitto
+0x08C65C2B hajimete no koto ka mo shirenai
+0x08C65C5E dou shiyo sonna mujaki na me de
+0x08C65C91 watashi o minaide
 0x08C65CC4 NULL
-0x08C65CF7 好きだよと言ってほしいの
-0x08C65D2A もっと力強く抱きしめて
-0x08C65D5D 私の小さなハートを
-0x08C65D90 リンと鳴らせるのはあなただけよ
-0x08C65DC3 リンと音が聞こえたなら
-0x08C65DF6 それはあなたへの合図なの
-0x08C65E29 耳をすませて聞いてね
-0x08C65E5C よそ見をしてたら聞こえないでしょ
+0x08C65CF7 suki da yo to itte hoshii no
+0x08C65D2A motto chikarazuyoku dakishimete
+0x08C65D5D watashi no chiisana haato o
+0x08C65D90 rin to naraseru no wa anata dake yo
+0x08C65DC3 rin to oto ga kikoeta nara
+0x08C65DF6 sore wa anata e no aizu na no
+0x08C65E29 mimi o sumasete kiite ne
+0x08C65E5C yosomi o shite'tara kikoenai desho
 0x08C65E8F NULL
-0x08C65EC2 俺の気持ちがわからないって
-0x08C65EF5 お前はいつも言うけれど
-0x08C65F28 素直な言葉を言ったって
-0x08C65F5B 気持ち悪がるだけだろ？
-0x08C65F8E こんな性格の俺だけど
-0x08C65FC1 お前にはわかってるはず
-0x08C65FF4 面と向かっては言えないけれど
-0x08C66027 感謝している
+0x08C65EC2 ore no kimochi ga wakaranai tte
+0x08C65EF5 omae wa itsumo iu keredo
+0x08C65F28 sunao na kotoba o itta tte
+0x08C65F5B kimochi warugaru dake daro?
+0x08C65F8E konna seikaku no ore da kedo
+0x08C65FC1 omae ni wa wakatte'ru hazu
+0x08C65FF4 men to mukatte wa ienai keredo
+0x08C66027 kansha shite iru
 0x08C6605A NULL
-0x08C6608D これは　恋のかけひき
-0x08C660C0 いじわるね　そんなことないだろ
-0x08C660F3 でもね　繋いだ手はなさない
-0x08C66126 けっきょくは優しい
+0x08C6608D kore wa koi no kakehiki
+0x08C660C0 ijiwaru ne sonna koto nai daro
+0x08C660F3 demo ne tsunaida te hanasanai
+0x08C66126 kekkyoku wa yasashii
 0x08C66159 NULL
-0x08C6618C 好きだよと言ってあげるよ
-0x08C661BF うっとうしいくらい言ってあげるよ
-0x08C661F2 本当にうっとうしそうだねｗ
-0x08C66225 やめろと言われてもやめませんから
-0x08C66258 リンリンシグナル無視したら
-0x08C6628B 違反キップきってしまうぞ
-0x08C662BE 気付かなかったじゃすまない
-0x08C662F1 言い訳されたら許しちゃうかも
+0x08C6618C suki da yo to itte ageru yo
+0x08C661BF uttoushii kurai itte ageru yo
+0x08C661F2 hontou ni uttoushisou da ne
+0x08C66225 yamero to iwarete mo yamemasen kara
+0x08C66258 rin rin shigunaru mushi shitara
+0x08C6628B ihan kippu kitte shimau zo
+0x08C662BE kizukanakatta ja sumanai
+0x08C662F1 iiwake saretara yurushichau ka mo
 

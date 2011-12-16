@@ -121,7 +121,15 @@
 #include "load_30.h"
 #include "load_31.h"
 #include "edit_base_04.h"
-
+#include "home_base_02.h"
+#include "menu_base_01.h"
+#include "menu_result.h"
+#include "mtit_base_01.h"
+#include "mtit_base_02.h"
+#include "mtit_base_03.h"
+#include "mtit_base_04.h"
+#include "mtit_base_05.h"
+#include "plst_base_01.h"
 
 PSP_MODULE_INFO("Extend Patch FR", 0, 1, 5);
 PSP_MAIN_THREAD_ATTR(0);
@@ -141,7 +149,7 @@ char st_text[128];
 int devkit, point;
 u16 macaddrfd[64], fwverfd[64];
 int focus, psp_model;
-char *path[98];
+char *path[107];
 int enter_button = 0;
 extern int currdev;
 extern char *cpath;
@@ -440,7 +448,16 @@ int install_thread(SceSize args, void *argp)
 	WriteFile(path[94], (void *)load_30, size_load_30, 0);
 	WriteFile(path[95], (void *)load_31, size_load_31, 0);
 	WriteFile(path[96], (void *)edit_base_04, size_edit_base_04, 0);
-	WriteFile(path[97], (void *)divapatch, size_divapatch, 0);
+	WriteFile(path[97], (void *)home_base_02, size_home_base_02, 0);
+	WriteFile(path[98], (void *)menu_base_01, size_menu_base_01, 0);
+	WriteFile(path[99], (void *)menu_result, size_menu_result, 0);
+	WriteFile(path[100], (void *)mtit_base_01, size_mtit_base_01, 0);
+	WriteFile(path[101], (void *)mtit_base_02, size_mtit_base_02, 0);
+	WriteFile(path[102], (void *)mtit_base_03, size_mtit_base_03, 0);
+	WriteFile(path[103], (void *)mtit_base_04, size_mtit_base_04, 0);
+	WriteFile(path[104], (void *)mtit_base_05, size_mtit_base_05, 0);
+	WriteFile(path[105], (void *)plst_base_01, size_plst_base_01, 0);
+	WriteFile(path[106], (void *)divapatch, size_divapatch, 0);
 	sceKernelDelayThread(1200000);	
 	SetProgress(100, 1);
 	
@@ -493,7 +510,7 @@ void MainMenu(int sel, int start)
 		vlfGuiRemovePicture(title_pic);
 	}
 
-	title_text = vlfGuiAddText(1, 1, "Project Diva Patch FR Installer v2.0      (12/12/11)");
+	title_text = vlfGuiAddText(1, 1, "Project Diva Patch FR Installer v2.0      (17/12/11)");
 	title_pic = vlfGuiAddPictureResource("ps3scan_plugin.rco", "tex_infobar_icon", 4, -2);
 	vlfGuiSetTitleBar(title_text, title_pic, 1, 1);
 
@@ -585,7 +602,13 @@ void Credits_Changelog(int changelog)
 			" - Traduction des descriptions des titres.\n"
 			" - Traduction des menus manquants de la Chambre DIVA.\n"
 			" - Traduction du SFO et des menus propres de la PSP\n"
-			"    (Sauvegarder, Charger, Quitter le jeu?, etc)\n";
+			"    (Sauvegarder, Charger, Quitter le jeu?, etc)\n\n"
+			"(17/12/11)\n"
+			" - Traduction de menus non traduit du mode EDIT.\n"
+			" - Correction de fautes et syntaxe.\n"
+			" - Traduction de nouvelles images comme l'écran des\n"
+			"    résultats et du profil.\n"
+			" - Correction des anciennes images.\n";
 		x = 35;
 	}
 	else
@@ -718,7 +741,16 @@ int app_main(int argc, char *argv[])
 		path[94] = "ef0:/seplugins/divapatch/load_30.png";
 		path[95] = "ef0:/seplugins/divapatch/load_31.png";
 		path[96] = "ef0:/seplugins/divapatch/edit_base_04.png";
-		path[97] = "ef0:/seplugins/divapatch/divapatch.prx";
+		path[97] = "ef0:/seplugins/divapatch/home_base_02.png";
+		path[98] = "ef0:/seplugins/divapatch/menu_base_01.png";
+		path[99] = "ef0:/seplugins/divapatch/menu_result.png";
+		path[100] = "ef0:/seplugins/divapatch/mtit_base_01.png";
+		path[101] = "ef0:/seplugins/divapatch/mtit_base_02.png";
+		path[102] = "ef0:/seplugins/divapatch/mtit_base_03.png";
+		path[103] = "ef0:/seplugins/divapatch/mtit_base_04.png";
+		path[104] = "ef0:/seplugins/divapatch/mtit_base_05.png";
+		path[105] = "ef0:/seplugins/divapatch/plst_base_01.png";
+		path[106] = "ef0:/seplugins/divapatch/divapatch.prx";
 	}
 	else
 	{
@@ -819,7 +851,16 @@ int app_main(int argc, char *argv[])
 		path[94] = "ms0:/seplugins/divapatch/load_30.png";
 		path[95] = "ms0:/seplugins/divapatch/load_31.png";
 		path[96] = "ms0:/seplugins/divapatch/edit_base_04.png";
-		path[97] = "ms0:/seplugins/divapatch/divapatch.prx";
+		path[97] = "ms0:/seplugins/divapatch/home_base_02.png";
+		path[98] = "ms0:/seplugins/divapatch/menu_base_01.png";
+		path[99] = "ms0:/seplugins/divapatch/menu_result.png";
+		path[100] = "ms0:/seplugins/divapatch/mtit_base_01.png";
+		path[101] = "ms0:/seplugins/divapatch/mtit_base_02.png";
+		path[102] = "ms0:/seplugins/divapatch/mtit_base_03.png";
+		path[103] = "ms0:/seplugins/divapatch/mtit_base_04.png";
+		path[104] = "ms0:/seplugins/divapatch/mtit_base_05.png";
+		path[105] = "ms0:/seplugins/divapatch/plst_base_01.png";
+		path[106] = "ms0:/seplugins/divapatch/divapatch.prx";
 	}
 
 	char buf[2048];
