@@ -1,5 +1,5 @@
 ﻿# Translation file for Project Diva Extend (use shift-jis to edit the file)
-# Date: 12/12/2011
+# Date: 17/12/11
 
 #ｪ = é
 #ｫ = è
@@ -63,7 +63,7 @@
 
 !x08823CB0 【HELP】Jeu Assistｪ
 !x08823CBC 【HELP】Combo protｪgｪ
-!x08823CC8 【HELP】Rｪcupｪration
+!x08823CC8 【HELP】Recovery
 !x08823CD4 【CHALLENGE】COOL&FINE
 !x08823CE0 【CHALLENGE】Survie
 
@@ -244,7 +244,7 @@
 !x08845B50 Ce jeu supporte la sauvegarde automatique.
 !x08845B64 Ne retirez pas le Memory Stick ou n'ｪteignez pas 
 !x08845B78 la PSP durant la sauvegarde.  Merci CodeStation
-!x08845B8C Project Diva Extend Patch Francais 12/12/11
+!x08845B8C Project Diva Extend Patch Francais 17/12/11
 
 ### EDIT MODE ### (max menu entry lenght: 25)
 
@@ -418,10 +418,10 @@ $x08883008 Crｪer un EDIT avec une musique in-game.
 !x08887848 Ne pas changer le BPM
 !x08887AE8 Ne pas changer le BPM
 !x08887854 Faites des modifs au BPM SVP.
-!x088887BC Minutes
-!x088887D4 Secondes
+!x088887BC Min
+!x088887D4 Sec
 !x088890B8 BPM de la 1ｫre mesure %3d
-!x088890DC 1 temps %1.3fsecondes
+!x088890DC 1 temps: %1.3f sec
 
 !x0889378C BPM est une unitｪ qui reprｪsente le tempo du morceau.
 !x088937A0 Avec un rythme marquｪ 60 fois durant 1 minute: 60BPM.
@@ -454,7 +454,7 @@ $x08883008 Crｪer un EDIT avec une musique in-game.
 !x0889D9F8 Rｪglez les effets ｬ utiliser dans l'EDIT.
 !x0889DAEC Rｪglez les effets ｬ utiliser dans l'EDIT.
 
-!x0889E84C 【Prｪrｪglage %d】
+!x0889E84C [Prｪdｪfini %d]
 ^x0889F3B4 Mesure
 ^x0889F3E8 Mesure
 !x0889F414 Mesure
@@ -916,12 +916,12 @@ $x088791F8 ※Le nom de l'EDIT n'est pas renseignｪ.
 
 !x0887B91C Confirmation finale avant suppression.
 !x0887B928 Suppression en cours.
-!x0887B974 Supprimer Cmd
-!x0887BDD4 Supprimer Cmd
-!x0887D240 Supprimer Cmd
-!x0887D28C Supprimer Cmd
-!x0887D2D4 Supprimer Cmd
-!x0887DF4C Supprimer Cmd
+!x0887B974 Supp. Commandes
+!x0887BDD4 Supp. Commandes
+!x0887D240 Supp. Commandes
+!x0887D28C Supp. Commandes
+!x0887D2D4 Supp. Commandes
+!x0887DF4C Supp. Commandes
 !x0887B9C4 Tous supprimer
 !x0887C264 Tous supprimer
 !x0887D34C Tous supprimer
@@ -960,8 +960,8 @@ $x088791F8 ※Le nom de l'EDIT n'est pas renseignｪ.
 !x0887D454 Synchro. Lｫvres
 !x0887D480 Regard
 !x0887D4AC Clign. des yeux
-!x0887D4D8 Affich. modｫle
-!x0887D504 Affich. ombres
+!x0887D4D8 Modｫle
+!x0887D504 Ombres
 !x0887E168 Crｪer une nouvelle donnee EDIT.
 !x0887E174 Modifier des donnｪes EDIT.
 !x0887E180 Convertir donnｪe Edit de 『-Project DIVA- 2nd』
@@ -994,22 +994,22 @@ $x088791F8 ※Le nom de l'EDIT n'est pas renseignｪ.
 !x088B9034 Tempo %7d/4
 !x088B6A04 Changer la signature rythmique BPM.
 !x088B6B4C Changer la signature rythmique BPM.
-!x088B6A10 ○ボタンで指定の位置に目印をつけることができます。
-!x088B6B58 ○ボタンで指定の位置に目印をつけることができます。
-!x088B6A1C 楽曲に合わせて、拍数に目印をつけていくことができます。
-!x088B6B64 楽曲に合わせて、拍数に目印をつけていくことができます。
+!x088B6A10 Mettre des repｫres dans la position spｪcifiｪe avec le bouton ○.
+!x088B6B58 Mettre des repｫres dans la position spｪcifiｪe avec le bouton ○.
+!x088B6A1C Placer les repｫres en fonction de la chanson.
+!x088B6B64 Placer les repｫres en fonction de la chanson.
 !x088B6F58 Confirmer
-!x088B70CC 楽曲のテンポを変更することができます。
-!x088B8A78 楽曲のテンポを変更することができます。
-!x088B75B8 BPMの設定を変更しています……
-!x088B7634 BPMの設定を変更しています……
+!x088B70CC Changer le tempo de la chanson.
+!x088B8A78 Changer le tempo de la chanson.
+!x088B75B8 Les paramｫtres BPM ont ｪtｪ changｪ...
+!x088B7634 Les paramｫtres BPM ont ｪtｪ changｪ...
 !x088B7754 Depuis le dｪbut
 !x088B7768 Depuis le milieu
-!x088B77C4 2小節目からリアルタイムでマーカーを入力することができます。
-!x088B7884 2小節目からリアルタイムでマーカーを入力することができます。
-!x088B7890 現在の小節からリアルタイムでマーカーを入力することができます。 
+!x088B77C4 Entrer les marqueurs en temps reel depuis la 2eme mesure.
+!x088B7884 Entrer les marqueurs en temps reel depuis la 2eme mesure.
+!x088B7890 Entrer les marqueurs en temps reel depuis la mesure actuelle. 
 !x088B7B30 ○ボタンで拍数の色を変更し、目印をつけることができます。
-!x088B8A84 1小節の拍数を変更することができます。
+!x088B8A84 Rｪgler le nombre de battements dans une mesure.
 !x088B8A90 現在の小節以降に、設定したBPM・拍数を反映させることができます。
 !x088B970C BPMを変更すると、表示限界数を超えた分のターゲットが
 !x088B9720 削除される場合がありますが、よろしいですか？
@@ -1022,7 +1022,7 @@ $x088791F8 ※Le nom de l'EDIT n'est pas renseignｪ.
 
 0x08C312FC Triste
 0x08C31300 Joyeux
-0x08C31304 （＞＜）
+0x08C31304 (><)
 0x08C31308 Surpris
 0x08C3130C Clin d'oeil
 0x08C31310 Colｫre
@@ -1045,6 +1045,8 @@ $x088791F8 ※Le nom de l'EDIT n'est pas renseignｪ.
 0x08C31350 Normal
 !x08823EE0 Normal
 0x08C31354 Yeux fermｪs
+
+# Edit mode -> lips
 
 !x08823E80 Oui
 !x08823E8C Non
@@ -1079,29 +1081,29 @@ $x088791F8 ※Le nom de l'EDIT n'est pas renseignｪ.
 0x08C43D7C Vous pouvez rｪgler l'effet.
 0x08C43D80 Vous pouvez configurer jusqu'a 600 paroles.
 0x08C43D88 Sｪlectionner le fond ｬ utiliser.
-0x08C43D8C Sｪlectionnez l'effet, ajuster la vitesse de lecture avec gauche et droite.
+0x08C43D8C Sｪlectionnez l'effet et ajuster sa vitesse de lecture.
 0x08C43D94 拍データのコピー、削除をすることができます。
-0x08C43D98 %s：コピー中です。○ボタンでペーストできます。
+0x08C43D98 %s: est copiｪ. Vous pouvez coller avec le bouton ○.
 0x08C43D9C カメラの設定をプリセットから選択することができます。
-0x08C43DA0 カメラの移動を設定することができます。
-0x08C43DA4 カメラの移動開始位置を設定することができます。
-0x08C43DA8 カメラの移動終了位置を設定することができます。
+0x08C43DA0 Vous pouvez dｪfinir le mouvement de la camｪra.
+0x08C43DA4 Vous pouvez dｪfinir la position de dｪbut du mouvement de camｪra.
+0x08C43DA8 Vous pouvez dｪfinir la position de fin du mouvement de camｪra.
 0x08C43DAC カメラの移動時間を拍数単位で設定することができます。
-0x08C43DB0 カメラ移動の加速・減速を設定します
-0x08C43DB4 設定したカメラ移動をプレビューで確認することができます。
+0x08C43DB0 Dｪfinir l'accｪlｪration et la dｪcｪlｪration de la camｪra.
+0x08C43DB4 Prｪvisualiser le mouvement de la camｪra.
 0x08C43DB8 現在のカメラ設定を反映させることができます。
-0x08C43DC4 ○ボタンを押してカメラの移動開始位置を設定して下さい。
-0x08C43DC8 ○ボタンを押してカメラの移動終了位置を設定して下さい。
-0x08C43DCC 方向キー左右で、カメラの移動時間を設定して下さい。
+0x08C43DC4 Dｪfinir la position de dｪpart en appuyant sur le bouton ○.
+0x08C43DC8 Dｪfinir la position de fin en appuyant sur le bouton ○.
+0x08C43DCC Rｪgler le temps de dｪplacement de la camｪra avec Gauche/Droite.
 0x08C43DD0 方向キー左右で位置を確認し、上下で加速度を設定して下さい。
-0x08C43DDC 固定位置のプリセットを選択します。
-0x08C43DE0 移動するプリセットを選択します。
-0x08C43DE4 歌詞を入力することができます。
-0x08C43DE8 歌詞の文字色を設定することができます。
+0x08C43DDC Sｪlectionnez une des positions prｪdｪfinies fixes.
+0x08C43DE0 Sｪlectionnez un des mouvements prｪdｪfinis.
+0x08C43DE4 Tapez les paroles.
+0x08C43DE8 Rｪgler la couleur du texte des paroles.
 0x08C43DEC 歌詞の表示時間を拍数単位で設定することができます。
 0x08C43DF0 現在の歌詞設定を反映させることができます。
-0x08C43DF8 歌詞の文字色を選択して下さい。
-0x08C43DFC 方向キー左右で、歌詞の表示時間を設定して下さい。
+0x08C43DF8 Choisissez la couleur du texte des paroles.
+0x08C43DFC Rｪgler le temps d'affichage des paroles avec Gauche/Droite
 !x088BC860 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：%0.1f)
 !x088BC878 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats： %0.1f)
 !x088BC88C %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：  %0.1f)
@@ -1135,14 +1137,14 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 !x088BF960 Mode EDIT
 !x088C0C08 Aucun
 !x088CCDB4 Aucun
-!x088C10C0 VITESSE   【%3d%%】
+!x088C10C0 Vitesse   【%3d%%】
 !x088C4250 Translation parallｫle
 !x088C65F8 Translation parallｫle
 !x088C736C Translation parallｫle
 !x088C4258 Mouvement de rotation
 !x088C6600 Mouvement de rotation
 !x088C7388 Mouvement de rotation
-!x088CA428 カメラ加速度【%4d%%】
+!x088CA428 Vit.Camｪra 【%4d%%】
 
 # Edit mode -> lyrics -> colors
 
@@ -1188,22 +1190,22 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 !x088CFE14 Cible prｪdｪfinie
 !x088CEF60 Chance Time
 !x088D1E0C Chance Time
-!x088CEF68 ○・×・□・△ボタンを押すと、ターゲットアイコンを配置できます。
-!x088CF2AC ○・×・□・△ボタンを押すと、ターゲットアイコンを配置できます。
-!x088CEF74 入力したターゲットアイコンの座標や方向を設定することができます。
-!x088CF2B8 入力したターゲットアイコンの座標や方向を設定することができます。
-!x088CEF80 楽曲に合わせてターゲットアイコンを入力することができます。
-!x088CF2C4 楽曲に合わせてターゲットアイコンを入力することができます。
-!x088CEF8C あらかじめ用意されたターゲットアイコンを入力することができます。
-!x088CF2D0 あらかじめ用意されたターゲットアイコンを入力することができます。
-!x088CEF98 チャンスタイムを設定することができます。
-!x088CF2DC チャンスタイムを設定することができます。
-!x088CFBB8 選択された項目を削除します
+!x088CEF68 Appuyez sur ○-X-□-△ pour placer une icone de cible.
+!x088CF2AC Appuyez sur ○-X-□-△ pour placer une icone de cible.
+!x088CEF74 Configurer la direction et les coordonnｪes de l'icone de cible.
+!x088CF2B8 Configurer la direction et les coordonnｪes de l'icone de cible.
+!x088CEF80 Placer des icones cibles selon la chanson.
+!x088CF2C4 Placer des icones cibles selon la chanson.
+!x088CEF8C Dｪfinissez une icone cible prｪdｪfinie.
+!x088CF2D0 Dｪfinissez une icone cible prｪdｪfinie.
+!x088CEF98 Configurer le Chance Time.
+!x088CF2DC Configurer le Chance Time.
+!x088CFBB8 Supprimer l'ｪlｪment sｪlectionnｪ
 !x088CFBCC Etes-vous sur?
 !x088CFE5C Aucun
 !x088CFE70 Prｪdｪfini %4d
-!x088CFF54 この小節に配置するターゲットパターンを選択することができます。
-!x088D4654 この小節に配置するターゲットパターンを選択することができます。
+!x088CFF54 Sｪlectionnez le motif cible ｬ placer dans cette mesure.
+!x088D4654 Sｪlectionnez le motif cible ｬ placer dans cette mesure.
 
 # Edit mode: target submenu -> target input
 
@@ -1212,23 +1214,23 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 !x088D08F8 Appuyez et maintenez
 !x088D090C Annuler
 !x088D0920 Confirmer
-^x088D0A44 ターゲットアイコンを直接入力することができます。
-!x088D0AF4 ターゲットアイコンを直接入力することができます。
-!x088D4B2C ターゲットアイコンを直接入力することができます。
+^x088D0A44 Placer une icone de cible de base.
+!x088D0AF4 Placer une icone de cible de base.
+!x088D4B2C Placer une icone de cible de base.
 !x088D0E4C %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：%0.1f)
 !x088D27C4 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：%0.1f)
 !x088D1970 Depuis le dｪbut
 !x088D1984 Depuis le milieu
-!x088D1A5C 2小節目からリアルタイムでターゲットを入力することができます。
-!x088D1B10 2小節目からリアルタイムでターゲットを入力することができます。
-!x088D1B1C 現在の小節からリアルタイムでターゲットを入力することができます。
-!x088D1F9C チャンスタイムの開始位置を設定することができます。
-!x088D9384 チャンスタイムの開始位置を設定することができます。
+!x088D1A5C Entrer une cible en temps reel depuis la 2eme mesure.
+!x088D1B10 Entrer une cible en temps reel depuis la 2eme mesure.
+!x088D1B1C Entrer une cible en temps reel depuis la mesure actuelle.
+!x088D1F9C Definisser le debut et la fin du Chance Time.
+!x088D9384 Definisser le debut et la fin du Chance Time.
 !x088D433C Mode EDIT
-!x088D4B38 同時押しアイコンを入力することができます。
-!x088D4B44 長押しアイコンを入力することができます。（1拍以上の空きが必要）
-!x088D4B50 この小節でのターゲット入力をキャンセルすることができます。
-!x088D4B64 この小節でのターゲット入力を反映させることができます。
+!x088D4B38 Placer une icone de cible Double Boutons.
+!x088D4B44 Placer une icone de cible Appuyer et Maintenir.
+!x088D4B50 Annuler l'entrｪe cible sur cette mesure.
+!x088D4B64 Accepter les cibles inscrits dans cette section.
 
 # Edit mode: target submenu -> placement settings
 
@@ -1270,7 +1272,7 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 
 # Main menu
 
-!x088E3CB0 Jouer
+!x088E3CB0 Jeu de Rythme
 !x088E3CBC Choix Perso.
 !x088E3CC8 Chambres DIVA
 !x088E3CD4 Boutique
@@ -1617,13 +1619,13 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 
 # (PD2nd savedata detection)
 
-#!x089522F0 Importer la progression de 『初音ミク -Project DIVA- 2nd』
-#!x08952310 dans『初音ミク -Project DIVA- extend』.
+!x089522F0 Vous pouvez importer les donnｪes systｫme de
+!x08952310 "-Project Diva- 2nd" ｬ "-Project Diva- Extend"
 
-#!x08952330 Si vous importez votre progression, une copie des
-#!x08952350 donnｪes issues de 『初音ミク -Project DIVA- 2nd』 sera 
-#!x08952370 intｪgrｪe dans votre sauvegarde 『初音ミク -Project DIVA- extend』
-#!x08952390 Penser ｬ garder votre ancienne sauvegarde.
+!x08952330 Si vous souhaitez importer les donnｪes systｫme
+!x08952350 du jeu prｪcｪdent, s'il vous plait copiez les 
+!x08952370 donnｪes systｫme de "-Project Diva- 2nd" sur le
+!x08952390 Memory Stick pour les nouvelles donnｪes.
 
 # PD2nd savedata import info
 
@@ -1704,8 +1706,8 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 
 # Savedata SFO info
 
-!x089C0E94 Hatsune Miku -Project DIVA- Extend
-!x089C1B14 Hatsune Miku -Project DIVA- Extend
+!x089C0E94 初音ミク -Project DIVA- Extend
+!x089C1B14 初音ミク -Project DIVA- Extend
 !x089C0F80 Temps Total: %3d:%2d:%02d
 0x08D26F50 Impossible de jouer de la musique.
 0x08D26F5C Impossible de jouer de la musique.
@@ -1728,7 +1730,7 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 0x08D26F98 初音ミク -Project DIVA- Extendの
 0x08D26F9C ゲームデータです。
 0x08D26FA0 Installation interrompu.
-!x089C27A4 Hatsune Miku -Project DIVA- Extend
+!x089C27A4 初音ミク -Project DIVA- Extend
 !x089C27E0 Donnees Installation
 0x08D26FAC Donnees Systeme
 0x08D26FB0 Donnees Edit
@@ -1751,8 +1753,8 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 0x08D26FF8 KB以上必要です。
 0x08D26FFC セーブを中止しました。
 0x08D27004 オートセーブの設定をOFFにしました。
-!x089C2CF0 Hatsune Miku -Project DIVA- Extend
-!x089C3008 Hatsune Miku -Project DIVA- Extend
+!x089C2CF0 初音ミク -Project DIVA- Extend
+!x089C3008 初音ミク -Project DIVA- Extend
 !x089C2DB0 Temps Total: %3d:%2d:%02d
 
 # DIVA room: Image gallery
@@ -2220,6 +2222,103 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 0x08C30FC0 Rouleau vertical(Chanteur)
 0x08C30FC4 DIVA×Drum Expert 1
 0x08C30FC8 DIVA×Drum Expert 2
+
+# DIVA room event titles
+
+0x08C30FCC 会スタート！
+0x08C30FD0 二人でダンスレッスン
+0x08C30FD4 探し物、見つからず…
+0x08C30FD8 探し物、見つかった！
+0x08C30FDC ブートキャンプ開始
+0x08C30FE0 起きてよ?
+0x08C30FE4 アイスをめぐる攻防！？1
+0x08C30FE8 アイスをめぐる攻防！？2
+0x08C30FEC 念願のコラボ
+0x08C30FF0 男の魅力を激写！
+0x08C30FF4 ミクとエアギター対決
+0x08C30FF8 4番、カイト！
+0x08C30FFC ピッチャー、カイト！
+0x08C31000 部屋の掃除をしよう
+0x08C31004 リンにダンスの指導中
+0x08C31008 女同士で飲みましょう
+0x08C3100C 美容の秘訣
+0x08C31010 歌道は一日にしてならず
+0x08C31014 頑張れ歌練習
+0x08C31018 美容と健康のために
+0x08C3101C メイコの掃除をお手伝い
+0x08C31020 カイトとセッション1
+0x08C31024 たまには飲みたい時もある
+0x08C31028 カイトとスティック振り
+0x08C3102C ミクの掃除をお手伝い
+0x08C31030 レンとあっち向いてホイ
+0x08C31034 リンとあっち向いてホイ
+0x08C31038 ルカとあっち向いてホイ
+0x08C3103C カイトとあっち向いてホイ
+0x08C31040 メイコとあっち向いてホイ
+0x08C31044 ネルとあっち向いてホイ
+0x08C31048 ハクとあっち向いてホイ
+0x08C3104C 咲音とあっち向いてホイ
+0x08C31050 Let's ロックンロール1
+0x08C31054 振り付けの練習1
+0x08C31058 ルカの美容体操を伝授1
+0x08C3105C ルカとお茶を楽しむ
+0x08C31060 メイコとお茶を楽しむ
+0x08C31064 リンとスティック振り
+0x08C31068 アイドルダンス伝授
+0x08C3106C エア野球、真剣勝負
+0x08C31070 ルカとエアギター対決
+0x08C31074 レンとエアギター対決
+0x08C31078 ネルとエアギター対決
+0x08C3107C ハクとエアギター対決
+0x08C31080 まったりおしゃべり
+0x08C31084 ゲームで対決
+0x08C31088 ミクの音楽教室1
+0x08C3108C お昼寝タイム
+0x08C31090 デュエット実現
+0x08C31094 カッコイイポーズを研究！
+0x08C31098 強烈目覚まし1
+0x08C3109C ルカの音楽講座
+0x08C310A0 ポーズ、決まってますか？
+0x08C310A4 リン、レン、エアギター対決
+0x08C310A8 男のエアギター対決！
+0x08C310AC ミクの音楽教室2
+0x08C310B0 ルカの美容体操を伝授2
+0x08C310B4 仲良くお昼寝
+0x08C310B8 セクシーポーズ研究中1
+0x08C310BC リンの掃除をお手伝い
+0x08C310C0 Let's ロックンロール2
+0x08C310C4 セクシーポーズ研究中2
+0x08C310C8 強烈目覚まし2
+0x08C310CC カイトとエアギター対決
+0x08C310D0 メイコとエアギター対決
+0x08C310D4 カイトとセッション2
+0x08C310D8 ポーズ…決め！
+0x08C310DC ポーズ…ダメ？
+0x08C310E0 ポーズ…うう?
+0x08C310E4 楽しくおしゃべり
+0x08C310E8 元気出して?
+0x08C310EC たまにはケンカも
+0x08C310F0 デュエット練習、いい感じ
+0x08C310F4 デュエット練習、何か違う
+0x08C310F8 メール着信、やったぁ！
+0x08C310FC メール着信、はぁ…
+0x08C31100 メール着信、ムキー！
+0x08C31104 合いの手講座1
+0x08C31108 合いの手講座2
+0x08C3110C 合いの手講座3
+0x08C31110 一気飲み対決！
+0x08C31114 一気飲み対決！？
+0x08C31118 一気飲み対決？
+0x08C3111C 正しい一気飲み講座1
+0x08C31120 正しい一気飲み講座2
+0x08C31124 楽しくメール
+0x08C31128 振り付けの練習2
+0x08C3112C 振り付けの練習3
+0x08C31130 振り付けの練習4
+0x08C31134 シンクロしてみよう1
+0x08C31138 シンクロしてみよう2
+0x08C3113C はい、チーズ！(リン)
+0x08C31140 はい、チーズ！(レン)
 
 #Titre
 
@@ -2753,11 +2852,202 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 0x08C31B0C sauvegarde de
 0x08C31B10 「-Project DIVA- 2nd」
 
-0x08C31B14 スタッフロールを見たプレイヤーに
-0x08C31B18 捧げられる称号。
+0x08C31B14 Avoir regarder les
+0x08C31B18 Crｪdits.
 
 0x08C31B20 Avoir collecter tout
 0x08C31B24 les autres titres.
+
+# Play records: DIVA room events descriptions
+
+0x08C31B2C Personnage Princ. est HAPPY
+0x08C31B38 Personnage Princ. est HAPPY
+0x08C31E74 Personnage Princ. est HAPPY
+0x08C31E98 Personnage Princ. est HAPPY
+0x08C31EB0 Personnage Princ. est HAPPY
+0x08C31EF8 Personnage Princ. est HAPPY
+0x08C31F40 Personnage Princ. est HAPPY
+0x08C31F4C Personnage Princ. est HAPPY
+0x08C31B30 Personnage Second. est GOOD
+0x08C31B60 Personnage Second. est GOOD
+0x08C31B9C Personnage Second. est GOOD
+0x08C31BCC Personnage Second. est GOOD
+0x08C31DAC Personnage Second. est GOOD
+0x08C31E60 Personnage Second. est GOOD
+0x08C31E6C Personnage Second. est GOOD
+0x08C31E84 Personnage Second. est GOOD
+0x08C31EA8 Personnage Second. est GOOD
+0x08C31EC0 Personnage Second. est GOOD
+0x08C31ECC Personnage Second. est GOOD
+0x08C31ED8 Personnage Second. est GOOD
+0x08C31EE4 Personnage Second. est GOOD
+0x08C31EF0 Personnage Second. est GOOD
+0x08C31EFC Personnage Second. est GOOD
+0x08C31F08 Personnage Second. est GOOD
+0x08C31F2C Personnage Second. est GOOD
+0x08C31F38 Personnage Second. est GOOD
+0x08C31B3C Personnage Second. est HAPPY
+0x08C31E54 Personnage Second. est HAPPY
+0x08C31E78 Personnage Second. est HAPPY
+0x08C31E9C Personnage Second. est HAPPY
+0x08C31EB4 Personnage Second. est HAPPY
+0x08C31F14 Personnage Second. est HAPPY
+0x08C31F20 Personnage Second. est HAPPY
+0x08C31F44 Personnage Second. est HAPPY
+0x08C31F50 Personnage Second. est HAPPY
+0x08C31F80 Personnage Second. est HAPPY
+0x08C31F8C Personnage Second. est HAPPY
+0x08C31B44 Personnage Princ. est BAD
+0x08C31B50 Personnage Princ. est BAD
+0x08C31E80 Personnage Princ. est BAD
+0x08C31E8C Personnage Princ. est BAD
+0x08C31EBC Personnage Princ. est BAD
+0x08C31EC8 Personnage Princ. est BAD
+0x08C31F10 Personnage Princ. est BAD
+0x08C31B48 Personnage Second. est BAD
+0x08C31B54 Personnage Second. est BAD
+0x08C31E90 Personnage Second. est BAD
+0x08C31B5C Personnage Princ. est GOOD
+0x08C31E50 Personnage Princ. est GOOD
+0x08C31E5C Personnage Princ. est GOOD
+0x08C31E68 Personnage Princ. est GOOD
+0x08C31EA4 Personnage Princ. est GOOD
+0x08C31ED4 Personnage Princ. est GOOD
+0x08C31EE0 Personnage Princ. est GOOD
+0x08C31EEC Personnage Princ. est GOOD
+0x08C31F04 Personnage Princ. est GOOD
+0x08C31F1C Personnage Princ. est GOOD
+0x08C31F28 Personnage Princ. est GOOD
+0x08C31F34 Personnage Princ. est GOOD
+0x08C31B68 Yowane Haku est HAPPY
+0x08C31D40 Yowane Haku est HAPPY
+0x08C31B6C Hatsune Miku est GOOD
+0x08C31CD0 Hatsune Miku est GOOD
+0x08C31CF4 Hatsune Miku est GOOD
+0x08C31D0C Hatsune Miku est GOOD
+0x08C31D18 Hatsune Miku est GOOD
+0x08C31D24 Hatsune Miku est GOOD
+0x08C31D30 Hatsune Miku est GOOD
+0x08C31D3C Hatsune Miku est GOOD
+0x08C31B74 Kaito est HAPPY
+0x08C31B80 Kaito est HAPPY
+0x08C31B8C Kaito est HAPPY
+0x08C31B98 Kaito est HAPPY
+0x08C31BC8 Kaito est HAPPY
+0x08C31C08 Kaito est HAPPY
+0x08C31C20 Kaito est HAPPY
+0x08C31C2C Kaito est HAPPY
+0x08C31C38 Kaito est HAPPY
+0x08C31C44 Kaito est HAPPY
+0x08C31C50 Kaito est HAPPY
+0x08C31D70 Kaito est HAPPY
+0x08C31D88 Kaito est HAPPY
+0x08C31DC4 Kaito est HAPPY
+0x08C31E00 Kaito est HAPPY
+0x08C31E30 Kaito est HAPPY
+0x08C31E48 Kaito est HAPPY
+0x08C31F58 Kaito est HAPPY
+0x08C31B78 Hatsune Miku est BAD
+0x08C31C4C Hatsune Miku est BAD
+0x08C31B84 Megurine Luka est BAD
+0x08C31B90 Kagamine Len est HAPPY
+0x08C31BB4 Kagamine Len est HAPPY
+0x08C31BC0 Kagamine Len est HAPPY
+0x08C31D28 Kagamine Len est HAPPY
+0x08C31D6C Kagamine Len est HAPPY
+0x08C31D84 Kagamine Len est HAPPY
+0x08C31D9C Kagamine Len est HAPPY
+0x08C31DA8 Kagamine Len est HAPPY
+0x08C31DE8 Kagamine Len est HAPPY
+0x08C31F5C Kagamine Len est HAPPY
+0x08C31F68 Kagamine Len est HAPPY
+0x08C31F88 Kagamine Len est HAPPY
+0x08C31BA4 Kaito est GOOD
+0x08C31BB0 Kaito est GOOD
+0x08C31BBC Kaito est GOOD
+0x08C31C80 Kaito est GOOD
+0x08C31BA8 Hatsune Miku est HAPPY
+0x08C31C40 Hatsune Miku est HAPPY
+0x08C31C58 Hatsune Miku est HAPPY
+0x08C31C64 Hatsune Miku est HAPPY
+0x08C31C70 Hatsune Miku est HAPPY
+0x08C31C7C Hatsune Miku est HAPPY
+0x08C31C88 Hatsune Miku est HAPPY
+0x08C31C94 Hatsune Miku est HAPPY
+0x08C31CA0 Hatsune Miku est HAPPY
+0x08C31CAC Hatsune Miku est HAPPY
+0x08C31CB8 Hatsune Miku est HAPPY
+0x08C31CC4 Hatsune Miku est HAPPY
+0x08C31CDC Hatsune Miku est HAPPY
+0x08C31CE8 Hatsune Miku est HAPPY
+0x08C31D48 Hatsune Miku est HAPPY
+0x08C31D64 Hatsune Miku est HAPPY
+0x08C31DD0 Hatsune Miku est HAPPY
+0x08C31BD4 Megurine Luka est HAPPY
+0x08C31BE0 Megurine Luka est HAPPY
+0x08C31BEC Megurine Luka est HAPPY
+0x08C31C04 Megurine Luka est HAPPY
+0x08C31CC8 Megurine Luka est HAPPY
+0x08C31CE0 Megurine Luka est HAPPY
+0x08C31D1C Megurine Luka est HAPPY
+0x08C31DA0 Megurine Luka est HAPPY
+0x08C31E18 Megurine Luka est HAPPY
+0x08C31BD8 Kagamine Rin est GOOD
+0x08C31C68 Kagamine Rin est GOOD
+0x08C31CF8 Kagamine Rin est GOOD
+0x08C31D10 Kagamine Rin est GOOD
+0x08C31DCC Kagamine Rin est GOOD
+0x08C31DD8 Kagamine Rin est GOOD
+0x08C31E20 Kagamine Rin est GOOD
+0x08C31E2C Kagamine Rin est GOOD
+0x08C31E38 Kagamine Rin est GOOD
+0x08C31F64 Kagamine Rin est GOOD
+0x08C31F70 Kagamine Rin est GOOD
+0x08C31BE4 Meiko est HAPPY
+0x08C31BF0 Meiko est HAPPY
+0x08C31C28 Meiko est HAPPY
+0x08C31C34 Meiko est HAPPY
+0x08C31CEC Meiko est HAPPY
+0x08C31D94 Meiko est HAPPY
+0x08C31DF4 Meiko est HAPPY
+0x08C31E0C Meiko est HAPPY
+0x08C31E24 Meiko est HAPPY
+0x08C31E3C Meiko est HAPPY
+0x08C31BF8 Megurine Luka est GOOD
+0x08C31C14 Megurine Luka est GOOD
+0x08C31C74 Megurine Luka est GOOD
+0x08C31CD4 Megurine Luka est GOOD
+0x08C31DDC Megurine Luka est GOOD
+0x08C31BFC Kaito est BAD
+0x08C31C10 Meiko est GOOD
+0x08C31C8C Meiko est GOOD
+0x08C31CBC Meiko est GOOD
+0x08C31C1C Meiko est BAD
+0x08C31C5C Kagamine Len est GOOD
+0x08C31D60 Kagamine Len est GOOD
+0x08C31D78 Kagamine Len est GOOD
+0x08C31D90 Kagamine Len est GOOD
+0x08C31DB4 Kagamine Len est GOOD
+0x08C31DC0 Kagamine Len est GOOD
+0x08C31C98 Akita Neru est GOOD
+0x08C31CA4 Yowane Haku est GOOD
+0x08C31CB0 Sakine Meiko est GOOD
+0x08C31D00 Hatsune Miku est BAD ou GOOD
+0x08C31D04 Sakine Meiko est HAPPY
+0x08C31E44 Sakine Meiko est HAPPY
+0x08C31D34 Akita Neru est HAPPY
+0x08C31D4C Kagamine Rin est HAPPY
+0x08C31D7C Kagamine Rin est HAPPY
+0x08C31DB8 Kagamine Rin est HAPPY
+0x08C31DE4 Kagamine Rin est HAPPY
+0x08C31DF0 Kagamine Rin est HAPPY
+0x08C31E08 Kagamine Rin est HAPPY
+0x08C31E14 Kagamine Rin est HAPPY
+0x08C31F7C Kagamine Rin est HAPPY
+0x08C31D54 Akita Neru est BAD ou GOOD
+0x08C31D58 Hatsune Miku est GOOD ou HAPPY
+0x08C31DFC Kagamine Rin est BAD
+0x08C31F74 Kagamine Len est BAD
 
 # Shop menu headers
 
@@ -3252,8 +3542,8 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 0x08C33E44 peut que diminuer.
 0x08C33E48 Mult. Points DIVA x4.
 
-0x8C34998 Reussir tout en EXTREME
-0x8C349A0 Jouer 100x avec Miku
+0x08C34998 Reussir tout en EXTREME
+0x08C349A0 Jouer 100x avec Miku
 
 0x08C34A40 Chanson Spｪcifique
 0x08C34A4C Chanson Spｪcifique
@@ -3545,6 +3835,7 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 0x08C41BC8 [Ｂ]【遠】右空→左空
 0x08C41C20 [Ｂ]煽り左前→煽り右前
 0x08C41C78 [Ｂ]煽り右前→煽り左前
+
 0x08C43458 Normal
 0x08C43468 Regarde la camｪra
 0x08C43478 上
@@ -3807,3 +4098,10 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 0x08C66870 Playlist 2
 0x08C66874 Playlist 3
 
+# Screenshot messages
+
+!x089C4D14 Impossible de capturer
+!x089C4EDC Rｪessayer
+!x089C4EF0 Supprimer les donnｪes
+!x089C4F04 Screenshot fini!
+!x089C5638 Screenshot terminｪe!

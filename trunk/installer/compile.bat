@@ -96,8 +96,18 @@ bin2c ..\data\load_29.png load_29.h load_29
 bin2c ..\data\load_30.png load_30.h load_30
 bin2c ..\data\load_31.png load_31.h load_31
 bin2c ..\data\edit_base_04.png edit_base_04.h edit_base_04
+bin2c ..\data\home_base_02.png home_base_02.h home_base_02
+bin2c ..\data\menu_base_01.png menu_base_01.h menu_base_01
+bin2c ..\data\menu_result.png menu_result.h menu_result
+bin2c ..\data\mtit_base_01.png mtit_base_01.h mtit_base_01
+bin2c ..\data\mtit_base_02.png mtit_base_02.h mtit_base_02
+bin2c ..\data\mtit_base_03.png mtit_base_03.h mtit_base_03
+bin2c ..\data\mtit_base_04.png mtit_base_04.h mtit_base_04
+bin2c ..\data\mtit_base_05.png mtit_base_05.h mtit_base_05
+bin2c ..\data\plst_base_01.png plst_base_01.h plst_base_01
+
 C:/pspsdk/bin/make 
-rm *.prx *.o *.elf *.sfo divapatch.h divaext_translation.h divaext_images.h divaext_embedded.h font12dot_01.h menu_help_01.h menu_help_02.h menu_title_adhk.h menu_title_crsl.h menu_title_edit.h menu_title_home.h menu_title_modl.h menu_title_msbx.h menu_title_optn.h menu_title_plys.h menu_title_prvd.h menu_title_room.h menu_title_rtmg.h menu_title_shop.h menu_title_visl.h pv_rank_01.h pv_start_37.h pv_start_39.h pv_start_40.h pv_start_41.h pv_start_53.h pv_start_65.h pv_start_67.h pv_start_68.h pv_start_69.h pv_start_70.h pv_start_71.h pv_start_72.h pv_start_73.h pv_start_74.h pv_start_75.h pv_start_76.h pv_start_77.h pv_start_78.h pv_start_79.h pv_start_80.h pv_start_81.h pv_start_82.h pv_start_83.h pv_start_84.h pv_start_85.h pv_start_86.h pv_start_87.h pv_start_88.h pv_start_89.h pv_start_90.h pv_start_91.h pv_start_92.h pv_start_93.h pv_start_94.h pv_start_95.h pv_start_96.h pv_start_97.h pv_start_edit.h load_00.h load_01.h load_02.h load_03.h load_04.h load_05.h load_06.h load_07.h load_08.h load_09.h load_10.h load_11.h load_12.h load_13.h load_14.h load_15.h load_16.h load_17.h load_18.h load_19.h load_20.h load_21.h load_22.h load_23.h load_24.h load_25.h load_26.h load_27.h load_28.h load_29.h load_30.h load_31.h edit_base_04.h 
+rm *.prx *.o *.elf *.sfo divapatch.h divaext_translation.h divaext_images.h divaext_embedded.h font12dot_01.h menu_help_01.h menu_help_02.h menu_title_adhk.h menu_title_crsl.h menu_title_edit.h menu_title_home.h menu_title_modl.h menu_title_msbx.h menu_title_optn.h menu_title_plys.h menu_title_prvd.h menu_title_room.h menu_title_rtmg.h menu_title_shop.h menu_title_visl.h pv_rank_01.h pv_start_37.h pv_start_39.h pv_start_40.h pv_start_41.h pv_start_53.h pv_start_65.h pv_start_67.h pv_start_68.h pv_start_69.h pv_start_70.h pv_start_71.h pv_start_72.h pv_start_73.h pv_start_74.h pv_start_75.h pv_start_76.h pv_start_77.h pv_start_78.h pv_start_79.h pv_start_80.h pv_start_81.h pv_start_82.h pv_start_83.h pv_start_84.h pv_start_85.h pv_start_86.h pv_start_87.h pv_start_88.h pv_start_89.h pv_start_90.h pv_start_91.h pv_start_92.h pv_start_93.h pv_start_94.h pv_start_95.h pv_start_96.h pv_start_97.h pv_start_edit.h load_00.h load_01.h load_02.h load_03.h load_04.h load_05.h load_06.h load_07.h load_08.h load_09.h load_10.h load_11.h load_12.h load_13.h load_14.h load_15.h load_16.h load_17.h load_18.h load_19.h load_20.h load_21.h load_22.h load_23.h load_24.h load_25.h load_26.h load_27.h load_28.h load_29.h load_30.h load_31.h edit_base_04.h home_base_02.h menu_base_01.h menu_result.h mtit_base_01.h mtit_base_02.h mtit_base_03.h mtit_base_04.h mtit_base_05.h plst_base_01.h 
 cd vlf
 rm *.h
 cd ..
