@@ -26,7 +26,10 @@ http://img204.imageshack.us/img204/7383/pic0000z.png
     # Lancer l'installer et appuyez sur "Installer le Patch FR XX/XX/XX"
     # Quittez l'installer et jouez!
 
-*ATTENTION!:* Si vous utiliser le NPloader, il doit être en 1er dans votre GAME.txt avant le patch FR
+*ATTENTION!:* 
+    # Pour assurer une compatibilité maximal, je vous conseille de mettre à jour votre CFW vers un CFW Pro
+    # Penser à désactiver le "Nodrm" dans le recovery du CFW Pro.
+    # Si vous utiliser le NPloader, il doit être en 1er dans votre GAME.txt avant le patch FR
 
 Exemple:
   * ms0:/seplugins/nploader.prx 1
