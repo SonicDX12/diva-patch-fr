@@ -1,5 +1,11 @@
 #summary Changelog de la traduction FR du Project DIVA Extend
 
+*17/12/11*
+  * Traduction de menus non traduit du mode EDIT.
+  * Correction de fautes et syntaxe.
+  * Traduction de nouvelles images comme l'écran des résultats et du profil.
+  * Correction des anciennes images.
+
 *12/12/11*
   * Suite de la traduction du mode EDIT avec la liste des fonds, objets, effets ainsi que de nouveaux menus.
   * Traduction des descriptions des titres.
