@@ -20,6 +20,7 @@ http://img88.imageshack.us/img88/5289/pic0000x.png
 
 = Installation =
 
+    ATTENTION: CEUX QUI ONT L'ANCIEN PATCH DOIVENT SUPPRIMER LE DOSSIER "Divapatch" DU DOSSIER "seplugins" DE VOTRE PSP CAR L'ARCHITECTURE DU PLUGIN A CHANGE!!!!
     # Décompressez l'archive. Vous obiendrez un dossier "DivaPatchInstaller" (ce dossier contient l'installer)
     # Placez ce dossier dans le dossier GAME de votre PSP (X:/PSP/GAME où X est la lettre assigné à votre PSP par votre PC)
     # Lancer l'installer et appuyez sur "Installer le Patch Extend FR" ou "Installer le Patch 2nd# FR"
