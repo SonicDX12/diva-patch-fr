@@ -1,4 +1,10 @@
-#summary Changelog de la traduction FR du Project DIVA Extend
+#summary Changelog du Diva Patch
+
+*03/01/12*
+  * Mise à jour de l'installer avec l'ajout de la traduction de 2nd#. Deux versions de l'installer sera disponible: une pour les CFW 6.XX et une autre pour les CFW 5.XX.
+  * Traduction de nouvelles lyrics pour Extend.
+  * Divers corrections pour Extend.
+  * Debut de traduction FR pour 2nd#.
 
 *17/12/11*
   * Traduction de menus non traduit du mode EDIT.
