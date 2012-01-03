@@ -1,5 +1,20 @@
 ﻿# Translation file for Project Diva Extend (use shift-jis to edit the file)
-# Date: 17/12/11
+# 0x08xxxxxx: use this format to rewrite the pointed address
+#             to a newly allocated one for the translation.
+# !x08xxxxxx: use this type of format if the address to modify
+#             is embedded inside a instruction (use the lower
+#             address part of the instruction for the address).
+# ^x08xxxxxx: use this type of format if the address to modify
+#             is embedded inside a instruction and you only need
+#             to patch the upper address (the lui is behind many
+#             branch instructions).
+# $x08xxxxxx: use this type of format if the address to modify
+#             is embedded inside a instruction and you only need
+#             to patch the lower address
+#
+# EBOOT reversing and translation: codestation
+# EBOOT reversing helper: Sonic DX
+# Translation helpers: HeroKing, naki-the-curious, kienono, Loserbait, nipah
 
 #ｪ = é
 #ｫ = è
@@ -244,7 +259,7 @@
 !x08845B50 Ce jeu supporte la sauvegarde automatique.
 !x08845B64 Ne retirez pas le Memory Stick ou n'ｪteignez pas 
 !x08845B78 la PSP durant la sauvegarde.  Merci CodeStation
-!x08845B8C Project Diva Extend Patch Francais 17/12/11
+!x08845B8C Project Diva Extend Patch Francais 03/01/2012
 
 ### EDIT MODE ### (max menu entry lenght: 25)
 
@@ -454,7 +469,7 @@ $x08883008 Crｪer un EDIT avec une musique in-game.
 !x0889D9F8 Rｪglez les effets ｬ utiliser dans l'EDIT.
 !x0889DAEC Rｪglez les effets ｬ utiliser dans l'EDIT.
 
-!x0889E84C [Prｪdｪfini %d]
+!x0889E84C  [Prｪdｪfini %d]
 ^x0889F3B4 Mesure
 ^x0889F3E8 Mesure
 !x0889F414 Mesure
@@ -1238,8 +1253,8 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 !x088D6E30 Coord. et direction
 !x088D6E48 Regler la direction
 !x088D6E60 Placement prｪdｪfinis
-!x088D7D00 【Personnalisｪ】
-!x088D7D14 【Prｪdｪfini %d】
+!x088D7D00  【Personnalisｪ】
+!x088D7D14  【Prｪdｪfini %d】
 
 !x088D9094 入力を行う小節以降のターゲットを消去し、
 !x088D90A8 リアルタイム入力を開始します。
@@ -1341,7 +1356,7 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 !x088E77C8 Instal. donnｪes a ｪtｪ mis sur OFF.
 
 ^x088E7824 Memory Stick non-dｪtｫctｪ!
-!x088E78A4 Memory Stick non-dｪtｫctｪ!
+$x088E78A4 Memory Stick non-dｪtｫctｪ!
 !x088E7B28 Save-Auto
 !x088E7B68 Installation donnｪes
 !x088E88FC Save-Auto
@@ -1396,12 +1411,12 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 !x08921574 Themes de Chambre
 !x089275AC Themes de Chambre
 !x08921728 Objets de Chambre (Sol)
-!x08921734 Objets de Chambre (Etageres)
+!x08921734 Objets de Chambre (Etagｫres)
 !x08921740 Objets de Chambre (Mur)
 !x08921A30 Themes de Chambre Extra
 !x089275C4 Themes de Chambre Extra
 !x08921C18 Objets de Chambre Extra (Sol)
-!x08921C24 Objets de Chambre Extra (Etageres)
+!x08921C24 Objets de Chambre Extra (Etagｫres)
 !x08921C34 Objets de Chambre Extra (Mur)
 
 !x08923CE0 Composition de la Chambre
@@ -1452,7 +1467,7 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 
 # DIVA room (cont.)
 
-!x0892AC04 Room Menu
+!x0892AC04 Menu de la Chambre
 !x0892B1D8 Composition de la Chambre
 !x0892B1E4 Cadeaux
 !x0892B1F0 Juke-Box
@@ -1466,7 +1481,7 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 !x0892BC70 Changer le/la %s?
 !x0892BC80 Donner un %s?
 !x0892BD08 Bonus pour utiliser la Chambre DIVA.
-!x0892BD1C 1000 Points DIVA gagnes.
+!x0892BD1C 1000 Points DIVA gagnｪs.
 !x0892BD9C Rｪgler le temps de %02d:%02d.
 !x0892BDAC Supprimer le/la %s?
 
@@ -1542,7 +1557,7 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 ^x08937EE4 Confirmer
 ^x08937F20 Confirmer
 !x08937F44 Confirmer
-!x0893C880 Defaut
+!x0893C880 Dｪfaut
 !x0893CD2C Extras
 !x0893D0E8 Retourner ｬ la Chambre DIVA?
 !x0893D504 Retourner ｬ la Chambre DIVA?
@@ -1550,7 +1565,7 @@ $x088BC890 %3d Bar %1.1f Beat ～ %3d Bar %1.1f Beat (Beats：   %0.1f)
 !x0893D234 l'ｪdition de votre Playlist?
 !x0893D268 La Playlist ne sera pas sauvegardｪe
 !x0893D294 si vous quittez maintenant.
-!x0893D2C0 ｪtｪs-vous sur?
+!x0893D2C0 Etes-vous sur?
 !x0893D330 La Playlist suivante:
 !x0893D384 Etes-vous sur de la supprimer?
 !x0893D3B8 Aucun PV dans la liste!
@@ -1609,8 +1624,8 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 !x0891B998 Rｪveil
 
 !x0891B2F0 "Rｪveil"
-!x0891B304 La rｪveil va lire un fichier MP3 
-!x0891B318 a l'heure spｪcifiｪe. Vous aurez besoin
+!x0891B304 Le rｪveil va lire un fichier MP3 
+!x0891B318 ｬ l'heure spｪcifiｪe. Vous aurez besoin
 !x0891B32C de sauvegarder vos donnｪes.
 
 !x0891B3A8 Retourner ｬ la Chambre DIVA.
@@ -1701,7 +1716,7 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 
 !x089A8830 Profil ｪchangｪ.
 !x089A8860 Pour enregistrer le profil-ami,
-!x089A888C Vous devez sauvegarder vos donnｪes.
+!x089A888C vous devez sauvegarder vos donnｪes.
 !x089A88F0 Profil ｪchangｪ.
 
 # Savedata SFO info
@@ -1836,7 +1851,7 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 
 # Profile default messages
 
-!x0881DD48 Entrez un pseudonyme SVP
+!x0881DD48 Entrez un pseudonyme
 !x0881DD70 Entrez le nom de votre chanson favorite
 !x0881DD98 Entrez un commentaire
 !x0881DDC0 Tapez une note
@@ -3052,7 +3067,7 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 # Shop menu headers
 
 0x08C31FD4 Objets de Chambre (Sol)
-0x08C31FD8 Objets de Chambre (Etagere)
+0x08C31FD8 Objets de Chambre (Etagｫre)
 0x08C31FDC Objets de Chambre (Mur)
 0x08C31FE0 Objets-Aide
 0x08C31FE4 Chambres DIVA
@@ -4105,3 +4120,18 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 !x089C4EF0 Supprimer les donnｪes
 !x089C4F04 Screenshot fini!
 !x089C5638 Screenshot terminｪe!
+
+# Cadeaux
+
+#!x08933794 プレゼント♪
+#!x08934944 プレゼント♪
+!x08934978 Objet: %s
+!x089349AC sera donnｪe.
+!x08934A50 Cadeau donnｪ!
+!x08934B4C Le cadeau a ｪtｪ mis
+!x08934B60 dans la Chambre.
+!x08934BB8 Retourner ｬ la Chambre DIVA?
+
+!x088F602C REPRENDRE
+!x088F6040 REESSAYER
+!x088F6054 MENU0

@@ -1,4 +1,4 @@
-# Translation file for Project Diva (use shift-jis to edit the file)
+# Translation file for Project Diva 2nd (v1.01) (use shift-jis to edit the file)
 # 0x08xxxxxx: use this format to rewrite the pointed address
 #             to a newly allocated one for the translation.
 # !x08xxxxxx: use this type of format if the address to modify
@@ -11,8 +11,16 @@
 # $x08xxxxxx: use this type of format if the address to modify
 #             is embedded inside a instruction and you only need
 #             to patch the lower address
-#
-# Placeholder file.
 
-0x08B705E0 Free Play
-0x08B705E4 Module Convert
+# Main menu
+
+!x088D4AE0 Rhythm Game
+!x088D4AEC Character Select
+!x088D4AF8 DIVA Room
+!x088D4B04 Shop
+!x088D4B10 Play Records
+!x088D4B1C Edit
+!x088D4B28 Ad Hoc
+!x088D4B34 Options
+!x088D4B40 Save
+!x088D4B4C Back to Title

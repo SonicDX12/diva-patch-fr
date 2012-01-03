@@ -31,6 +31,7 @@
 
 #include "divapatch.h"
 #include "divaext_translation.h"
+#include "diva2nd0_translation.h"
 #include "divaext_images.h"
 #include "divaext_embedded.h"
 #include "font12dot_01.h"
@@ -131,7 +132,7 @@
 #include "mtit_base_05.h"
 #include "plst_base_01.h"
 
-PSP_MODULE_INFO("Extend Patch FR", 0, 1, 5);
+PSP_MODULE_INFO("Diva Patch FR", 0, 1, 5);
 PSP_MAIN_THREAD_ATTR(0);
 
 void Install();
@@ -149,7 +150,7 @@ char st_text[128];
 int devkit, point;
 u16 macaddrfd[64], fwverfd[64];
 int focus, psp_model;
-char *path[107];
+char *path[110];
 int enter_button = 0;
 extern int currdev;
 extern char *cpath;
@@ -327,6 +328,9 @@ int install_thread(SceSize args, void *argp)
 	if(sceIoDopen(path[1]) < 0)
 		sceIoMkdir(path[1], 0777);	
 		
+	if(sceIoDopen(path[107]) < 0)
+		sceIoMkdir(path[107], 0777);
+		
 	if(size < 0)
 		WriteFile(path[2], path[3], 41, 0);
 	else
@@ -457,7 +461,7 @@ int install_thread(SceSize args, void *argp)
 	WriteFile(path[103], (void *)mtit_base_04, size_mtit_base_04, 0);
 	WriteFile(path[104], (void *)mtit_base_05, size_mtit_base_05, 0);
 	WriteFile(path[105], (void *)plst_base_01, size_plst_base_01, 0);
-	WriteFile(path[106], (void *)divapatch, size_divapatch, 0);
+	WriteFile(path[107], (void *)divapatch, size_divapatch, 0);
 	sceKernelDelayThread(1200000);	
 	SetProgress(100, 1);
 	
@@ -465,9 +469,60 @@ int install_thread(SceSize args, void *argp)
 	return sceKernelExitDeleteThread(0);
 }
 
-void installing()
+int install_thread2(SceSize args, void *argp)
+{
+	char buffer[1024];	
+	memset(buffer, 0, sizeof(buffer));
+
+	int size = ReadFile(path[2], buffer, sizeof(buffer), 0);
+
+	ClearProgress();
+    status = vlfGuiAddText(80, 100, "Installation en cours...");
+    progress_bar = vlfGuiAddProgressBar(136);    
+    progress_text = vlfGuiAddText(240, 148, "0%");
+    vlfGuiSetTextAlignment(progress_text, VLF_ALIGNMENT_CENTER);
+	
+	if(sceIoDopen(path[0]) < 0)
+		sceIoMkdir(path[0], 0777);
+	
+	if(sceIoDopen(path[1]) < 0)
+		sceIoMkdir(path[1], 0777);	
+		
+	if(sceIoDopen(path[108]) < 0)
+		sceIoMkdir(path[108], 0777);
+		
+	if(size < 0)
+		WriteFile(path[2], path[3], 41, 0);
+	else
+	{
+		if(!strstr(buffer, path[4]))
+		{
+			strcat(buffer, path[plus ? 3 : 5]);
+			WriteFile(path[2], buffer, size + (plus ? 41 : 43), 0);
+		}
+	}
+	
+	WriteFile(path[4], (void *)divapatch, size_divapatch, 0);
+	WriteFile(path[106], (void *)diva2nd0_translation, size_diva2nd0_translation, 0);
+	WriteFile(path[107], (void *)divapatch, size_divapatch, 0);
+	sceKernelDelayThread(1200000);	
+	SetProgress(100, 1);
+	
+	vlfGuiAddEventHandler(0, 600000, OnInstallComplete, NULL);
+	return sceKernelExitDeleteThread(0);
+}
+
+void installing_extend()
 {
 	SceUID install_thid = sceKernelCreateThread("install_thread", install_thread, 0x18, 0x10000, 0, NULL);// Dark_Alex's antifreeze method.
+	if(install_thid >= 0)
+		sceKernelStartThread(install_thid, 4, NULL);
+	
+	}
+	
+void installing_2nd0()
+{
+	SceUID install_thid = sceKernelCreateThread("install_thread2", install_thread2, 0x18, 0x10000, 0, NULL);// Dark_Alex's antifreeze method.
 	if(install_thid >= 0)
 		sceKernelStartThread(install_thid, 4, NULL);
 	
@@ -481,20 +536,25 @@ int menu_sel(int sel)
 	{
 		case 0:
 			vlfGuiCancelCentralMenu();
-			installing();
+			installing_extend();
 			break;
-
+			
 		case 1:
-			point = 1;
-			Credits_Changelog(1);
-			return VLF_EV_RET_REMOVE_HANDLERS | VLF_EV_RET_REMOVE_OBJECTS;
+			vlfGuiCancelCentralMenu();
+			installing_2nd0();
+			break;
 
 		case 2:
 			point = 2;
+			Credits_Changelog(1);
+			return VLF_EV_RET_REMOVE_HANDLERS | VLF_EV_RET_REMOVE_OBJECTS;
+
+		case 3:
+			point = 3;
 			Credits_Changelog(0);
 			return VLF_EV_RET_REMOVE_HANDLERS | VLF_EV_RET_REMOVE_OBJECTS;
 		
-		case 3:
+		case 4:
 			sceKernelExitGame();
 			break;
 	}
@@ -510,11 +570,11 @@ void MainMenu(int sel, int start)
 		vlfGuiRemovePicture(title_pic);
 	}
 
-	title_text = vlfGuiAddText(1, 1, "Project Diva Patch FR Installer v2.0      (17/12/11)");
+	title_text = vlfGuiAddText(1, 1, "Diva Patch FR Installer v3.0      (03/01/2012)");
 	title_pic = vlfGuiAddPictureResource("ps3scan_plugin.rco", "tex_infobar_icon", 4, -2);
 	vlfGuiSetTitleBar(title_text, title_pic, 1, 1);
 
-	char *items[] = { "Installer le patch Extend FR", "Changelog", "Credits", "Quitter" };
+	char *items[] = { "Installer le patch Extend FR", "Installer le patch 2nd# FR", "Changelog", "Credits", "Quitter" };
 
 	vlfGuiCentralMenu(sizeof(items) / sizeof(char *), items, sel, menu_sel, 0, 0);
 
@@ -608,14 +668,21 @@ void Credits_Changelog(int changelog)
 			" - Correction de fautes et syntaxe.\n"
 			" - Traduction de nouvelles images comme l'écran des\n"
 			"    résultats et du profil.\n"
-			" - Correction des anciennes images.\n";
+			" - Correction des anciennes images.\n\n"
+			"(03/01/12)\n"
+			" - Mise à jour de l'installer avec l'ajout de la\n"
+			"    traduction de 2nd#. Deux versions de l'installer\n"
+			"    sera disponible: une pour les CFW 6.XX et\n"
+			"    une autre pour les CFW 5.XX\n"
+			" - Traduction de nouvelles lyrics pour Extend.\n"
+			" - Divers corrections pour Extend.\n"
+			" - Debut de traduction FR pour 2nd#.\n";
 		x = 35;
 	}
 	else
 	{
 		crchtext =
-			"Project Diva Patch FR\n"
-			"Installer v2.0\n"
+			"Diva Patch Installer v3.0\n"
 			"Copyright(C) 2011, Sonic DX\n\n"
 			"   Credits:\n"
 			"     - Codestation\n"// Plugin, Eboot reversing
@@ -653,104 +720,107 @@ int app_main(int argc, char *argv[])
 		path[6] = "ef0:/seplugins/divapatch/divaext_translation.bin";
 		path[7] = "ef0:/seplugins/divapatch/divaext_images.bin";
 		path[8] = "ef0:/seplugins/divapatch/divaext_embedded.bin";
-		path[9] = "ef0:/seplugins/divapatch/font12dot_01.png";
-		path[10] = "ef0:/seplugins/divapatch/menu_help_01.png";
-		path[11] = "ef0:/seplugins/divapatch/menu_help_02.png";
-		path[12] = "ef0:/seplugins/divapatch/menu_title_adhk.png";
-		path[13] = "ef0:/seplugins/divapatch/menu_title_crsl.png";
-		path[14] = "ef0:/seplugins/divapatch/menu_title_edit.png";
-		path[15] = "ef0:/seplugins/divapatch/menu_title_home.png";
-		path[16] = "ef0:/seplugins/divapatch/menu_title_modl.png";
-		path[17] = "ef0:/seplugins/divapatch/menu_title_msbx.png";
-		path[18] = "ef0:/seplugins/divapatch/menu_title_optn.png";
-		path[19] = "ef0:/seplugins/divapatch/menu_title_plys.png";
-		path[20] = "ef0:/seplugins/divapatch/menu_title_prvd.png";
-		path[21] = "ef0:/seplugins/divapatch/menu_title_room.png";
-		path[22] = "ef0:/seplugins/divapatch/menu_title_rtmg.png";
-		path[23] = "ef0:/seplugins/divapatch/menu_title_shop.png";
-		path[24] = "ef0:/seplugins/divapatch/menu_title_visl.png";
-		path[25] = "ef0:/seplugins/divapatch/pv_rank_01.png";
-		path[26] = "ef0:/seplugins/divapatch/pv_start_37.png";
-		path[27] = "ef0:/seplugins/divapatch/pv_start_39.png";
-		path[28] = "ef0:/seplugins/divapatch/pv_start_40.png";
-		path[29] = "ef0:/seplugins/divapatch/pv_start_41.png";
-		path[30] = "ef0:/seplugins/divapatch/pv_start_53.png";
-		path[31] = "ef0:/seplugins/divapatch/pv_start_65.png";
-		path[32] = "ef0:/seplugins/divapatch/pv_start_67.png";
-		path[33] = "ef0:/seplugins/divapatch/pv_start_68.png";
-		path[34] = "ef0:/seplugins/divapatch/pv_start_69.png";
-		path[35] = "ef0:/seplugins/divapatch/pv_start_70.png";
-		path[36] = "ef0:/seplugins/divapatch/pv_start_71.png";
-		path[37] = "ef0:/seplugins/divapatch/pv_start_72.png";
-		path[38] = "ef0:/seplugins/divapatch/pv_start_73.png";
-		path[39] = "ef0:/seplugins/divapatch/pv_start_74.png";
-		path[40] = "ef0:/seplugins/divapatch/pv_start_75.png";
-		path[41] = "ef0:/seplugins/divapatch/pv_start_76.png";
-		path[42] = "ef0:/seplugins/divapatch/pv_start_77.png";
-		path[43] = "ef0:/seplugins/divapatch/pv_start_78.png";
-		path[44] = "ef0:/seplugins/divapatch/pv_start_79.png";
-		path[45] = "ef0:/seplugins/divapatch/pv_start_80.png";
-		path[46] = "ef0:/seplugins/divapatch/pv_start_81.png";
-		path[47] = "ef0:/seplugins/divapatch/pv_start_82.png";
-		path[48] = "ef0:/seplugins/divapatch/pv_start_83.png";
-		path[49] = "ef0:/seplugins/divapatch/pv_start_84.png";
-		path[50] = "ef0:/seplugins/divapatch/pv_start_85.png";
-		path[51] = "ef0:/seplugins/divapatch/pv_start_86.png";
-		path[52] = "ef0:/seplugins/divapatch/pv_start_87.png";
-		path[53] = "ef0:/seplugins/divapatch/pv_start_88.png";
-		path[54] = "ef0:/seplugins/divapatch/pv_start_89.png";
-		path[55] = "ef0:/seplugins/divapatch/pv_start_90.png";
-		path[56] = "ef0:/seplugins/divapatch/pv_start_91.png";
-		path[57] = "ef0:/seplugins/divapatch/pv_start_92.png";
-		path[58] = "ef0:/seplugins/divapatch/pv_start_93.png";
-		path[59] = "ef0:/seplugins/divapatch/pv_start_94.png";
-		path[60] = "ef0:/seplugins/divapatch/pv_start_95.png";
-		path[61] = "ef0:/seplugins/divapatch/pv_start_96.png";
-		path[62] = "ef0:/seplugins/divapatch/pv_start_97.png";
-		path[63] = "ef0:/seplugins/divapatch/pv_start_edit.png";
-		path[64] = "ef0:/seplugins/divapatch/load_00.png";
-		path[65] = "ef0:/seplugins/divapatch/load_01.png";
-		path[66] = "ef0:/seplugins/divapatch/load_02.png";
-		path[67] = "ef0:/seplugins/divapatch/load_03.png";
-		path[68] = "ef0:/seplugins/divapatch/load_04.png";
-		path[69] = "ef0:/seplugins/divapatch/load_05.png";
-		path[70] = "ef0:/seplugins/divapatch/load_06.png";
-		path[71] = "ef0:/seplugins/divapatch/load_07.png";
-		path[72] = "ef0:/seplugins/divapatch/load_08.png";
-		path[73] = "ef0:/seplugins/divapatch/load_09.png";
-		path[74] = "ef0:/seplugins/divapatch/load_10.png";
-		path[75] = "ef0:/seplugins/divapatch/load_11.png";
-		path[76] = "ef0:/seplugins/divapatch/load_12.png";
-		path[77] = "ef0:/seplugins/divapatch/load_13.png";
-		path[78] = "ef0:/seplugins/divapatch/load_14.png";
-		path[79] = "ef0:/seplugins/divapatch/load_15.png";
-		path[80] = "ef0:/seplugins/divapatch/load_16.png";
-		path[81] = "ef0:/seplugins/divapatch/load_17.png";
-		path[82] = "ef0:/seplugins/divapatch/load_18.png";
-		path[83] = "ef0:/seplugins/divapatch/load_19.png";
-		path[84] = "ef0:/seplugins/divapatch/load_20.png";
-		path[85] = "ef0:/seplugins/divapatch/load_21.png";
-		path[86] = "ef0:/seplugins/divapatch/load_22.png";
-		path[87] = "ef0:/seplugins/divapatch/load_23.png";
-		path[88] = "ef0:/seplugins/divapatch/load_24.png";
-		path[89] = "ef0:/seplugins/divapatch/load_25.png";
-		path[90] = "ef0:/seplugins/divapatch/load_26.png";
-		path[91] = "ef0:/seplugins/divapatch/load_27.png";
-		path[92] = "ef0:/seplugins/divapatch/load_28.png";
-		path[93] = "ef0:/seplugins/divapatch/load_29.png";
-		path[94] = "ef0:/seplugins/divapatch/load_30.png";
-		path[95] = "ef0:/seplugins/divapatch/load_31.png";
-		path[96] = "ef0:/seplugins/divapatch/edit_base_04.png";
-		path[97] = "ef0:/seplugins/divapatch/home_base_02.png";
-		path[98] = "ef0:/seplugins/divapatch/menu_base_01.png";
-		path[99] = "ef0:/seplugins/divapatch/menu_result.png";
-		path[100] = "ef0:/seplugins/divapatch/mtit_base_01.png";
-		path[101] = "ef0:/seplugins/divapatch/mtit_base_02.png";
-		path[102] = "ef0:/seplugins/divapatch/mtit_base_03.png";
-		path[103] = "ef0:/seplugins/divapatch/mtit_base_04.png";
-		path[104] = "ef0:/seplugins/divapatch/mtit_base_05.png";
-		path[105] = "ef0:/seplugins/divapatch/plst_base_01.png";
-		path[106] = "ef0:/seplugins/divapatch/divapatch.prx";
+		path[9] = "ef0:/seplugins/divapatch/divaext/font12dot_01.png";
+		path[10] = "ef0:/seplugins/divapatch/divaext/menu_help_01.png";
+		path[11] = "ef0:/seplugins/divapatch/divaext/menu_help_02.png";
+		path[12] = "ef0:/seplugins/divapatch/divaext/menu_title_adhk.png";
+		path[13] = "ef0:/seplugins/divapatch/divaext/menu_title_crsl.png";
+		path[14] = "ef0:/seplugins/divapatch/divaext/menu_title_edit.png";
+		path[15] = "ef0:/seplugins/divapatch/divaext/menu_title_home.png";
+		path[16] = "ef0:/seplugins/divapatch/divaext/menu_title_modl.png";
+		path[17] = "ef0:/seplugins/divapatch/divaext/menu_title_msbx.png";
+		path[18] = "ef0:/seplugins/divapatch/divaext/menu_title_optn.png";
+		path[19] = "ef0:/seplugins/divapatch/divaext/menu_title_plys.png";
+		path[20] = "ef0:/seplugins/divapatch/divaext/menu_title_prvd.png";
+		path[21] = "ef0:/seplugins/divapatch/divaext/menu_title_room.png";
+		path[22] = "ef0:/seplugins/divapatch/divaext/menu_title_rtmg.png";
+		path[23] = "ef0:/seplugins/divapatch/divaext/menu_title_shop.png";
+		path[24] = "ef0:/seplugins/divapatch/divaext/menu_title_visl.png";
+		path[25] = "ef0:/seplugins/divapatch/divaext/pv_rank_01.png";
+		path[26] = "ef0:/seplugins/divapatch/divaext/pv_start_37.png";
+		path[27] = "ef0:/seplugins/divapatch/divaext/pv_start_39.png";
+		path[28] = "ef0:/seplugins/divapatch/divaext/pv_start_40.png";
+		path[29] = "ef0:/seplugins/divapatch/divaext/pv_start_41.png";
+		path[30] = "ef0:/seplugins/divapatch/divaext/pv_start_53.png";
+		path[31] = "ef0:/seplugins/divapatch/divaext/pv_start_65.png";
+		path[32] = "ef0:/seplugins/divapatch/divaext/pv_start_67.png";
+		path[33] = "ef0:/seplugins/divapatch/divaext/pv_start_68.png";
+		path[34] = "ef0:/seplugins/divapatch/divaext/pv_start_69.png";
+		path[35] = "ef0:/seplugins/divapatch/divaext/pv_start_70.png";
+		path[36] = "ef0:/seplugins/divapatch/divaext/pv_start_71.png";
+		path[37] = "ef0:/seplugins/divapatch/divaext/pv_start_72.png";
+		path[38] = "ef0:/seplugins/divapatch/divaext/pv_start_73.png";
+		path[39] = "ef0:/seplugins/divapatch/divaext/pv_start_74.png";
+		path[40] = "ef0:/seplugins/divapatch/divaext/pv_start_75.png";
+		path[41] = "ef0:/seplugins/divapatch/divaext/pv_start_76.png";
+		path[42] = "ef0:/seplugins/divapatch/divaext/pv_start_77.png";
+		path[43] = "ef0:/seplugins/divapatch/divaext/pv_start_78.png";
+		path[44] = "ef0:/seplugins/divapatch/divaext/pv_start_79.png";
+		path[45] = "ef0:/seplugins/divapatch/divaext/pv_start_80.png";
+		path[46] = "ef0:/seplugins/divapatch/divaext/pv_start_81.png";
+		path[47] = "ef0:/seplugins/divapatch/divaext/pv_start_82.png";
+		path[48] = "ef0:/seplugins/divapatch/divaext/pv_start_83.png";
+		path[49] = "ef0:/seplugins/divapatch/divaext/pv_start_84.png";
+		path[50] = "ef0:/seplugins/divapatch/divaext/pv_start_85.png";
+		path[51] = "ef0:/seplugins/divapatch/divaext/pv_start_86.png";
+		path[52] = "ef0:/seplugins/divapatch/divaext/pv_start_87.png";
+		path[53] = "ef0:/seplugins/divapatch/divaext/pv_start_88.png";
+		path[54] = "ef0:/seplugins/divapatch/divaext/pv_start_89.png";
+		path[55] = "ef0:/seplugins/divapatch/divaext/pv_start_90.png";
+		path[56] = "ef0:/seplugins/divapatch/divaext/pv_start_91.png";
+		path[57] = "ef0:/seplugins/divapatch/divaext/pv_start_92.png";
+		path[58] = "ef0:/seplugins/divapatch/divaext/pv_start_93.png";
+		path[59] = "ef0:/seplugins/divapatch/divaext/pv_start_94.png";
+		path[60] = "ef0:/seplugins/divapatch/divaext/pv_start_95.png";
+		path[61] = "ef0:/seplugins/divapatch/divaext/pv_start_96.png";
+		path[62] = "ef0:/seplugins/divapatch/divaext/pv_start_97.png";
+		path[63] = "ef0:/seplugins/divapatch/divaext/pv_start_edit.png";
+		path[64] = "ef0:/seplugins/divapatch/divaext/load_00.png";
+		path[65] = "ef0:/seplugins/divapatch/divaext/load_01.png";
+		path[66] = "ef0:/seplugins/divapatch/divaext/load_02.png";
+		path[67] = "ef0:/seplugins/divapatch/divaext/load_03.png";
+		path[68] = "ef0:/seplugins/divapatch/divaext/load_04.png";
+		path[69] = "ef0:/seplugins/divapatch/divaext/load_05.png";
+		path[70] = "ef0:/seplugins/divapatch/divaext/load_06.png";
+		path[71] = "ef0:/seplugins/divapatch/divaext/load_07.png";
+		path[72] = "ef0:/seplugins/divapatch/divaext/load_08.png";
+		path[73] = "ef0:/seplugins/divapatch/divaext/load_09.png";
+		path[74] = "ef0:/seplugins/divapatch/divaext/load_10.png";
+		path[75] = "ef0:/seplugins/divapatch/divaext/load_11.png";
+		path[76] = "ef0:/seplugins/divapatch/divaext/load_12.png";
+		path[77] = "ef0:/seplugins/divapatch/divaext/load_13.png";
+		path[78] = "ef0:/seplugins/divapatch/divaext/load_14.png";
+		path[79] = "ef0:/seplugins/divapatch/divaext/load_15.png";
+		path[80] = "ef0:/seplugins/divapatch/divaext/load_16.png";
+		path[81] = "ef0:/seplugins/divapatch/divaext/load_17.png";
+		path[82] = "ef0:/seplugins/divapatch/divaext/load_18.png";
+		path[83] = "ef0:/seplugins/divapatch/divaext/load_19.png";
+		path[84] = "ef0:/seplugins/divapatch/divaext/load_20.png";
+		path[85] = "ef0:/seplugins/divapatch/divaext/load_21.png";
+		path[86] = "ef0:/seplugins/divapatch/divaext/load_22.png";
+		path[87] = "ef0:/seplugins/divapatch/divaext/load_23.png";
+		path[88] = "ef0:/seplugins/divapatch/divaext/load_24.png";
+		path[89] = "ef0:/seplugins/divapatch/divaext/load_25.png";
+		path[90] = "ef0:/seplugins/divapatch/divaext/load_26.png";
+		path[91] = "ef0:/seplugins/divapatch/divaext/load_27.png";
+		path[92] = "ef0:/seplugins/divapatch/divaext/load_28.png";
+		path[93] = "ef0:/seplugins/divapatch/divaext/load_29.png";
+		path[94] = "ef0:/seplugins/divapatch/divaext/load_30.png";
+		path[95] = "ef0:/seplugins/divapatch/divaext/load_31.png";
+		path[96] = "ef0:/seplugins/divapatch/divaext/edit_base_04.png";
+		path[97] = "ef0:/seplugins/divapatch/divaext/home_base_02.png";
+		path[98] = "ef0:/seplugins/divapatch/divaext/menu_base_01.png";
+		path[99] = "ef0:/seplugins/divapatch/divaext/menu_result.png";
+		path[100] = "ef0:/seplugins/divapatch/divaext/mtit_base_01.png";
+		path[101] = "ef0:/seplugins/divapatch/divaext/mtit_base_02.png";
+		path[102] = "ef0:/seplugins/divapatch/divaext/mtit_base_03.png";
+		path[103] = "ef0:/seplugins/divapatch/divaext/mtit_base_04.png";
+		path[104] = "ef0:/seplugins/divapatch/divaext/mtit_base_05.png";
+		path[105] = "ef0:/seplugins/divapatch/divaext/plst_base_01.png";
+		path[106] = "ef0:/seplugins/divapatch/diva2nd#_translation.bin";
+		path[107] = "ef0:/seplugins/divapatch/divaext";
+		path[108] = "ef0:/seplugins/divapatch/diva2nd#";
+		path[109] = "ef0:/seplugins/divapatch/divapatch.prx";
 	}
 	else
 	{
@@ -763,104 +833,107 @@ int app_main(int argc, char *argv[])
 		path[6] = "ms0:/seplugins/divapatch/divaext_translation.bin";
 		path[7] = "ms0:/seplugins/divapatch/divaext_images.bin";
 		path[8] = "ms0:/seplugins/divapatch/divaext_embedded.bin";
-		path[9] = "ms0:/seplugins/divapatch/font12dot_01.png";
-		path[10] = "ms0:/seplugins/divapatch/menu_help_01.png";
-		path[11] = "ms0:/seplugins/divapatch/menu_help_02.png";
-		path[12] = "ms0:/seplugins/divapatch/menu_title_adhk.png";
-		path[13] = "ms0:/seplugins/divapatch/menu_title_crsl.png";
-		path[14] = "ms0:/seplugins/divapatch/menu_title_edit.png";
-		path[15] = "ms0:/seplugins/divapatch/menu_title_home.png";
-		path[16] = "ms0:/seplugins/divapatch/menu_title_modl.png";
-		path[17] = "ms0:/seplugins/divapatch/menu_title_msbx.png";
-		path[18] = "ms0:/seplugins/divapatch/menu_title_optn.png";
-		path[19] = "ms0:/seplugins/divapatch/menu_title_plys.png";
-		path[20] = "ms0:/seplugins/divapatch/menu_title_prvd.png";
-		path[21] = "ms0:/seplugins/divapatch/menu_title_room.png";
-		path[22] = "ms0:/seplugins/divapatch/menu_title_rtmg.png";
-		path[23] = "ms0:/seplugins/divapatch/menu_title_shop.png";
-		path[24] = "ms0:/seplugins/divapatch/menu_title_visl.png";
-		path[25] = "ms0:/seplugins/divapatch/pv_rank_01.png";
-		path[26] = "ms0:/seplugins/divapatch/pv_start_37.png";
-		path[27] = "ms0:/seplugins/divapatch/pv_start_39.png";
-		path[28] = "ms0:/seplugins/divapatch/pv_start_40.png";
-		path[29] = "ms0:/seplugins/divapatch/pv_start_41.png";
-		path[30] = "ms0:/seplugins/divapatch/pv_start_53.png";
-		path[31] = "ms0:/seplugins/divapatch/pv_start_65.png";
-		path[32] = "ms0:/seplugins/divapatch/pv_start_67.png";
-		path[33] = "ms0:/seplugins/divapatch/pv_start_68.png";
-		path[34] = "ms0:/seplugins/divapatch/pv_start_69.png";
-		path[35] = "ms0:/seplugins/divapatch/pv_start_70.png";
-		path[36] = "ms0:/seplugins/divapatch/pv_start_71.png";
-		path[37] = "ms0:/seplugins/divapatch/pv_start_72.png";
-		path[38] = "ms0:/seplugins/divapatch/pv_start_73.png";
-		path[39] = "ms0:/seplugins/divapatch/pv_start_74.png";
-		path[40] = "ms0:/seplugins/divapatch/pv_start_75.png";
-		path[41] = "ms0:/seplugins/divapatch/pv_start_76.png";
-		path[42] = "ms0:/seplugins/divapatch/pv_start_77.png";
-		path[43] = "ms0:/seplugins/divapatch/pv_start_78.png";
-		path[44] = "ms0:/seplugins/divapatch/pv_start_79.png";
-		path[45] = "ms0:/seplugins/divapatch/pv_start_80.png";
-		path[46] = "ms0:/seplugins/divapatch/pv_start_81.png";
-		path[47] = "ms0:/seplugins/divapatch/pv_start_82.png";
-		path[48] = "ms0:/seplugins/divapatch/pv_start_83.png";
-		path[49] = "ms0:/seplugins/divapatch/pv_start_84.png";
-		path[50] = "ms0:/seplugins/divapatch/pv_start_85.png";
-		path[51] = "ms0:/seplugins/divapatch/pv_start_86.png";
-		path[52] = "ms0:/seplugins/divapatch/pv_start_87.png";
-		path[53] = "ms0:/seplugins/divapatch/pv_start_88.png";
-		path[54] = "ms0:/seplugins/divapatch/pv_start_89.png";
-		path[55] = "ms0:/seplugins/divapatch/pv_start_90.png";
-		path[56] = "ms0:/seplugins/divapatch/pv_start_91.png";
-		path[57] = "ms0:/seplugins/divapatch/pv_start_92.png";
-		path[58] = "ms0:/seplugins/divapatch/pv_start_93.png";
-		path[59] = "ms0:/seplugins/divapatch/pv_start_94.png";
-		path[60] = "ms0:/seplugins/divapatch/pv_start_95.png";
-		path[61] = "ms0:/seplugins/divapatch/pv_start_96.png";
-		path[62] = "ms0:/seplugins/divapatch/pv_start_97.png";
-		path[63] = "ms0:/seplugins/divapatch/pv_start_edit.png";
-		path[64] = "ms0:/seplugins/divapatch/load_00.png";
-		path[65] = "ms0:/seplugins/divapatch/load_01.png";
-		path[66] = "ms0:/seplugins/divapatch/load_02.png";
-		path[67] = "ms0:/seplugins/divapatch/load_03.png";
-		path[68] = "ms0:/seplugins/divapatch/load_04.png";
-		path[69] = "ms0:/seplugins/divapatch/load_05.png";
-		path[70] = "ms0:/seplugins/divapatch/load_06.png";
-		path[71] = "ms0:/seplugins/divapatch/load_07.png";
-		path[72] = "ms0:/seplugins/divapatch/load_08.png";
-		path[73] = "ms0:/seplugins/divapatch/load_09.png";
-		path[74] = "ms0:/seplugins/divapatch/load_10.png";
-		path[75] = "ms0:/seplugins/divapatch/load_11.png";
-		path[76] = "ms0:/seplugins/divapatch/load_12.png";
-		path[77] = "ms0:/seplugins/divapatch/load_13.png";
-		path[78] = "ms0:/seplugins/divapatch/load_14.png";
-		path[79] = "ms0:/seplugins/divapatch/load_15.png";
-		path[80] = "ms0:/seplugins/divapatch/load_16.png";
-		path[81] = "ms0:/seplugins/divapatch/load_17.png";
-		path[82] = "ms0:/seplugins/divapatch/load_18.png";
-		path[83] = "ms0:/seplugins/divapatch/load_19.png";
-		path[84] = "ms0:/seplugins/divapatch/load_20.png";
-		path[85] = "ms0:/seplugins/divapatch/load_21.png";
-		path[86] = "ms0:/seplugins/divapatch/load_22.png";
-		path[87] = "ms0:/seplugins/divapatch/load_23.png";
-		path[88] = "ms0:/seplugins/divapatch/load_24.png";
-		path[89] = "ms0:/seplugins/divapatch/load_25.png";
-		path[90] = "ms0:/seplugins/divapatch/load_26.png";
-		path[91] = "ms0:/seplugins/divapatch/load_27.png";
-		path[92] = "ms0:/seplugins/divapatch/load_28.png";
-		path[93] = "ms0:/seplugins/divapatch/load_29.png";
-		path[94] = "ms0:/seplugins/divapatch/load_30.png";
-		path[95] = "ms0:/seplugins/divapatch/load_31.png";
-		path[96] = "ms0:/seplugins/divapatch/edit_base_04.png";
-		path[97] = "ms0:/seplugins/divapatch/home_base_02.png";
-		path[98] = "ms0:/seplugins/divapatch/menu_base_01.png";
-		path[99] = "ms0:/seplugins/divapatch/menu_result.png";
-		path[100] = "ms0:/seplugins/divapatch/mtit_base_01.png";
-		path[101] = "ms0:/seplugins/divapatch/mtit_base_02.png";
-		path[102] = "ms0:/seplugins/divapatch/mtit_base_03.png";
-		path[103] = "ms0:/seplugins/divapatch/mtit_base_04.png";
-		path[104] = "ms0:/seplugins/divapatch/mtit_base_05.png";
-		path[105] = "ms0:/seplugins/divapatch/plst_base_01.png";
-		path[106] = "ms0:/seplugins/divapatch/divapatch.prx";
+		path[9] = "ms0:/seplugins/divapatch/divaext/font12dot_01.png";
+		path[10] = "ms0:/seplugins/divapatch/divaext/menu_help_01.png";
+		path[11] = "ms0:/seplugins/divapatch/divaext/menu_help_02.png";
+		path[12] = "ms0:/seplugins/divapatch/divaext/menu_title_adhk.png";
+		path[13] = "ms0:/seplugins/divapatch/divaext/menu_title_crsl.png";
+		path[14] = "ms0:/seplugins/divapatch/divaext/menu_title_edit.png";
+		path[15] = "ms0:/seplugins/divapatch/divaext/menu_title_home.png";
+		path[16] = "ms0:/seplugins/divapatch/divaext/menu_title_modl.png";
+		path[17] = "ms0:/seplugins/divapatch/divaext/menu_title_msbx.png";
+		path[18] = "ms0:/seplugins/divapatch/divaext/menu_title_optn.png";
+		path[19] = "ms0:/seplugins/divapatch/divaext/menu_title_plys.png";
+		path[20] = "ms0:/seplugins/divapatch/divaext/menu_title_prvd.png";
+		path[21] = "ms0:/seplugins/divapatch/divaext/menu_title_room.png";
+		path[22] = "ms0:/seplugins/divapatch/divaext/menu_title_rtmg.png";
+		path[23] = "ms0:/seplugins/divapatch/divaext/menu_title_shop.png";
+		path[24] = "ms0:/seplugins/divapatch/divaext/menu_title_visl.png";
+		path[25] = "ms0:/seplugins/divapatch/divaext/pv_rank_01.png";
+		path[26] = "ms0:/seplugins/divapatch/divaext/pv_start_37.png";
+		path[27] = "ms0:/seplugins/divapatch/divaext/pv_start_39.png";
+		path[28] = "ms0:/seplugins/divapatch/divaext/pv_start_40.png";
+		path[29] = "ms0:/seplugins/divapatch/divaext/pv_start_41.png";
+		path[30] = "ms0:/seplugins/divapatch/divaext/pv_start_53.png";
+		path[31] = "ms0:/seplugins/divapatch/divaext/pv_start_65.png";
+		path[32] = "ms0:/seplugins/divapatch/divaext/pv_start_67.png";
+		path[33] = "ms0:/seplugins/divapatch/divaext/pv_start_68.png";
+		path[34] = "ms0:/seplugins/divapatch/divaext/pv_start_69.png";
+		path[35] = "ms0:/seplugins/divapatch/divaext/pv_start_70.png";
+		path[36] = "ms0:/seplugins/divapatch/divaext/pv_start_71.png";
+		path[37] = "ms0:/seplugins/divapatch/divaext/pv_start_72.png";
+		path[38] = "ms0:/seplugins/divapatch/divaext/pv_start_73.png";
+		path[39] = "ms0:/seplugins/divapatch/divaext/pv_start_74.png";
+		path[40] = "ms0:/seplugins/divapatch/divaext/pv_start_75.png";
+		path[41] = "ms0:/seplugins/divapatch/divaext/pv_start_76.png";
+		path[42] = "ms0:/seplugins/divapatch/divaext/pv_start_77.png";
+		path[43] = "ms0:/seplugins/divapatch/divaext/pv_start_78.png";
+		path[44] = "ms0:/seplugins/divapatch/divaext/pv_start_79.png";
+		path[45] = "ms0:/seplugins/divapatch/divaext/pv_start_80.png";
+		path[46] = "ms0:/seplugins/divapatch/divaext/pv_start_81.png";
+		path[47] = "ms0:/seplugins/divapatch/divaext/pv_start_82.png";
+		path[48] = "ms0:/seplugins/divapatch/divaext/pv_start_83.png";
+		path[49] = "ms0:/seplugins/divapatch/divaext/pv_start_84.png";
+		path[50] = "ms0:/seplugins/divapatch/divaext/pv_start_85.png";
+		path[51] = "ms0:/seplugins/divapatch/divaext/pv_start_86.png";
+		path[52] = "ms0:/seplugins/divapatch/divaext/pv_start_87.png";
+		path[53] = "ms0:/seplugins/divapatch/divaext/pv_start_88.png";
+		path[54] = "ms0:/seplugins/divapatch/divaext/pv_start_89.png";
+		path[55] = "ms0:/seplugins/divapatch/divaext/pv_start_90.png";
+		path[56] = "ms0:/seplugins/divapatch/divaext/pv_start_91.png";
+		path[57] = "ms0:/seplugins/divapatch/divaext/pv_start_92.png";
+		path[58] = "ms0:/seplugins/divapatch/divaext/pv_start_93.png";
+		path[59] = "ms0:/seplugins/divapatch/divaext/pv_start_94.png";
+		path[60] = "ms0:/seplugins/divapatch/divaext/pv_start_95.png";
+		path[61] = "ms0:/seplugins/divapatch/divaext/pv_start_96.png";
+		path[62] = "ms0:/seplugins/divapatch/divaext/pv_start_97.png";
+		path[63] = "ms0:/seplugins/divapatch/divaext/pv_start_edit.png";
+		path[64] = "ms0:/seplugins/divapatch/divaext/load_00.png";
+		path[65] = "ms0:/seplugins/divapatch/divaext/load_01.png";
+		path[66] = "ms0:/seplugins/divapatch/divaext/load_02.png";
+		path[67] = "ms0:/seplugins/divapatch/divaext/load_03.png";
+		path[68] = "ms0:/seplugins/divapatch/divaext/load_04.png";
+		path[69] = "ms0:/seplugins/divapatch/divaext/load_05.png";
+		path[70] = "ms0:/seplugins/divapatch/divaext/load_06.png";
+		path[71] = "ms0:/seplugins/divapatch/divaext/load_07.png";
+		path[72] = "ms0:/seplugins/divapatch/divaext/load_08.png";
+		path[73] = "ms0:/seplugins/divapatch/divaext/load_09.png";
+		path[74] = "ms0:/seplugins/divapatch/divaext/load_10.png";
+		path[75] = "ms0:/seplugins/divapatch/divaext/load_11.png";
+		path[76] = "ms0:/seplugins/divapatch/divaext/load_12.png";
+		path[77] = "ms0:/seplugins/divapatch/divaext/load_13.png";
+		path[78] = "ms0:/seplugins/divapatch/divaext/load_14.png";
+		path[79] = "ms0:/seplugins/divapatch/divaext/load_15.png";
+		path[80] = "ms0:/seplugins/divapatch/divaext/load_16.png";
+		path[81] = "ms0:/seplugins/divapatch/divaext/load_17.png";
+		path[82] = "ms0:/seplugins/divapatch/divaext/load_18.png";
+		path[83] = "ms0:/seplugins/divapatch/divaext/load_19.png";
+		path[84] = "ms0:/seplugins/divapatch/divaext/load_20.png";
+		path[85] = "ms0:/seplugins/divapatch/divaext/load_21.png";
+		path[86] = "ms0:/seplugins/divapatch/divaext/load_22.png";
+		path[87] = "ms0:/seplugins/divapatch/divaext/load_23.png";
+		path[88] = "ms0:/seplugins/divapatch/divaext/load_24.png";
+		path[89] = "ms0:/seplugins/divapatch/divaext/load_25.png";
+		path[90] = "ms0:/seplugins/divapatch/divaext/load_26.png";
+		path[91] = "ms0:/seplugins/divapatch/divaext/load_27.png";
+		path[92] = "ms0:/seplugins/divapatch/divaext/load_28.png";
+		path[93] = "ms0:/seplugins/divapatch/divaext/load_29.png";
+		path[94] = "ms0:/seplugins/divapatch/divaext/load_30.png";
+		path[95] = "ms0:/seplugins/divapatch/divaext/load_31.png";
+		path[96] = "ms0:/seplugins/divapatch/divaext/edit_base_04.png";
+		path[97] = "ms0:/seplugins/divapatch/divaext/home_base_02.png";
+		path[98] = "ms0:/seplugins/divapatch/divaext/menu_base_01.png";
+		path[99] = "ms0:/seplugins/divapatch/divaext/menu_result.png";
+		path[100] = "ms0:/seplugins/divapatch/divaext/mtit_base_01.png";
+		path[101] = "ms0:/seplugins/divapatch/divaext/mtit_base_02.png";
+		path[102] = "ms0:/seplugins/divapatch/divaext/mtit_base_03.png";
+		path[103] = "ms0:/seplugins/divapatch/divaext/mtit_base_04.png";
+		path[104] = "ms0:/seplugins/divapatch/divaext/mtit_base_05.png";
+		path[105] = "ms0:/seplugins/divapatch/divaext/plst_base_01.png";
+		path[106] = "ms0:/seplugins/divapatch/diva2nd#_translation.bin";
+		path[107] = "ms0:/seplugins/divapatch/divaext";
+		path[108] = "ms0:/seplugins/divapatch/diva2nd#";
+		path[109] = "ms0:/seplugins/divapatch/divapatch.prx";
 	}
 
 	char buf[2048];
