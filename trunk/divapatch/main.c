@@ -30,7 +30,7 @@
 
 #define PLUGIN_NAME "divapatch"
 
-PSP_MODULE_INFO(PLUGIN_NAME, PSP_MODULE_KERNEL, 1, 0);
+PSP_MODULE_INFO(PLUGIN_NAME, PSP_MODULE_KERNEL, 0, 5);
 PSP_HEAP_SIZE_KB(0);
 
 #define GAME_MODULE "PdvApp"
@@ -53,6 +53,8 @@ const char *diva_id[] = {
         "ULJM05681", // Project Diva 2nd
         "ULJM05933", // Project Diva Extend
 		"NPJH50465", // Project Diva Extend
+		"NPJH50475", // Project Diva 2nd Okaidoku Ban
+		"ULJM05681", // Project Diva 2nd 1.01
 };
 
 const char *trans_files[] = {
@@ -60,6 +62,8 @@ const char *trans_files[] = {
         "diva2nd_translation.bin",
         "divaext_translation.bin",
         "divaext_translation.bin",
+        "diva2nd#_translation.bin",
+        "diva2nd101_translation.bin",
 };
 
 const char *embedded_files[] = {
@@ -67,13 +71,21 @@ const char *embedded_files[] = {
         "diva2nd_embedded.bin",
         "divaext_embedded.bin",
         "divaext_embedded.bin",
+        "diva2nd#_embedded.bin",
+        "diva2nd101_embedded.bin",
 };
 
 const stub stubs[] = {
         { 0x109F50BC, diva_open  }, // sceIoOpen
         { 0x6A638D83, diva_read  }, // sceIoRead
+        { 0xA0B5A7C2, diva_aread }, // sceIoReadAsync
+        { 0xE23EEC33, diva_wait  }, // sceIoWaitAsync
+        { 0x3251EA56, diva_poll  }, // sceIoPollAsync
+        { 0x35DBD746, diva_waitc }, // sceIoWaitAsyncCB
         { 0x810C4BC3, diva_close }, // sceIoClose
 };
+
+#ifdef UTILITY_HOOK
 
 const stub utility_stubs[] = {
         { 0x50C4CD57, diva_save  }, // sceUtilitySavedataInitStart
@@ -81,6 +93,8 @@ const stub utility_stubs[] = {
         { 0x4DB1E739, diva_net   }, // sceUtilityNetconfInitStart
         { 0x0251B134, diva_shot  }, // sceUtilityScreenshotInitStart
 };
+
+#endif
 
 char filepath[256];
 
@@ -133,8 +147,10 @@ void patch_embedded() {
     strrchr(filepath, '/')[1] = 0;
     strcat(filepath, embedded_files[patch_index]);
 
+    kprintf("trying to open %s\n", filepath);
     fd = sceIoOpen(filepath, PSP_O_RDONLY, 0777);
     if(fd < 0) {
+        kprintf("%s not found\n", filepath);
         return;
     }
 
@@ -182,6 +198,7 @@ void patch_embedded() {
         }
     }
     sceKernelFreePartitionMemory(embedded_id);
+    kprintf("patching done\n");
 }
 
 void patch_eboot()  {
@@ -194,8 +211,10 @@ void patch_eboot()  {
     strrchr(filepath, '/')[1] = 0;
     strcat(filepath, trans_files[patch_index]);
 
+    kprintf("trying to open %s\n", filepath);
     fd = sceIoOpen(filepath, PSP_O_RDONLY, 0777);
     if(fd < 0) {
+        kprintf("%s not found\n", filepath);
         return;
     }
 
@@ -347,6 +366,7 @@ void patch_eboot()  {
         }
     }
     sceKernelFreePartitionMemory(table_id);
+    kprintf("patching done\n");
 }
 
 /**
@@ -376,7 +396,7 @@ int module_start_handler(SceModule2 * module) {
     if((module->text_addr & 0x80000000) != 0x80000000 && strcmp(module->modname, GAME_MODULE) == 0) {
         // game found, but since all versions use the same module name we need
         // to find out the correct game.
-        kprintf("Project Diva found, loaded at %08X\n", module->text_addr);
+        kprintf("Project Diva found, loaded at %08X, data size: %08X, bss size: %08X\n", module->text_addr, module->data_size, module->bss_size);
         char gameid[16];
 
         if(get_gameid(gameid) >= 0) {
@@ -388,9 +408,17 @@ int module_start_handler(SceModule2 * module) {
                     break;
                 }
             }
+             // Check if the game has been updated to 1.01 and change the index to use the diva2nd101 files
+             if(patch_index == 1 && module->data_size == 0x0016887D && module->bss_size == 0x0003B860) {
+                 kprintf("Found Project Diva 2nd v1.01 eboot, changing patch index to use %s\n", diva_id[5]);
+                 patch_index = 5;
+             }
+
             // valid gameid
             if(patch_index >= 0) {
+                kprintf("patching embedded strings (overwrite)\n");
                 patch_embedded();
+                kprintf("patching string addresses (redirect)\n");
                 patch_eboot();
                 clear_caches();
                 // wake up our main thread so it can hook the file i/o funcs of the game
@@ -413,6 +441,8 @@ void patch_imports(SceModule *module) {
     }
 }
 
+#ifdef UTILITY_HOOK
+
 /**
  * Patch the imports of the game eboot (osk/net/save dialogs)
  * @param module: module structure to have it hooked
@@ -432,6 +462,8 @@ void change_lang(int lang) {
     sceImposeSetLanguageMode(lang, button);
 }
 
+#endif
+
 int thread_start(SceSize args, void *argp) {
     // save the plugin location
     strcpy(filepath, argp);
@@ -446,14 +478,16 @@ int thread_start(SceSize args, void *argp) {
 
     // load the image index table
     if(patch_index >= 0) {
+#ifdef UTILITY_HOOK
         // change the impose language
         change_lang(PSP_SYSTEMPARAM_LANGUAGE_ENGLISH);
-
+#endif
         SceModule *module = sceKernelFindModuleByName(GAME_MODULE);
         if(module) {
+#ifdef UTILITY_HOOK
             kprintf("patching utility funcs\n");
             patch_utility(module);
-
+#endif
             if(load_image_index(patch_index)) {
                 // redirect the file open, read and close operations to our plugin
                 kprintf("patching imports\n");

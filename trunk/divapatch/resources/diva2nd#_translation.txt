@@ -1,0 +1,26 @@
+# Translation file for Project Diva 2nd Okaidoku Ban (use shift-jis to edit the file)
+# 0x08xxxxxx: use this format to rewrite the pointed address
+#             to a newly allocated one for the translation.
+# !x08xxxxxx: use this type of format if the address to modify
+#             is embedded inside a instruction (use the lower
+#             address part of the instruction for the address).
+# ^x08xxxxxx: use this type of format if the address to modify
+#             is embedded inside a instruction and you only need
+#             to patch the upper address (the lui is behind many
+#             branch instructions).
+# $x08xxxxxx: use this type of format if the address to modify
+#             is embedded inside a instruction and you only need
+#             to patch the lower address
+
+# Main menu
+
+!x088D47D8 Rhythm Game
+!x088D47E4 Character Select
+!x088D47F0 DIVA Room
+!x088D47FC Shop
+!x088D4808 Play Records
+!x088D4814 Edit
+!x088D4820 Ad Hoc
+!x088D482C Options
+!x088D4838 Save
+!x088D4844 Back to Title

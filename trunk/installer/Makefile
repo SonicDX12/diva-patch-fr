@@ -17,7 +17,7 @@ LIBS = -lvlfgui -lvlfgu -lvlfutils -lvlflibc -lpspkubridge
 PSP_FW_VERSION = 271
 
 EXTRA_TARGETS = EBOOT.PBP
-PSP_EBOOT_TITLE = Project Diva Extend Patch FR Installer v2.0
+PSP_EBOOT_TITLE = Diva Patch FR Installer v3.0
 PSP_EBOOT_ICON = ICON0.PNG
 PSP_EBOOT_PIC1 = PIC1.PNG
 
