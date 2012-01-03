@@ -1,4 +1,4 @@
-#summary Comment aider pour la traduction?
+#summary Comment aider pour la traduction? Voir ce qui est traduit.
 
 Vous souhaitez aider à la traduction?  Vous trouverez ici les fichiers textes nécéssaires.
 
@@ -7,3 +7,7 @@ Vous souhaitez aider à la traduction?  Vous trouverez ici les fichiers textes n
 
 ||divaext_translation.txt||[https://diva-patch-fr.googlecode.com/svn/trunk/fichiers%20fr/divaext_translation.txt ICI]||
 ||divaext_embedded.txt||[https://diva-patch-fr.googlecode.com/svn/trunk/fichiers%20fr/divaext_embedded.txt ICI]||
+
+*Project DIVA 2nd#*
+
+||diva2nd#__translation.txt||[https://diva-patch-fr.googlecode.com/svn/trunk/fichiers%20fr/diva2nd%23_translation.txt ICI]||
