@@ -11,19 +11,18 @@ Pour cela, nous allons utiliser l'Installer fournis pour faciliter l'installatio
 
   * Une PSP en CFW/LCFW du style PRO ou ME
   * Un UMD/ISO du jeu (ou bientôt la version PSN)
-  * Le Patch dispo dans la partie "Downloads"
+  * Le Patch correspondant à votre CFW dispo dans la partie "Downloads"
 
 = Screenshots de l'Installer =
-(_Images issus de la version 1_)
 
-http://img856.imageshack.us/img856/7729/pic0001z.png
-http://img204.imageshack.us/img204/7383/pic0000z.png
+http://img804.imageshack.us/img804/5730/pic0003zi.png
+http://img88.imageshack.us/img88/5289/pic0000x.png
 
 = Installation =
 
     # Décompressez l'archive. Vous obiendrez un dossier "DivaPatchInstaller" (ce dossier contient l'installer)
     # Placez ce dossier dans le dossier GAME de votre PSP (X:/PSP/GAME où X est la lettre assigné à votre PSP par votre PC)
-    # Lancer l'installer et appuyez sur "Installer le Patch FR XX/XX/XX"
+    # Lancer l'installer et appuyez sur "Installer le Patch Extend FR" ou "Installer le Patch 2nd# FR"
     # Quittez l'installer et jouez!
 
 *ATTENTION!:* 
