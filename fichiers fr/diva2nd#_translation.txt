@@ -12,15 +12,20 @@
 #             is embedded inside a instruction and you only need
 #             to patch the lower address
 
+#ｪ = é
+#ｫ = è
+#ｬ = à
+#ｭ = ê
+
 # Options: Data import
 
 !x08812D40 PV de jeu de rythme
 !x08812D54 Modules
 !x08812D68 Themes de Chambre
 !x08812D7C Objets de Chambre (Sol)
-!x08812D90 Objets de Chambre (Etagere)
+!x08812D90 Objets de Chambre (Etagｫre)
 !x08812DA4 Objets de Chambre (Mur)
-!x08812DB8 Donnees Musique (Mode EDIT)
+!x08812DB8 Donnｪes Musique (Mode EDIT)
 !x08812DCC Mouvements (Mode EDIT)
 !x08812DE0 Fond (Mode EDIT)
 !x08812DF4 Accessoires (Mode EDIT)
@@ -28,17 +33,17 @@
 
 # Options: Data import menu descriptions
 
-!x08813010 Voulez-vous importer les donnees additionelles
-!x08813024 de cette categorie comme EXTRA?
+!x08813010 Voulez-vous importer les donnｪes additionelles
+!x08813024 de cette catｪgorie comme EXTRA?
 
-!x08813214 Importation des donnees terminee!
+!x08813214 Importation des donnｪes terminee!
 !x08813228 Afficher la liste de l'import.
-!x0881336C Liste des donnees importees
-!x088135B4 Impossible de lire les donnees additionelles.
-!x08813740 Revenir a l'ecran d'accueil?
+!x0881336C Liste des donnｪes importees
+!x088135B4 Impossible de lire les donnｪes additionelles.
+!x08813740 Revenir ｬ l'ecran d'accueil?
 
-!x088139DC Acces au Memory Stick pour
-!x088139F0 verifier les donnees additionelles.
+!x088139DC Accｫs au Memory Stick pour
+!x088139F0 vｪrifier les donnｪes additionelles.
 !x08813A04 Ne retirez pas le Memory Stick!
 
 # Vocaloids
@@ -69,7 +74,7 @@
 
 # Character mood screen
 
-!x08821F44 Cadeaux donnes   %03d
+!x08821F44 Cadeaux donnｪs: %03d
 
 # Play records exit (confirm message)
 
@@ -87,15 +92,15 @@
 !x08824AA8 Stats par DLC
 !x08823598 Humeur des persos
 !x08825738 Humeur des persos
-!x088235BC Parametre du profil
-!x088275F0 Parametre du profil
+!x088235BC Paramｫtre du profil
+!x088275F0 Paramｫtre du profil
 !x088235E0 Amis
 !x0882A534 Amis
 
 # Music play info screen
 
-!x088246F4 High score      Combo Max    Reussi      Essais
-!x08825364 High score      Combo Max    Reussi      Essais
+!x088246F4 High score      Combo Max    Rｪussi      Essais
+!x08825364 High score      Combo Max    Rｪussi      Essais
 
 # Profile menu
 
@@ -112,7 +117,7 @@
 
 # Profile Ad-Hoc message
 
-!x088278B4 Verifiez votre profil 
+!x088278B4 Vｪrifiez votre profil 
 !x088278C8 afin que vous puissiez
 !x088278DC l'envoyer via Ad-Hoc.
 
@@ -137,7 +142,7 @@
 !x08828EB0 Choix de la chanson
 !x08828AAC Entrer le nom de la chanson
 
-#?!x08828C90 ※Pas d'entree
+#?!x08828C90 ※Pas d'entrｪe
 
 # Profile: title selection
 
@@ -175,12 +180,12 @@
 # Gameplay info
 
 !x0882DBB0 Temps de jeu
-!x0882DBD0 Points DIVA gagnes
-!x0882DBF0 Cadeaux donnes
-!x0882DACC Taux de chansons terminees
+!x0882DBD0 Points DIVA gagnｪs
+!x0882DBF0 Cadeaux donnｪs
+!x0882DACC Taux de chansons terminｪes
 !x0882DAD0 Taux d'objets acquis
 !x0882DAD4 Taux de modules acquis
-!x0882DAD8 Galerie debloquee
+!x0882DAD8 Galerie dｪbloquｪe
 !x0882DADC Taux de Titre acquis
 !x0882DAE0 Taux de Perfect
 
@@ -188,19 +193,19 @@
 
 !x088310E8 Quitter la Boutique?
 !x0883145C De nouveaux objets
-!x08831480 sont dispo a l'achat.
+!x08831480 sont dispo ｬ l'achat.
 !x08832054 Pas assez de Points DIVA.
 
 !x08832178 Voulez-vous l'acheter?
 !x08832180 ○:OUI　×:NON
-!x08832294 Quantite Max Atteinte.
-!x08832558 Quantite 0 / 0
-!x08832614 Quantite %d / %d
-!x08832640 Quantite - / -
+!x08832294 Quantitｪ Max Atteinte.
+!x08832558 Quantitｪ 0 / 0
+!x08832614 Quantitｪ %d / %d
+!x08832640 Quantitｪ - / -
 
 # Shop menu
 
-!x08831678 Categories
+!x08831678 Catｪgories
 !x0883169C Modules
 !x088316C0 Chambres
 !x088316E4 Objets de Chambre
@@ -209,9 +214,9 @@
 # Autosave message (credits)
 
 !x0883ACC8 Ce jeu supporte la sauvegarde automatique.
-!x0883ACDC Ne retirez pas le Memory Stick ou n'eteignez pas 
+!x0883ACDC Ne retirez pas le Memory Stick ou n'ｪteignez pas 
 !x0883ACF0 la PSP durant la sauvegarde.  Merci CodeStation
-!x0883AD04 Project Diva 2nd# Patch Francais 03/01/2012 
+!x0883AD04 Project Diva 2nd# Patch Francais 05/01/2012 
 
 #!x0883AE98 本ゲームではセーブ時に、
 #!x0883AEAC ゲームの進行を保存するためのセーブデータとは別に、
@@ -253,54 +258,54 @@
 
 # Room entering messages
 
-!x088D5F20 Aller a la Chambre de Miku?
-!x088D5F2C Aller a la Chambre de Rin?
-!x088D5F38 Aller a la Chambre de Len?
-!x088D5F44 Aller a la Chambre de Luka?
-!x088D5F50 Aller a la Chambre de Kaito?
-!x088D5F5C Aller a la Chambre de Meiko?
-!x088D5F68 Aller a la Chambre de Neru?
-!x088D5F74 Aller a la Chambre de Haku?
-!x088D5F80 Aller a la Chambre de S.Meiko?
+!x088D5F20 Aller ｬ la Chambre de Miku?
+!x088D5F2C Aller ｬ la Chambre de Rin?
+!x088D5F38 Aller ｬ la Chambre de Len?
+!x088D5F44 Aller ｬ la Chambre de Luka?
+!x088D5F50 Aller ｬ la Chambre de Kaito?
+!x088D5F5C Aller ｬ la Chambre de Meiko?
+!x088D5F68 Aller ｬ la Chambre de Neru?
+!x088D5F74 Aller ｬ la Chambre de Haku?
+!x088D5F80 Aller ｬ la Chambre de S.Meiko?
 
 # Options menu entries
 
 !x088D64D4 Sauvegarde-Auto
-!x08806518 Instal. donnees
-!x088D68A0 Import donnees additionelles
-!x088D68B0 Recuperation des donnees d'un jeu precedent
+!x08806518 Instal. donnｪes
+!x088D68A0 Import donnｪes additionelles
+!x088D68B0 Rｪcupｪration des donnｪes d'un jeu precedent
 
-!x088D6D44 Faire un import de donnees?
-!x088D6D54 Import des donnees de DIVA 1st.
+!x088D6D44 Faire un import de donnｪes?
+!x088D6D54 Import des donnｪes de DIVA 1st.
 !x088D7154 La save-auto est sur ON.
 
 # Installation data messages
 
 !x088D716C ※Durant la sauvegarde, la LED
 !x088D7178 du Memory Stick clignote.
-!x088D7184 Veuillez ne pas eteindre la PSP,
+!x088D7184 Veuillez ne pas ｪteindre la PSP,
 !x088D7198 ni retirer la Memory Stick.
 !x088D71A8 
 
 !x088D725C Save-Auto
-!x088D7288 Votre progression n'a pas ete enregistree.
+!x088D7288 Votre progression n'a pas ｪtｪ enregistrｪe.
 !x088D7294 Save-auto mis sur OFF.
 
 !x088D72A0 Creer une sauvegarde depuis
 !x088D72B4 le menu "Sauver" avant de
-!x088D72C4 regler la save-auto sur ON.
+!x088D72C4 rｪgler la save-auto sur ON.
 
-!x088D7688 Donnees d'installation
-!x088D7700 Donnees d'instal. non trouvees.
-!x088D768C Les donnees d'instal. n'ont pas ete trouvees,
+!x088D7688 Donnｪes d'installation
+!x088D7700 Donnｪes d'instal. non trouvｪes.
+!x088D768C Les donnｪes d'instal. n'ont pas ｪtｪ trouvｪes,
 !x088D7690 le jeu les chargera depuis l'UMD.
-!x088D7698 Instal. donnees a ete mis sur OFF.
+!x088D7698 Instal. donnｪes a ｪtｪ mis sur OFF.
 
 !x088D7774 Memory Stick non-detecte!
 !x088D7A00 Save-Auto
-!x088D7A40 Installation donnees
+!x088D7A40 Installation donnｪes
 !x088D8720 Save-Auto
-!x088D87C0 Installation donnees
+!x088D87C0 Installation donnｪes
 
 # Module menu extras
 
@@ -308,45 +313,45 @@
 
 # Main menu messages
 
-!x088E077C Les donnees importees
-!x088E074C n'ont pas pu etre chargees.
+!x088E077C Les donnｪes importｪes
+!x088E074C n'ont pas pu ｭtre chargｪes.
 !x088E078C Utiliser les options 
 !x088E0798 d'import pour importer.
-!x088E0808 Donnees additionelles
+!x088E0808 donnｪes additionelles
 
 # Unlock messages
 
-0x08C45490 Une nouvelle chanson a ete ajoutee.
-0x08C45494 Le PV a ete ajoute a la Galerie.
-0x08C45498 Le mode HARD a ete ajoute.
-0x08C4549C Le mode EXTREME a ete ajoute.
-0x08C454A0 Un nouveau perso a ete ajoute.
-0x08C454A4 Un nouveau module est dispo a la Boutique.
-0x08C454A8 Une nouvelle Chambre est dispo a la Boutique.
-0x08C454AC Un Theme de Chambre est dispo a la Boutique.
-0x08C454B0 Un Objet de Chambre est dispo a la Boutique.
+0x08C45490 Une nouvelle chanson a ｪtｪ ajoutｪe.
+0x08C45494 Le PV a ｪtｪ ajoutｪ ｬ la Galerie.
+0x08C45498 Le mode HARD a ｪtｪ ajoutｪ.
+0x08C4549C Le mode EXTREME a ｪtｪ ajoutｪ.
+0x08C454A0 Un nouveau perso a ｪtｪ ajoutｪ.
+0x08C454A4 Un nouveau module est dispo ｬ la Boutique.
+0x08C454A8 Une nouvelle Chambre est dispo ｬ la Boutique.
+0x08C454AC Un Theme de Chambre est dispo ｬ la Boutique.
+0x08C454B0 Un Objet de Chambre est dispo ｬ la Boutique.
 0x08C454B4 エディット背景が追加されました。
 0x08C454B8 SGイラストが追加されました。
 
 # DLC load error messages
 
-!x08863DEC Les donnees additionelles
-!x08863E00 n'ont pas pu etre chargees.
+!x08863DEC Les donnｪes additionelles
+!x08863E00 n'ont pas pu ｭtre chargｪes.
 
-!x0890B128 Les donnees additionelles
-!x0890B13C n'ont pas pu etre chargees.
+!x0890B128 Les donnｪes additionelles
+!x0890B13C n'ont pas pu ｭtre chargｪes.
 
-!x0890B150 Le module utilise a ete
-!x0890B164 remplace par l'original.
+!x0890B150 Le module utilisｪ a ｪtｪ
+!x0890B164 remplacｪ par l'original.
 
-!x0890B210 Les donnees additionelles
-!x0890B224 n'ont pas pu etre chargees.
+!x0890B210 Les donnｪes additionelles
+!x0890B224 n'ont pas pu ｭtre chargｪes.
 
-!x0890B238 La disposition par defaut de
-!x0890B24C la Chambre a ete restauree.
+!x0890B238 La disposition par dｪfaut de
+!x0890B24C la Chambre a ｪtｪ restaurｪe.
 
-!x0890B2B4 Les donnees additionelles
-!x0890B2C8 n'ont pas pu etre chargees.
+!x0890B2B4 Les donnｪes additionelles
+!x0890B2C8 n'ont pas pu ｭtre chargｪes.
 
 # DIVA room
 
@@ -354,12 +359,12 @@
 !x0890CFD0 Themes de Chambre
 !x08912EA8 Themes de Chambre
 !x0890D174 Objets de Chambre (Sol)
-!x0890D180 Objets de Chambre (Etageres)
+!x0890D180 Objets de Chambre (Etagｫres)
 !x0890D18C Objets de Chambre (Mur)
 !x0890D44C Themes de Chambre Extra
 !x08912EC0 Themes de Chambre Extra
 !x0890D634 Objets de Chambre Extra (Sol)
-!x0890D640 Objets de Chambre Extra (Etageres)
+!x0890D640 Objets de Chambre Extra (Etagｫres)
 !x0890D650 Objets de Chambre Extra (Mur)
 
 !x0890F5BC Composition de la Chambre
@@ -375,25 +380,25 @@
 !x08914E4C Composition de la Chambre
 !x089159A8 Composition de la Chambre
 
-!x0891095C Reorganiser les objets
+!x0891095C Rｪorganiser les objets
 !x08910CD8 Placer l'objet ici?
 !x08910D24 Supprimer cet objet?
 !x08910E44 Supprimer tout les objets?
-!x08910F68 Retourner a la Chambre DIVA?
+!x08910F68 Retourner ｬ la Chambre DIVA?
 !x08911074 Reorganiser un ou deux objets SVP.
 !x0891115C Supprimer l'objet en-dessous 
 !x08911170 pour ajouter cet objet?
 !x089111C0 Vous ne pouvez plus
 !x089111D4 mettre d'objets ici.
 
-!x089112C0 Les donnees additionelles
-!x089112D4 ne peuvent pas etre chargees.
-!x089140DC ne peuvent pas etre chargees.
+!x089112C0 Les donnｪes additionelles
+!x089112D4 ne peuvent pas ｭtre chargｪes.
+!x089140DC ne peuvent pas ｭtre chargｪes.
 !x08912550 Supprimer un objet (Sol)
-!x0891253C Supprimer un objet (Etagere)
+!x0891253C Supprimer un objet (Etagｫres)
 !x08912528 Supprimer un objet (Mur)
 !x089125C4 Deplacer un objet (Sol)
-!x089125B0 Deplacer un objet (Etagere)
+!x089125B0 Deplacer un objet (Etagｫres)
 !x0891259C Deplacer un objet (Mur)
 
 !x08912EB4 Objets de Chambre
@@ -407,17 +412,17 @@
 # Present-giving messages
 
 !x0892009C Objet: %s
-!x089200D0 sera donnee.
-!x08920174 Cadeau donne!
-!x08920270 Le cadeau a ete mis
+!x089200D0 sera donnｪe.
+!x08920174 Cadeau donnｪ!
+!x08920270 Le cadeau a ｪtｪ mis
 !x08920284 dans la Chambre.
-!x089202DC Retourner a la Chambre DIVA?
+!x089202DC Retourner ｬ la Chambre DIVA?
 
-!x08920338 Les donnees additionelles
-!x0892034C n'ont pas pas etre chargees.
+!x08920338 Les donnｪes additionelles 
+!x0892034C n'ont pas pas ｭtre chargｪes.
 
-!x08913FD4 Acces au Memory Stick
-!x08913FE8 pour verifier les donnees additionelles.
+!x08913FD4 Accｫs au Memory Stick
+!x08913FE8 pour vｪrifier les donnｪes additionelles.
 !x08913FFC Ne pas retirer le Memory Stick!
 
 # DIVA room (cont.)
@@ -428,17 +433,17 @@
 !x08916740 Juke-Box
 !x0891674C Galerie des PV
 !x08916758 Galerie d'images
-!x08916764 Mise en veille reglable
+!x08916764 Mise en veille rｪglable
 !x08916770 Minuterie de navigation
-!x0891677C Reveil
+!x0891677C Rｪveil
 !x08917168 Retourner au menu.
 
 !x08917198 Utiliser le/la %s?
 !x089171AC Changer le/la %s?
 !x089171B8 Donner un %s?
 !x08917244 Bonus pour utiliser la Chambre DIVA.
-!x08917258 1000 Points DIVA gagnes.
-!x089172D8 Regler le temps de %02d:%02d.
+!x08917258 1000 Points DIVA gagnｪs.
+!x089172D8 Rｪgler le temps de %02d:%02d.
 !x089172E8 Supprimer le/la %s?
 
 # DIVA room (cont.)
@@ -447,20 +452,20 @@
 !x08918088 Lecteur de Musique
 !x0891809C Regarder/Editer une Playlist
 !x0891825C Regarder/Editer une Playlist
-!x089180B0 Creer une playlist
+!x089180B0 Crｪer une playlist
 !x089180C4 Supprimer une playlist
 !x08918904 Supprimer une playlist
 !x089180D8 Retour
 !x08918168 Lecteur de Musique
 !x089185B8 Editer une playlist
 !x08918B90 Editer une playlist
-!x0891D8F8 Retourner a la Chambre DIVA?
-!x0891DD2C Retourner a la Chambre DIVA?
+!x0891D8F8 Retourner ｬ la Chambre DIVA?
+!x0891DD2C Retourner ｬ la Chambre DIVA?
 
 # DIVA room (playlist dialogs)
 
-!x0891DA18 Voulez-vous mettre fin a
-!x0891DA44 l'edition de votre Playlist?
+!x0891DA18 Voulez-vous mettre fin ｬ
+!x0891DA44 l'ｪdition de votre Playlist?
 
 !x0891DA78 La Playlist ne sera pas sauvegarder
 !x0891DAA4 si vous quittez maintenant.
@@ -469,21 +474,21 @@
 !x0891DB58 La Playlist suivante:
 !x0891DBAC Etes-vous sur de la supprimer?
 
-!x0891DBE0 Les musiques ne sont pas enregistrees.
+!x0891DBE0 Les musiques ne sont pas enregistrｪes.
 
 !x0891DC0C La Playlist actuelle n'a pas 
-!x0891DC38 ete sauvegardee. Etes-vous sur de quitter?
+!x0891DC38 ｪtｪ sauvegardｪe. Etes-vous sur de quitter?
 
 !x0891DC6C Aucune Playlist n'est disponible.
-!x0891DC98 Voulez-vous en creer une?
+!x0891DC98 Voulez-vous en crｪer une?
 !x0891DCF8 Aucune Playlist est disponible.
-!x0891DD8C Le nombre limite d'enregistrements a ete atteint.
+!x0891DD8C Le nombre limite d'enregistrements a ｪtｪ atteint.
 
 !x0891DDC0 Le nombre limite de Playlist
 !x0891DDEC est atteint.
 
-!x0891DE20 Les donnees additionelles 
-!x0891DE4C n'ont pas pu etre chargees.
+!x0891DE20 Les donnｪes additionelles 
+!x0891DE4C n'ont pas pu ｭtre chargｪes.
 
 # DIVA room (PV menu)
 
@@ -492,13 +497,13 @@
 !x08921F3C Regarder un PV
 !x08921E4C Regarder/Editer une Playlist
 !x08922134 Regarder/Editer une Playlist
-!x08921E60 Creer une Playlist
+!x08921E60 Crｪer une Playlist
 !x08921E74 Supprimer une Playlist
 !x08922618 Supprimer une Playlist
 !x08921E88 Changer le module
 !x08921E9C Retour
-!x08922020 Liste des PV enregistree
-!x089228F4 Liste des PV enregistree
+!x08922020 Liste des PV enregistrｪe
+!x089228F4 Liste des PV enregistrｪe
 !x089223C4 Editer une Playlist
 !x08922810 Editer une Playlist
 !x089229F0 Selection du module
@@ -506,99 +511,99 @@
 !x08922B0C Module A
 !x08922B60 Module B
 !x08922BB8 Confirmer
-!x08922D88 Defaut
+!x08922D88 Dｪfaut
 !x08926ACC Extras
-!x08926DC0 Retourner a la Chambre DIVA?
-!x089271DC Retourner a la Chambre DIVA?
-!x08926EE0 Voulez-vous mettre fin a
-!x08926F0C l'edition de votre Playlist?
-!x08926F40 La Playlist ne sera pas sauvegardee
+!x08926DC0 Retourner ｬ la Chambre DIVA?
+!x089271DC Retourner ｬ la Chambre DIVA?
+!x08926EE0 Voulez-vous mettre fin ｬ
+!x08926F0C l'ｪdition de votre Playlist?
+!x08926F40 La Playlist ne sera pas sauvegardｪe
 !x08926F6C si vous quittez maintenant.
 !x08926F98 Etes-vous sur?
 !x08927008 La Playlist suivante:
 !x0892705C Etes-vous sur de la supprimer?
 !x08927090 Aucun PV dans la liste!
 !x089270BC Voulez-vous supprimer la Playlist
-!x089270E8 et revenir au menu precedent?
+!x089270E8 et revenir au menu prｪcｪdent?
 !x0892711C Aucune Playlist n'est disponible.
-!x08927148 Voulez-vous en creer une?
+!x08927148 Voulez-vous en crｪer une?
 !x089271A8 Aucune Playlist est disponible.
-!x0892723C Le nombre limite d'enregistrements a ete atteint.
+!x0892723C Le nombre limite d'enregistrements a ｪtｪ atteint.
 !x08927270 Le nombre limite de Playlist
 !x0892729C est atteint.
-!x089272D8 Les donnees additionelles
-!x08927304 n'ont pas pu etre chargees.
-!x08927340 Les donnees additionelles
-!x0892736C n'ont pas pu etre chargees.
+!x089272D8 Les donnｪes additionelles
+!x08927304 n'ont pas pu ｭtre chargｪes.
+!x08927340 Les donnｪes additionelles
+!x0892736C n'ont pas pu ｭtre chargｪes.
 !x08927398 オプション画面でインポートを
 !x089273C4 行って下さい。
 
 # DIVA room (date/clock and quantity texts)
 
 !x08933C98 %04d/%02d/%02d   %02d:%02d:%02d
-!x0893425C Quantite ∞
-!x08934280 Quantite %d / %d
-!x089342C4 Quantite - / -
-!x08936AF4 Mise en veille reglable
+!x0893425C Quantitｪ ∞
+!x08934280 Quantitｪ %d / %d
+!x089342C4 Quantitｪ - / -
+!x08936AF4 Mise en veille rｪglable
 !x08936B00 Minuterie de navigation
-!x08936B0C Reveil
+!x08936B0C Rｪveil
 
 # DIVA room: timers
 
-!x08929DA0 Mise en veille reglable
-!x0892A560 Mise en veille reglable
-!x0892A668 Mise en veille reglable
+!x08929DA0 Mise en veille rｪglable
+!x0892A560 Mise en veille rｪglable
+!x0892A668 Mise en veille rｪglable
 
 !x08929FBC Minuterie de navigation
 !x0892B138 Minuterie de navigation
 
-!x0892A0C8 "Mise en veille reglable"
+!x0892A0C8 "Mise en veille rｪglable"
 !x0892A0DC La PSP se met automatiquement en mode veille
-!x0892A0F0 apres le delai specifie (en minutes).
-!x0892A104 Sauvegarder vos donnees avant!
+!x0892A0F0 aprｫs le dｪlai spｪcifiｪ (en minutes).
+!x0892A104 Sauvegarder vos donnｪes avant!
 !x0892A118
 
 !x0892A184 "Minuterie de navigation"
-!x0892A198 Une alarme retentit apres 
-!x0892A1AC le delai specifie (en minutes).
+!x0892A198 Une alarme retentit aprｫs 
+!x0892A1AC le dｪlai spｪcifiｪ (en minutes).
 
-!x0892A1D0 Retourner a la Chambre DIVA.
-!x0892A1F4 Retourner a la Chambre DIVA.
+!x0892A1D0 Retourner ｬ la Chambre DIVA.
+!x0892A1F4 Retourner ｬ la Chambre DIVA.
 
-!x08906174 Reveil
-!x08906F34 Reveil
-!x08907620 Reveil
+!x08906174 Rｪveil
+!x08906F34 Rｪveil
+!x08907620 Rｪveil
 
-!x08906D98 "Reveil"
-!x08906DAC Le reveil va lire un fichier MP3 
-!x08906DC0 a l'heure specifiee. Vous aurez besoin
-!x08906DD4 de sauvegarder vos donnees.
+!x08906D98 "Rｪveil"
+!x08906DAC Le rｪveil va lire un fichier MP3 
+!x08906DC0 ｬ l'heure spｪcifiｪe. Vous aurez besoin
+!x08906DD4 de sauvegarder vos donnｪes.
 !x08906DE8
 
-!x08906E50 Retourner a la Chambre DIVA.
+!x08906E50 Retourner ｬ la Chambre DIVA.
 
 # Music device selection
 
 !x0897507C Liste des Chansons
 !x08975088 Memory Stick
-!x08975410 La Memory Stick n'est pas inseree.
-!x0897547C Chansons non trouvees.
-!x089754B0 Cette chanson ne peut etre jouee.
+!x08975410 La Memory Stick n'est pas inserｪe.
+!x0897547C Chansons non trouvｪes.
+!x089754B0 Cette chanson ne peut ｭtre jouｪe.
 !x089754DC この楽曲はエディットモードで使用できません。
 !x08975A20 Objets-Aide
 
 # Ad Hoc menu
 
-!x0898EED4 Envoyer des donnees Edit
-!x0898EF00 Recevoir des donnees Edit
+!x0898EED4 Envoyer des donnｪes Edit
+!x0898EF00 Recevoir des donnｪes Edit
 !x0898EF2C Echange de profil (Envoyer)
 !x0898EF58 Echange de profil (Recevoir)
 !x0898EF84 Retourner au menu.
 
-!x0898F2EC Profil echange.
+!x0898F2EC Profil ｪchangｪ.
 !x0898F31C Pour enregistrer le profil-ami,
-!x0898F348 vous devez sauvegarder vos donnees.
-!x0898F3AC Profil echange.
+!x0898F348 vous devez sauvegarder vos donnｪes.
+!x0898F3AC Profil ｪchangｪ.
 
 # DIVA room: Image gallery
 
@@ -731,7 +736,7 @@
 0x08C131A4 Cyber Spot
 0x08C131A8 Cyber Spot
 0x08C131AC Cyber Spot
-0x08C131B0 Cour Imperiale
+0x08C131B0 Cour Impｪriale
 0x08C131B4 Maison de Bonbons
 0x08C131B8 Maison sur la plage
 0x08C131BC Mini Studio
@@ -741,62 +746,62 @@
 
 # Item list
 
-0x08C131CC Heart-shaped cushion
-0x08C131D0 Leek Pillow
-0x08C131D4 Chalk Board
-0x08C131D8 Speaker with Stand
-0x08C131DC Guitar Amplifier
-0x08C131E0 Synthesizer
-0x08C131E4 Electric Guitar
-0x08C131E8 Plant
-0x08C131EC Mini Plant
+0x08C131CC Coussin en coeur
+0x08C131D0 Oreiller-Poireaux
+0x08C131D4 Ardoise
+0x08C131D8 Enceinte sur support
+0x08C131DC Ampli de Guitare 
+0x08C131E0 Synthｪtiseur
+0x08C131E4 Guitare Electrique
+0x08C131E8 Plante
+0x08C131EC Mini Plante
 0x08C131F0 Cactus
-0x08C131F4 Ghost Tree
-0x08C131F8 Christmas Tree
-0x08C131FC Balance Ball
-0x08C13200 Hatsune Miku POP
-0x08C13204 Tea Set
-0x08C13208 Lantern
-0x08C1320C Candle Stand
-0x08C13210 Table Lamp
-0x08C13214 Mosquito Repellant
-0x08C13218 CRT Television
+0x08C131F4 Arbre fantome
+0x08C131F8 Sapin de Noel
+0x08C131FC Ballon
+0x08C13200 Pancarte Project DIVA
+0x08C13204 Service ｬ Thｪ
+0x08C13208 Lanterne
+0x08C1320C Chandelier
+0x08C13210 Lampe de chevｭt
+0x08C13214 Anti-moustiques
+0x08C13218 Tｪlｪvision
 0x08C1321C Microscope
-0x08C13220 Black Telephone
+0x08C13220 Tｪlｪphone Noir
 0x08C13224 Aquarium
 0x08C13228 Globe
-0x08C1322C Jewelry Box
-0x08C13230 Carved Wooden Bear
-0x08C13234 Octopus Pot
-0x08C13238 Birdcage
-0x08C1323C Electronic Billboards
-0x08C13240 Blue Diamond
-0x08C13244 Labware
-0x08C13248 SLR Camera
+0x08C1322C Boite ｬ bijoux
+0x08C13230 Sculpture d'ours en bois
+0x08C13234 Jarre
+0x08C13238 Cage d'oiseaux
+0x08C1323C Tableau Electrique
+0x08C13240 Emeraude du Chaos Bleu
+0x08C13244 Materiel de laboratoire
+0x08C13248 Appareil Photo
 0x08C1324C Gramophone
-0x08C13250 Decoration Drum
-0x08C13254 Turntable
-0x08C13258 Tower of Cards
-0x08C1325C Block Robot
-0x08C13260 Block Flower
-0x08C13264 Pico Pico Hammer
-0x08C13268 Fan
-0x08C1326C Fortune Box
-0x08C13270 Wrapped Chocolates
-0x08C13274 Wrapped Candy
-0x08C13278 Tulip Planter
-0x08C1327C Cherry Blossom Bonsai
-0x08C13280 Mini Carp Steamer
-0x08C13284 Rose Planter
-0x08C13288 Watermelon
-0x08C1328C Sunflower Planter
-0x08C13290 Potted Autumn Leaves
-0x08C13294 Ghost Coffin
-0x08C13298 Pumpkin Light
-0x08C1329C Red Boots
-0x08C132A0 Mini Christmas Tree
+0x08C13250 Tambour en dｪcoration
+0x08C13254 Platine
+0x08C13258 Tour de cartes
+0x08C1325C Robot en briques
+0x08C13260 Fleur en briques
+0x08C13264 Marteau Pico-Pico
+0x08C13268 Eventail
+0x08C1326C Boite sacrｪe de Oracle
+0x08C13270 Boite ｬ Chocolat
+0x08C13274 Boite ｬ Bonbons
+0x08C13278 Tulipes en Pot
+0x08C1327C Cerisier en Pot
+0x08C13280 Mini Carpes 
+0x08C13284 Rose en Pot
+0x08C13288 Pastｫque
+0x08C1328C Jardiniｫre de tournesol
+0x08C13290 Feuilles d'automne en pot
+0x08C13294 Cercueil
+0x08C13298 Citrouille d'Halloween
+0x08C1329C Chaussure de Noel
+0x08C132A0 Mini sapin de Noel
 0x08C132A4 Dodge Ball
-0x08C132A8 Beach Ball
+0x08C132A8 Ballon de plage
 0x08C132AC Nendoroid Hatsune Miku
 0x08C132B0 Nendoroid Kagamine Rin
 0x08C132B4 Nendoroid Kagamine Len
@@ -806,60 +811,60 @@
 0x08C132C4 Nendoroid Akita Neru
 0x08C132C8 Nendoroid Yowane Haku
 0x08C132CC Nendoroid Sakine Meiko
-0x08C132D0 Tapestry
-0x08C132D4 Route 39 Classic Board
-0x08C132D8 Jolly Roger
-0x08C132DC Hanging scroll (Weak)
-0x08C132E0 Penmanship (Song)
-0x08C132E4 Pendulum Clock
-0x08C132E8 Global Map
-0x08C132EC Starry Tapestry
-0x08C132F0 Sweets Wall Decoration
-0x08C132F4 Ethnic Mask
-0x08C132F8 Hockey Mask
-0x08C132FC Wall Speaker
-0x08C13300 Wall Sword
-0x08C13304 Negi Ornament
-0x08C13308 Basketball Goal
-0x08C1330C Ten-Gallon Hat
-0x08C13310 Opera Curtain
-0x08C13314 Stuffed Deer
-0x08C13318 Wall Candle
-0x08C1331C Record Disc
-0x08C13320 Gold Disc
-0x08C13324 Panel (Spring)
-0x08C13328 Panel (Summer)
-0x08C1332C Panel (Autumn)
-0x08C13330 Panel (Winter)
-0x08C13334 Hibiscus Wall Decoration
-0x08C13338 Magic Mirror
-0x08C1333C Cuckoo Clock
-0x08C13340 Wall Lighting
-0x08C13344 Wall Monitor
-0x08C13348 Eagle Feathers
-0x08C1334C Bat Decoration
-0x08C13350 Wreath
-0x08C13354 Santa Decoration
-0x08C13358 Flower Basket
-0x08C1335C Memory Chip
-0x08C13360 Block TV
-0x08C13364 Illustration Poster 1
-0x08C13368 Illustration Poster 2
-0x08C1336C Illustration Poster 3
-0x08C13370 Illustration Poster 4
-0x08C13374 Illustration Poster 5
-0x08C13378 Illustration Poster 6
-0x08C1337C Illustration Poster 7
-0x08C13380 Illustration Poster 8
-0x08C13384 Illustration Poster 9
-0x08C13388 Illustration Poster 10
-0x08C1338C Illustration Poster 11
-0x08C13390 Illustration Poster 12
+0x08C132D0 Tapisserie
+0x08C132D4 Panneau Route 39
+0x08C132D8 Drapeau de pirates
+0x08C132DC Rouleau suspendu (Faible)
+0x08C132E0 Calligraphie (Chanson)
+0x08C132E4 Pendule
+0x08C132E8 Carte du Monde
+0x08C132EC Carte des Etoiles
+0x08C132F0 Dｪcor murale de bonbons
+0x08C132F4 Masque Ethnique
+0x08C132F8 Masque de Hockey
+0x08C132FC Enceinte mural
+0x08C13300 Epｪes acrochees
+0x08C13304 Ornement de poireaux
+0x08C13308 Panier de Basket
+0x08C1330C Chapeau de Cow-Boy
+0x08C13310 Rideau d'Opera
+0x08C13314 Tｭte de cerf
+0x08C13318 Bougies acrochｪes
+0x08C1331C Vinyles
+0x08C13320 Disque d'Or
+0x08C13324 Tableau (Printemps)
+0x08C13328 Tableau (Etｪ)
+0x08C1332C Tableau (Automne)
+0x08C13330 Tableau (Hiver)
+0x08C13334 Dｪcor Mural d'Hibiscus
+0x08C13338 Miroir Magique
+0x08C1333C Horloge avec Coucou
+0x08C13340 Luminaire mural
+0x08C13344 Ecran Plat
+0x08C13348 Dｪcoration Plume d'aigle
+0x08C1334C Chauves-Souris
+0x08C13350 Ornement de Fleur
+0x08C13354 Dｪcoration de Noel
+0x08C13358 Panier de fleurs
+0x08C1335C Puce mｪmoire
+0x08C13360 TV en briques
+0x08C13364 Poster 1
+0x08C13368 Poster 2
+0x08C1336C Poster 3
+0x08C13370 Poster 4
+0x08C13374 Poster 5
+0x08C13378 Poster 6
+0x08C1337C Poster 7
+0x08C13380 Poster 8
+0x08C13384 Poster 9
+0x08C13388 Poster 10
+0x08C1338C Poster 11
+0x08C13390 Poster 12
 
 # Shop menu headers
 
 0x08C13C54 Objets de Chambre (Sol)
-0x08C13C58 Objets de Chambre (Etagere)
+0x08C13C58 Objets de Chambre (Etagｫre)
 0x08C13C5C Objets de Chambre (Mur)
 0x08C13C60 Objets-Aide
 0x08C13C64 Chambres DIVA
@@ -876,9 +881,9 @@
 
 # Item quantity
 
-0x08C14B90 Objet du depart
-0x08C14E90 Objet du depart
-0x08C15190 Objet du depart
+0x08C14B90 Objet du dｪpart
+0x08C14E90 Objet du dｪpart
+0x08C15190 Objet du dｪpart
 
 # Song list
 
@@ -959,17 +964,17 @@
 0x08C25C58 et regarder vos
 0x08C25C5C statistiques.
 # (Edit)
-0x08C25C64 Creer des PV originaux 
+0x08C25C64 Crｪer des PV originaux 
 0x08C25C68 et des jeux de rythme.
 0x08C25C6C 
 # (Ad Hoc)
-0x08C25C74 Echanger des donnees
+0x08C25C74 Echanger des donnｪes
 0x08C25C78 et votre profil
 0x08C25C7C via Ad Hoc.
 0x08C25C80 
 # (Options)
 0x08C25C84 Ajuster le volume
-0x08C25C88 et autres parametres
+0x08C25C88 et autres paramｫtres
 0x08C25C8C comme le sauve-auto.
 # (Save)
 0x08C25C94 Sauver votre
@@ -977,15 +982,15 @@
 0x08C25C9C 
 # (Back to Title)
 0x08C25CA4 Quit le jeu et retourne 
-0x08C25CA8 a l'ecran-titre.
+0x08C25CA8 ｬ l'ｪcran-titre.
 
 # Main menu entering confirmation messages
 
-0x08C25CD8 Aller a la Boutique?
+0x08C25CD8 Aller ｬ la Boutique?
 0x08C25CE4 Aller voir les Stats?
 0x08C25CF0 Aller au mode EDIT?
 0x08C25CFC Aller au mode Ad Hoc?
-0x08C25D20 Retourner a l'ecran-titre?
+0x08C25D20 Retourner ｬ l'ｪcran-titre?
 0x08C25D24 Vous allez perdre votre progression.
 0x08C25D28 Etes-vous sur?
 
@@ -1025,15 +1030,15 @@
 0x08C25DB0 voir la Chambre de
 0x08C25DB4 S.Meiko.
 
-!x088D5D20 Les donnees n'ont pu etre importees. En
+!x088D5D20 Les donnｪes n'ont pu etre importｪes. En
 !x088D5D2C vous rendant dans une chambre DIVA,
-!x088D5D38 l'agencement sera celui par defaut.
-!x088D5D54 ※L'import. de contenu additionel peut se faire via l'ecran Options.
+!x088D5D38 l'agencement sera celui par dｪfaut.
+!x088D5D54 ※L'import. de contenu additionel peut se faire via l'ｪcran Options.
 
 # Options menu descriptions
 
 0x08C25DBC Change le volume du
-0x08C25DC0 systeme BGM.
+0x08C25DC0 systｫme BGM.
 
 0x08C25DCC Change le volume du
 0x08c25DD0 SE.
@@ -1042,12 +1047,12 @@
 0x08c25DE0 sauvegarde auto.
 
 0x08C25DEC Activer ou pas le 
-0x08C25DF0 chargement des donnees
-0x08C25DF4 installees.
+0x08C25DF0 chargement des donnｪes
+0x08C25DF4 installｪes.
 
-0x08C25DFC Importer des donnees
+0x08C25DFC Importer des donnｪes
 0x08C25E00 additionelles en 
-0x08C25E04 donnees Extras.
+0x08C25E04 donnｪes Extras.
 
 # DIVA room playlists
 
@@ -1059,8 +1064,14 @@
 0x08C45A4C Playlist 2
 0x08C45A50 Playlist 3
 
+# Start Menu
+
+!x088E4530 REPRENDRE
+!x088E4544 REESSAYER
+!x088E4558 MENU PRINCIPAL
+
 # Others
 
 0x08C25E10 することができます。
 0x08C25E0C 前作データの引継ぎを
-!x08892600 could not be loaded.
+!x08892600 n'ont pas pu ｭtre chargｪes.

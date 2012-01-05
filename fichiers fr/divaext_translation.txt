@@ -47,7 +47,7 @@
 !x08816044 Revenir ｬ l'ｪcran d'accueil?
 
 !x088162F0 Accｫs au Memory Stick pour
-!x08816304 verifier les donnｪes additionelles.
+!x08816304 vｪrifier les donnｪes additionelles.
 !x08816318 Ne retirez pas le Memory Stick!
 
 # Vocaloids
@@ -259,7 +259,7 @@
 !x08845B50 Ce jeu supporte la sauvegarde automatique.
 !x08845B64 Ne retirez pas le Memory Stick ou n'ｪteignez pas 
 !x08845B78 la PSP durant la sauvegarde.  Merci CodeStation
-!x08845B8C Project Diva Extend Patch Francais 03/01/2012
+!x08845B8C Project Diva Extend Patch Francais 05/01/2012
 
 ### EDIT MODE ### (max menu entry lenght: 25)
 
@@ -1436,7 +1436,7 @@ $x088E78A4 Memory Stick non-dｪtｫctｪ!
 !x0892537C Placer l'objet ici?
 !x089253C8 Supprimer cet objet?
 !x089254E8 Supprimer tout les objets?
-!x0892560C Retourner a la Chambre DIVA?
+!x0892560C Retourner ｬ la Chambre DIVA?
 !x08925730 Rｪorganiser un ou deux objets SVP.
 !x08925818 Supprimer l'objet en-dessous 
 !x0892582C pour ajouter cet objet?
@@ -1446,10 +1446,10 @@ $x088E78A4 Memory Stick non-dｪtｫctｪ!
 !x0892597C Les donnｪes additionelles
 !x08925990 ne peuvent pas ｭtre chargｪes.
 !x08926C44 Supprimer un objet (Sol)
-!x08926C30 Supprimer un objet (Etagere)
+!x08926C30 Supprimer un objet (Etagｫres)
 !x08926C1C Supprimer un objet (Mur)
 !x08926CB8 Dｪplacer un objet (Sol)
-!x08926CA4 Dｪplacer un objet (Etagere)
+!x08926CA4 Dｪplacer un objet (Etagｫres)
 !x08926C90 Dｪplacer un objet (Mur)
 
 !x089275B8 Objets de Chambre
@@ -1541,7 +1541,7 @@ $x088E78A4 Memory Stick non-dｪtｫctｪ!
 !x0893717C Changer le module
 !x08937190 Regarder/Editer une Playlist
 !x0893748C Regarder/Editer une Playlist
-!x089371A4 Creer une Playlist
+!x089371A4 Crｪer une Playlist
 !x089371B8 Supprimer une Playlist
 !x089371CC Retour
 !x08937354 Liste des PV enregistrｪe
@@ -1570,7 +1570,7 @@ $x088E78A4 Memory Stick non-dｪtｫctｪ!
 !x0893D384 Etes-vous sur de la supprimer?
 !x0893D3B8 Aucun PV dans la liste!
 !x0893D3E4 Voulez-vous supprimer la Playlist
-!x0893D410 et revenir au menu precedent?
+!x0893D410 et revenir au menu prｪcｪdent?
 !x0893D444 Aucune Playlist n'est disponible.
 !x0893D470 Voulez-vous en crｪer une?
 !x0893D4D0 Aucune Playlist est disponible.
@@ -1605,12 +1605,12 @@ $x088E78A4 Memory Stick non-dｪtｫctｪ!
 
 !x08940954 "Mise en veille rｪglable"
 !x08940968 La PSP se met automatiquement en mode veille
-!x0894097C apres le dｪlai spｪcifiｪ (en minutes).
+!x0894097C aprｫs le dｪlai spｪcifiｪ (en minutes).
 !x08940990 Sauvegarder vos donnｪes avant!
 
 ^x08940930 "Minuterie de navigation"
 !x08940A10 "Minuterie de navigation"
-!x08940A24 Une alarme retentit apres 
+!x08940A24 Une alarme retentit aprｫs 
 !x08940A38 le dｪlai spｪcifiｪ (en minutes).
 
 ^x089409D8 Retourner ｬ la Chambre DIVA.
@@ -2150,7 +2150,7 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 0x08C30E64 Nendoroid Meiko
 0x08C30E68 Nendoroid Akita Neru
 0x08C30E6C Nendoroid Yowane Haku
-0x08C30E70 Nendoroid Saki Oto Meiko
+0x08C30E70 Nendoroid Sakine Meiko
 0x08C30E74 Pagnier de fleurs Miku
 0x08C30E78 Canette i CUP Drink
 0x08C30E7C Figurine Rin-Len Noel
@@ -4134,4 +4134,4 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 
 !x088F602C REPRENDRE
 !x088F6040 REESSAYER
-!x088F6054 MENU0
+!x088F6054 MENU PRINCIPAL0
