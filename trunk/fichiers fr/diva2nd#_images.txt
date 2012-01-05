@@ -1,0 +1,32 @@
+﻿# Image index table file for PD Okaidoku Ban
+# Use the format <offset, filename> to override the files in Diva2Data.cpk
+
+0x00078800 diva2nd#/font01.png
+0x000B5800 diva2nd#/font12dot_01.png
+0x000D6800 diva2nd#/menu_base_01.png
+0x000D9000 diva2nd#/menu_base_02.png
+0x000DB000 diva2nd#/menu_help_01.png
+0x000DF800 diva2nd#/menu_help_02.png
+0x00179000 diva2nd#/mtit_base_03.png
+0x005D3800 diva2nd#/menu_base_03.png
+0x005D7800 diva2nd#/menu_base_04.png
+0x005DB000 diva2nd#/menu_title_home.png
+0x005DD000 diva2nd#/menu_title_rtmg.png
+0x005DF000 diva2nd#/menu_title_crsl.png
+0x005E1000 diva2nd#/menu_title_modl.png
+0x005E3000 diva2nd#/menu_title_room.png
+0x005E5000 diva2nd#/menu_title_optn.png
+0x005E7000 diva2nd#/home_base_01.png
+0x005F0800 diva2nd#/home_base_02.png
+0x0062F000 diva2nd#/mtit_base_01.png
+0x0063A000 diva2nd#/mtit_base_02.png
+0x160D0800 diva2nd#/pv_rank_01.png
+0x160D6000 diva2nd#/menu_result.png
+0x1739D000 diva2nd#/edit_base_04.png
+0x173A1000 diva2nd#/plst_base_01.png
+0x1913A800 diva2nd#/menu_title_plys.png
+0x1913C800 diva2nd#/menu_title_adhk.png
+0x1913E800 diva2nd#/menu_title_prvd.png
+0x19140800 diva2nd#/menu_title_shop.png
+0x19142800 diva2nd#/menu_title_visl.png
+0x19144800 diva2nd#/menu_title_msbx.png

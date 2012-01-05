@@ -29,7 +29,8 @@
 #include <psputility_sysparam.h>
 #include "main.h"
 
-#include "divapatch.h"
+#include "divapatch5XX.h"
+#include "divapatch6XX.h"
 #include "divaext_translation.h"
 #include "diva2nd0_translation.h"
 #include "divaext_images.h"
@@ -131,6 +132,8 @@
 #include "mtit_base_04.h"
 #include "mtit_base_05.h"
 #include "plst_base_01.h"
+#include "diva2nd0_images.h"
+#include "menu_result2nd0.h"
 
 PSP_MODULE_INFO("Diva Patch FR", 0, 1, 5);
 PSP_MAIN_THREAD_ATTR(0);
@@ -150,13 +153,19 @@ char st_text[128];
 int devkit, point;
 u16 macaddrfd[64], fwverfd[64];
 int focus, psp_model;
-char *path[110];
+char *path[140];
 int enter_button = 0;
 extern int currdev;
 extern char *cpath;
 int plus;
 
-#define FW(f) ((((f >> 8) & 0xF) << 24) | (((f >> 4) & 0xF) << 16) | ((f & 0xF) << 8) | 0x10)
+#if _PSP_FW_VERSION == 639
+#define DEVKIT_VER      0x06030910
+#define VERSION_STR     "6.39"
+#elif _PSP_FW_VERSION == 660
+#define DEVKIT_VER      0x06060010
+#define VERSION_STR     "6.60"
+#endif
 
 #define NUM_DEL_ITEMS_CREDITS_CHANGELOG 1
 VlfText text_credits_changelog[NUM_DEL_ITEMS_CREDITS_CHANGELOG];
@@ -342,7 +351,11 @@ int install_thread(SceSize args, void *argp)
 		}
 	}
 	
-	WriteFile(path[4], (void *)divapatch, size_divapatch, 0);
+	if(sceKernelDevkitVersion() == 0x05000010 || sceKernelDevkitVersion() == 0x05050010)
+	WriteFile(path[109], (void *)divapatch5XX, size_divapatch5XX, 0);
+	else if(sceKernelDevkitVersion() == 0x06020010 || sceKernelDevkitVersion() == 0x06030510 || sceKernelDevkitVersion() == 0x06030910 || sceKernelDevkitVersion() == 0x06060010)
+	WriteFile(path[4], (void *)divapatch6XX, size_divapatch6XX, 0);
+	
 	WriteFile(path[6], (void *)divaext_translation, size_divaext_translation, 0);
 	WriteFile(path[7], (void *)divaext_images, size_divaext_images, 0);
 	WriteFile(path[8], (void *)divaext_embedded, size_divaext_embedded, 0);
@@ -461,7 +474,11 @@ int install_thread(SceSize args, void *argp)
 	WriteFile(path[103], (void *)mtit_base_04, size_mtit_base_04, 0);
 	WriteFile(path[104], (void *)mtit_base_05, size_mtit_base_05, 0);
 	WriteFile(path[105], (void *)plst_base_01, size_plst_base_01, 0);
-	WriteFile(path[107], (void *)divapatch, size_divapatch, 0);
+	
+	if(sceKernelDevkitVersion() == 0x05000010 || sceKernelDevkitVersion() == 0x05050010)
+	WriteFile(path[109], (void *)divapatch5XX, size_divapatch5XX, 0);
+	else if(sceKernelDevkitVersion() == 0x06020010 || sceKernelDevkitVersion() == 0x06030510 || sceKernelDevkitVersion() == 0x06030910 || sceKernelDevkitVersion() == 0x06060010)
+	WriteFile(path[4], (void *)divapatch6XX, size_divapatch6XX, 0);
 	sceKernelDelayThread(1200000);	
 	SetProgress(100, 1);
 	
@@ -471,6 +488,7 @@ int install_thread(SceSize args, void *argp)
 
 int install_thread2(SceSize args, void *argp)
 {
+	devkit = sceKernelDevkitVersion();
 	char buffer[1024];	
 	memset(buffer, 0, sizeof(buffer));
 
@@ -502,9 +520,48 @@ int install_thread2(SceSize args, void *argp)
 		}
 	}
 	
-	WriteFile(path[4], (void *)divapatch, size_divapatch, 0);
+	if(sceKernelDevkitVersion() == 0x05000010 || sceKernelDevkitVersion() == 0x05050010)
+	WriteFile(path[109], (void *)divapatch5XX, size_divapatch5XX, 0);
+	else if(sceKernelDevkitVersion() == 0x06020010 || sceKernelDevkitVersion() == 0x06030510 || sceKernelDevkitVersion() == 0x06030910 || sceKernelDevkitVersion() == 0x06060010)
+	WriteFile(path[4], (void *)divapatch6XX, size_divapatch6XX, 0);
+	
 	WriteFile(path[106], (void *)diva2nd0_translation, size_diva2nd0_translation, 0);
-	WriteFile(path[107], (void *)divapatch, size_divapatch, 0);
+	WriteFile(path[110], (void *)diva2nd0_images, size_diva2nd0_images, 0);
+	WriteFile(path[111], (void *)font12dot_01, size_font12dot_01, 0);
+	WriteFile(path[112], (void *)menu_help_01, size_menu_help_01, 0);
+	WriteFile(path[113], (void *)menu_help_02, size_menu_help_02, 0);
+	WriteFile(path[114], (void *)menu_title_adhk, size_menu_title_adhk, 0);
+	WriteFile(path[115], (void *)menu_title_crsl, size_menu_title_crsl, 0);
+	WriteFile(path[116], (void *)menu_title_edit, size_menu_title_edit, 0);
+	WriteFile(path[117], (void *)menu_title_home, size_menu_title_home, 0);
+	WriteFile(path[118], (void *)menu_title_modl, size_menu_title_modl, 0);
+	WriteFile(path[119], (void *)menu_title_msbx, size_menu_title_msbx, 0);
+	WriteFile(path[120], (void *)menu_title_optn, size_menu_title_optn, 0);
+	WriteFile(path[121], (void *)menu_title_plys, size_menu_title_plys, 0);
+	WriteFile(path[122], (void *)menu_title_prvd, size_menu_title_prvd, 0);
+	sceKernelDelayThread(1200000);
+	SetProgress(50, 1);
+	WriteFile(path[123], (void *)menu_title_room, size_menu_title_room, 0);
+	WriteFile(path[124], (void *)menu_title_rtmg, size_menu_title_rtmg, 0);
+	WriteFile(path[125], (void *)menu_title_shop, size_menu_title_shop, 0);
+	WriteFile(path[126], (void *)menu_title_visl, size_menu_title_visl, 0);
+	WriteFile(path[127], (void *)pv_rank_01, size_pv_rank_01, 0);
+	WriteFile(path[128], (void *)edit_base_04, size_edit_base_04, 0);
+	WriteFile(path[129], (void *)home_base_02, size_home_base_02, 0);
+	WriteFile(path[130], (void *)menu_base_01, size_menu_base_01, 0);
+	WriteFile(path[131], (void *)menu_result2nd0, size_menu_result2nd0, 0);
+	WriteFile(path[132], (void *)mtit_base_01, size_mtit_base_01, 0);
+	WriteFile(path[133], (void *)mtit_base_02, size_mtit_base_02, 0);
+	WriteFile(path[134], (void *)mtit_base_03, size_mtit_base_03, 0);
+	WriteFile(path[135], (void *)mtit_base_04, size_mtit_base_04, 0);
+	WriteFile(path[136], (void *)mtit_base_05, size_mtit_base_05, 0);
+	WriteFile(path[137], (void *)plst_base_01, size_plst_base_01, 0);
+	
+	if(sceKernelDevkitVersion() == 0x05000010 || sceKernelDevkitVersion() == 0x05050010)
+	WriteFile(path[109], (void *)divapatch5XX, size_divapatch5XX, 0);
+	else if(sceKernelDevkitVersion() == 0x06020010 || sceKernelDevkitVersion() == 0x06030510 || sceKernelDevkitVersion() == 0x06030910 || sceKernelDevkitVersion() == 0x06060010)
+	WriteFile(path[4], (void *)divapatch6XX, size_divapatch6XX, 0);
+	
 	sceKernelDelayThread(1200000);	
 	SetProgress(100, 1);
 	
@@ -570,7 +627,7 @@ void MainMenu(int sel, int start)
 		vlfGuiRemovePicture(title_pic);
 	}
 
-	title_text = vlfGuiAddText(1, 1, "Diva Patch FR Installer v3.0      (03/01/2012)");
+	title_text = vlfGuiAddText(1, 1, "Diva Patch FR Installer v3.1      (05/01/2012)");
 	title_pic = vlfGuiAddPictureResource("ps3scan_plugin.rco", "tex_infobar_icon", 4, -2);
 	vlfGuiSetTitleBar(title_text, title_pic, 1, 1);
 
@@ -676,7 +733,14 @@ void Credits_Changelog(int changelog)
 			"    une autre pour les CFW 5.XX\n"
 			" - Traduction de nouvelles lyrics pour Extend.\n"
 			" - Divers corrections pour Extend.\n"
-			" - Debut de traduction FR pour 2nd#.\n";
+			" - Debut de traduction FR pour 2nd#.\n\n"
+			"(05/01/12)\n"
+			" - Mise à jour de l'installer qui supporte\n"
+			"    désormais les 2 versions en un seul homebrew.\n"
+			" - Ajouts des traductions des images pour 2nd#.\n"
+			"    (Reste les écrans avant de débuter une chanson\n"
+			"    à traduire)\n"
+			" - Correction d'accents pour Extend.\n";
 		x = 35;
 	}
 	else
@@ -692,9 +756,8 @@ void Credits_Changelog(int changelog)
 			"     - Reload\n"// fr translate
 			"     - DarkCenobyte\n"// Pictures
 			"     - Staz\n"// fr translate
-			"     - Kienono\n\n"// fr translate
-			"Patch FR fait pour des fans\n"
-			"par des fan";
+			"     - Kienono\n"// fr translate
+			"     - Sonic-San\n";
 
 		x = 140;
 	}
@@ -821,6 +884,34 @@ int app_main(int argc, char *argv[])
 		path[107] = "ef0:/seplugins/divapatch/divaext";
 		path[108] = "ef0:/seplugins/divapatch/diva2nd#";
 		path[109] = "ef0:/seplugins/divapatch/divapatch.prx";
+		path[110] = "ef0:/seplugins/divapatch/diva2nd#_images.bin";
+		path[111] = "ef0:/seplugins/divapatch/diva2nd#/font12dot_01.png";
+		path[112] = "ef0:/seplugins/divapatch/diva2nd#/menu_help_01.png";
+		path[113] = "ef0:/seplugins/divapatch/diva2nd#/menu_help_02.png";
+		path[114] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_adhk.png";
+		path[115] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_crsl.png";
+		path[116] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_edit.png";
+		path[117] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_home.png";
+		path[118] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_modl.png";
+		path[119] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_msbx.png";
+		path[120] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_optn.png";
+		path[121] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_plys.png";
+		path[122] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_prvd.png";
+		path[123] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_room.png";
+		path[124] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_rtmg.png";
+		path[125] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_shop.png";
+		path[126] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_visl.png";
+		path[127] = "ef0:/seplugins/divapatch/diva2nd#/pv_rank_01.png";
+		path[128] = "ef0:/seplugins/divapatch/diva2nd#/edit_base_04.png";
+		path[129] = "ef0:/seplugins/divapatch/diva2nd#/home_base_02.png";
+		path[130] = "ef0:/seplugins/divapatch/diva2nd#/menu_base_01.png";
+		path[131] = "ef0:/seplugins/divapatch/diva2nd#/menu_result.png";
+		path[132] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_01.png";
+		path[133] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_02.png";
+		path[134] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_03.png";
+		path[135] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_04.png";
+		path[136] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_05.png";
+		path[137] = "ef0:/seplugins/divapatch/diva2nd#/plst_base_01.png";
 	}
 	else
 	{
@@ -934,6 +1025,34 @@ int app_main(int argc, char *argv[])
 		path[107] = "ms0:/seplugins/divapatch/divaext";
 		path[108] = "ms0:/seplugins/divapatch/diva2nd#";
 		path[109] = "ms0:/seplugins/divapatch/divapatch.prx";
+		path[110] = "ms0:/seplugins/divapatch/diva2nd#_images.bin";
+		path[111] = "ms0:/seplugins/divapatch/diva2nd#/font12dot_01.png";
+		path[112] = "ms0:/seplugins/divapatch/diva2nd#/menu_help_01.png";
+		path[113] = "ms0:/seplugins/divapatch/diva2nd#/menu_help_02.png";
+		path[114] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_adhk.png";
+		path[115] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_crsl.png";
+		path[116] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_edit.png";
+		path[117] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_home.png";
+		path[118] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_modl.png";
+		path[119] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_msbx.png";
+		path[120] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_optn.png";
+		path[121] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_plys.png";
+		path[122] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_prvd.png";
+		path[123] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_room.png";
+		path[124] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_rtmg.png";
+		path[125] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_shop.png";
+		path[126] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_visl.png";
+		path[127] = "ms0:/seplugins/divapatch/diva2nd#/pv_rank_01.png";
+		path[128] = "ms0:/seplugins/divapatch/diva2nd#/edit_base_04.png";
+		path[129] = "ms0:/seplugins/divapatch/diva2nd#/home_base_02.png";
+		path[130] = "ms0:/seplugins/divapatch/diva2nd#/menu_base_01.png";
+		path[131] = "ms0:/seplugins/divapatch/diva2nd#/menu_result.png";
+		path[132] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_01.png";
+		path[133] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_02.png";
+		path[134] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_03.png";
+		path[135] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_04.png";
+		path[136] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_05.png";
+		path[137] = "ms0:/seplugins/divapatch/diva2nd#/plst_base_01.png";		
 	}
 
 	char buf[2048];
