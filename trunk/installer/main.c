@@ -547,7 +547,7 @@ int install_thread2(SceSize args, void *argp)
 	WriteFile(path[126], (void *)menu_title_visl, size_menu_title_visl, 0);
 	WriteFile(path[127], (void *)pv_rank_01, size_pv_rank_01, 0);
 	WriteFile(path[128], (void *)edit_base_04, size_edit_base_04, 0);
-	WriteFile(path[129], (void *)home_base_02, size_home_base_02, 0);
+	//WriteFile(path[129], (void *)home_base_02, size_home_base_02, 0);
 	WriteFile(path[130], (void *)menu_base_01, size_menu_base_01, 0);
 	WriteFile(path[131], (void *)menu_result2nd0, size_menu_result2nd0, 0);
 	WriteFile(path[132], (void *)mtit_base_01, size_mtit_base_01, 0);
@@ -903,7 +903,7 @@ int app_main(int argc, char *argv[])
 		path[126] = "ef0:/seplugins/divapatch/diva2nd#/menu_title_visl.png";
 		path[127] = "ef0:/seplugins/divapatch/diva2nd#/pv_rank_01.png";
 		path[128] = "ef0:/seplugins/divapatch/diva2nd#/edit_base_04.png";
-		path[129] = "ef0:/seplugins/divapatch/diva2nd#/home_base_02.png";
+		//path[129] = "ef0:/seplugins/divapatch/diva2nd#/home_base_02.png";
 		path[130] = "ef0:/seplugins/divapatch/diva2nd#/menu_base_01.png";
 		path[131] = "ef0:/seplugins/divapatch/diva2nd#/menu_result.png";
 		path[132] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_01.png";
@@ -1044,7 +1044,7 @@ int app_main(int argc, char *argv[])
 		path[126] = "ms0:/seplugins/divapatch/diva2nd#/menu_title_visl.png";
 		path[127] = "ms0:/seplugins/divapatch/diva2nd#/pv_rank_01.png";
 		path[128] = "ms0:/seplugins/divapatch/diva2nd#/edit_base_04.png";
-		path[129] = "ms0:/seplugins/divapatch/diva2nd#/home_base_02.png";
+		//path[129] = "ms0:/seplugins/divapatch/diva2nd#/home_base_02.png";
 		path[130] = "ms0:/seplugins/divapatch/diva2nd#/menu_base_01.png";
 		path[131] = "ms0:/seplugins/divapatch/diva2nd#/menu_result.png";
 		path[132] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_01.png";
