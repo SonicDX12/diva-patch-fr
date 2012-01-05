@@ -1,5 +1,10 @@
 #summary Changelog du Diva Patch
 
+*05/01/12*
+  * Mise à jour de l'installer qui supporte désormais les 2 versions en un seul homebrew.
+  * Ajouts des traductions des images pour 2nd#.(Reste les écrans avant de débuter une chanson à traduire)
+  * Correction d'accents pour Extend.
+
 *03/01/12*
   * Mise à jour de l'installer avec l'ajout de la traduction de 2nd#. Deux versions de l'installer sera disponible: une pour les CFW 6.XX et une autre pour les CFW 5.XX.
   * Traduction de nouvelles lyrics pour Extend.
