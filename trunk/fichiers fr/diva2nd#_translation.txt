@@ -216,7 +216,7 @@
 !x0883ACC8 Ce jeu supporte la sauvegarde automatique.
 !x0883ACDC Ne retirez pas le Memory Stick ou n'ｪteignez pas 
 !x0883ACF0 la PSP durant la sauvegarde.  Merci CodeStation
-!x0883AD04 Project Diva 2nd# Patch Francais 05/01/2012 
+!x0883AD04 Project Diva 2nd# Patch Francais 13/01/2012 
 
 #!x0883AE98 本ゲームではセーブ時に、
 #!x0883AEAC ゲームの進行を保存するためのセーブデータとは別に、
@@ -271,7 +271,7 @@
 # Options menu entries
 
 !x088D64D4 Sauvegarde-Auto
-!x08806518 Instal. donnｪes
+!x088D6518 Instal. donnｪes
 !x088D68A0 Import donnｪes additionelles
 !x088D68B0 Rｪcupｪration des donnｪes d'un jeu precedent
 
@@ -917,7 +917,7 @@
 0x08C1A310 Ai Kotoba
 0x08C1A320 PoPiPo
 0x08C1A330 Saihate
-0x08C1A340 VOiCE -DIVA　MIX-
+0x08C1A340 VOiCE -DIVA MIX-
 0x08C1A350 Love-colored Ward
 0x08C1A360 Gigantic Girl
 0x08C1A370 Meltdown
@@ -1070,8 +1070,132 @@
 !x088E4544 REESSAYER
 !x088E4558 MENU PRINCIPAL
 
+# Help Item
+
+!x0881F75C Systｫme d'assistance
+!x0881F768 Combo protｪgｪ 3 notes
+!x0881F774 Combo protｪgｪ 5 notes
+!x0881F780 Combo protｪgｪ 10 notes
+!x0881F78C Survie
+!x0881F798 Rｪcupｪration
+
+0x08C15490 Change tous les SAD et
+0x08C15494 WORST en SAFE, mais le
+0x08C15498 rｪsultat sera un CHEAP.
+
+0x08C1549C Change 3 notes SAFE
+0x08C154A0 et/ou SAD en FINE.
+
+0x08C154A8 Change 5 notes SAFE
+0x08C154AC et/ou SAD en FINE.
+
+0x08C154B4 Change 10 notes SAFE
+0x08C154B8 et/ou SAD en FINE.
+
+0x08C154C0 Recharge la jauge
+0x08C154C4 d'ｪnergie de moitiｪ 
+0x08C154C8 si celle-ci est ｬ 0.
+
+0x08C154CC Recharge toute la 
+0x08C154D0 jauge d'ｪnergie si
+0x08C154D4 celle-ci est ｬ 0.
+
+0x08C25B64 Change tous les SAD et
+0x08C25B68 WORST en SAFE, mais le
+0x08C25B6C rｪsultat sera un CHEAP.
+
+0x08C25B74 Change 3 notes SAFE
+0x08C25B78 et/ou SAD en FINE.
+
+0x08C25B84 Change 5 notes SAFE
+0x08C25B88 et/ou SAD en FINE.
+
+0x08C25B94 Change 10 notes SAFE
+0x08C25B98 et/ou SAD en FINE.
+
+0x08C25BA4 Recharge la jauge
+0x08C25BA8 d'ｪnergie de moitiｪ 
+0x08C25BAC si celle-ci est ｬ 0.
+
+0x08C25BB4 Recharge toute la 
+0x08C25BB8 jauge d'ｪnergie si
+0x08C25BBC celle-ci est ｬ 0.
+
+0x08C35F50 Change tous les SAD et
+0x08C35F54 WORST en SAFE, mais le
+0x08C35F58 rｪsultat sera un CHEAP.
+
+0x08C35F5C Change 3 notes SAFE
+0x08C35F60 et/ou SAD en FINE.
+
+0x08C35F68 Change 5 notes SAFE
+0x08C35F6C et/ou SAD en FINE.
+
+0x08C35F74 Change 10 notes SAFE
+0x08C35F78 et/ou SAD en FINE.
+
+0x08C35F80 Recharge la jauge
+0x08C35F84 d'ｪnergie de moitiｪ 
+0x08C35F88 si celle-ci est ｬ 0.
+
+0x08C35F8C Recharge toute la
+0x08C35F90 jauge d'ｪnergie si
+0x08C35F94 celle-ci est ｬ 0.
+
+# PD1st savedata detection
+
+!x0893A8A8 Vous pouvez importer les donnｪes systｫme de
+!x0893A8C4 "-Project Diva-" ｬ "-Project Diva- 2nd"
+
+!x0893A8E0 Si vous souhaitez importer les donnｪes systｫme
+!x0893A8FC du jeu prｪcｪdent, s'il vous plait copiez les 
+!x0893A918 donnｪes systｫme de "-Project Diva-" sur le
+!x0893A934 Memory Stick pour les nouvelles donnｪes.
+
+!x0893AB90 En important les donnｪes, vous pouvez avoir:
+
+!x0893ABAC ●Rｪcupｪrer les modules gagnｪs.
+!x0893ABC0 ●Rｪcupｪrer %d Points DIVA bonus.
+!x0893ABF4 ●Rｪcupｪrer un objet pour la Chambre 「%s」.
+
+!x0893AC28 Appuyez sur le bouton ○ pour importer
+!x0893AC44 sinon appuyez sur le bouton × pour passer.
+!x0893AC80 ※Vous pouvez le faire ｬ partir des "Options".
+
+# Auto Save
+
+!x0893A4C8 Ce jeu est compatible avec l'auto-save.
+!x0893A4DC Voulez-vous activer cette fonction?
+
+!x0893A504 ※Vous pouvez changer dans les "Options".
+!x0893A518 ※Le Mode EDIT N'est PAS compatible avec l'auto-save.
+
+!x0893A5F4 Auto-save rｪglｪ sur "ON".
+!x0893A608 "Fichier des infos importｪes" crｪｪ.
+
+!x0893A634 "Donnｪes Systｫme"(env.544KB) et "Fichier
+!x0893A648 des infos importｪes"(env.480KB). Pour les
+!x0893A65C crｪer, ayez au moins 1024KB d'espace libre.
+
+!x0893A680 ※Durant la sauvegarde automatique, la LED 
+!x0893A694 du Memory-Stick clignote. Veuillez ne pas
+!x0893A6A8 ｪteindre la PSP, ni retirer la Memory Stick.
+
+# ???
+
+!x0893B228 Arrｭter l'import de la sauvegarde prｪcｪdente?
+!x0893C0D0 Vous choisissez de sauvegarder manuellement.
+!x0893C0E4 Etes-vous sur de dｪsactiver l'auto-save?
+
 # Others
 
 0x08C25E10 することができます。
 0x08C25E0C 前作データの引継ぎを
 !x08892600 n'ont pas pu ｭtre chargｪes.
+!x0893B404 En important les donnｪes, vous pouvez avoir:
+!x0893B420 ●Rｪcupｪrer les modules gagnｪs.
+!x0893B434 ●Rｪcupｪrer %d Points DIVA bonus.
+!x0893B468 ●Rｪcupｪrer un objet pour la Chambre 「%s」.
+!x0893B49C Appuyez sur le bouton ○ pour importer
+!x0893B4B8 sinon Appuyez sur le bouton × pour passer.
+!x0893B4F4 ※Vous pouvez le faire ｬ partir des "Options".
