@@ -259,7 +259,7 @@
 !x08845B50 Ce jeu supporte la sauvegarde automatique.
 !x08845B64 Ne retirez pas le Memory Stick ou n'ｪteignez pas 
 !x08845B78 la PSP durant la sauvegarde.  Merci CodeStation
-!x08845B8C Project Diva Extend Patch Francais 05/01/2012
+!x08845B8C Project Diva Extend Patch Francais 13/01/2012
 
 ### EDIT MODE ### (max menu entry lenght: 25)
 
@@ -1653,41 +1653,65 @@ $x08940A80 Retourner ｬ la Chambre DIVA.
 !x08952718 　※extendで「ルームアイテム」を配置している場合は引継げません。
 !x08952738 　※「ルームテーマ」は引継げません。
 
-!x08952948 ●以下のプレイレコードを引継ぐことができます。
-!x08952968 　累計DIVAポイント
-!x08952988 　総合プレゼント回数
+!x08952948 ●Rｪcupｪrer des ｪlｪments suivants:
+!x08952968 　L'ensemble des Points DIVA
+!x08952988 　Le nombre total des cadeaux
 !x089529A8 　エクストラプレイ情報
-!x089529C8 　キャラクターへのプレゼント回数
-!x089529E8 　フレンド情報
-!x08952A08 　※現在のフレンドに追加します。最大50人まで。
+!x089529C8 　Le nombre de cadeau par perso.
+!x089529E8 　Liste d'amis
+!x08952A08 　※Ajouter aux amis prｪsents. (50 amis max)
 
-!x0895304C 前作データの引継ぎを中止しますか？
-!x0895359C 『初音ミク -Project DIVA- 2nd』のシステムデータを引継ぎました。
-!x089535BC 引継いだシステムデータの保存先を選んでください。
-!x089535DC ※システムデータを保存するまで、引継ぎは完了しません。
+!x089512A0 ●Bonus Avantages:
+!x089512B4 　%d Points DIVA bonus.
+!x089512F0 　Un objet pour la Chambre 「%s」.
 
-!x08953C04 本ゲームはゲームデータインストール機能に対応しています。
-!x08953C18 ゲームデータインストール機能をONに設定しますか？
-!x08953C2C ※設定は『オプション』画面で変更することができます。
+!x0895132C Appuyez sur le bouton ○ pour importer
+!x0895134C sinon appuyez sur le bouton × pour passer.
+!x08951384 ※Vous pouvez le faire ｬ partir des "Options".
 
-!x08953F54 インストールデータが見つかりませんでした。
-!x08953F68 ゲームデータインストール機能をOFFに設定しました。
-!x08953F90 ※ゲームデータインストールはタイトル画面で行うことができます。
-!x08953FA4 ※設定は『オプション』画面で変更することができます。
+!x08951B88 Ce jeu est compatible avec l'auto-save.
+!x08951B9C Voulez-vous activer cette fonction?
 
-!x08954950 システムデータを保存しないと、オートセーブ機能はONにできません。
-!x08954964 オートセーブ機能をOFFにしてゲームを進めますか？
+!x08951BC4 ※Vous pouvez changer dans les "Options".
+!x08951BD8 ※Le Mode EDIT N'est PAS compatible avec l'auto-save.
 
-!x08957DF4 記録メディアにゲームデータの一部を
-!x08957E0C インストールして、読み込み時間を短縮します。
-!x08957E24 インストールデータをセーブするには、
-!x08957E38 記録メディアに%dMB以上の空き容量が必要です。
-!x08957E64 ※既にインストールデータをセーブしている状態で、
-!x08957E80 ○ボタンを押すと、インストールデータを削除後、
-!x08957E98 インストールの確認が行われますのでご注意ください。
-!x089582D8 ゲームデータインストールが完了しました。
-!x089582F0 記録メディアからのロードを有効にするには
-!x08958308 オプション画面でインストールデータの設定をONにしてください。
+!x08951CE0 Auto-Save activｪ! "Donnｪes Systｫme" va ｭtre crｪｪ.
+!x08951D0C Afin de crｪer les "Donnｪes Systｫme",
+!x08951C6C %dKB sont nｪcｪssaire pour cette tache.
+
+!x08951D40 ※Durant la sauvegarde automatique, la LED 
+!x08951D54 du Memory-Stick clignote. Veuillez ne pas
+!x08951D68 ｪteindre la PSP, ni retirer la Memory Stick.
+
+!x0895304C Arrｭter l'import de la sauvegarde prｪcｪdente?
+!x0895359C Sauvegarde "-Project DIVA- 2nd" importｪe!
+!x089535BC Choisissez une destination pour cet import. 
+!x089535DC ※Sauvegarder pour terminer l'import!
+
+!x08953C04 Ce jeu peut installer des donnｪes de jeu.
+!x08953C18 Utiliser les donnｪes de jeu installｪes?
+!x08953C2C ※Vous pouvez changer dans les "Options".
+!x08953C40 
+#!x08953C40 ※Vous pouvez changer dans les "Options".
+
+!x08953F54 Les donnｪes de jeu ne sont pas installｪes!
+!x08953F68 Fonction rｪglｪe sur "OFF".
+!x08953F90 ※Vous pouvez les installer ｬ l'ｪcran titre.
+!x08953FA4 ※Vous pouvez changer dans les "Options".
+
+!x08954950 Vous choisissez de sauvegarder manuellement.
+!x08954964 Etes-vous sur de dｪsactiver l'auto-save?
+
+!x08957DF4 Des donnｪes du jeu peut ｭtre copier
+!x08957E0C pour raccourcir le temps de chargement.
+!x08957E24 Pour copier les donnｪes d'installation,
+!x08957E38 vous avez besoin de %dMB d'espace libre.
+!x08957E64 ※Si des donnｪes sont trouvｪes, appuyez
+!x08957E80 sur ○ pour les supprimer.
+!x08957E98 Notez que l'installation est vｪrifiｪe!
+!x089582D8 Donnｪes d'installation copiｪes!
+!x089582F0 Pour activer le chargement de ces donnｪes,
+!x08958308 rｪglez l'option sur "ON" dans les "Options".
 
 # Music device selection
 

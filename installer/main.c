@@ -134,6 +134,47 @@
 #include "plst_base_01.h"
 #include "diva2nd0_images.h"
 #include "menu_result2nd0.h"
+#include "pv_start_01.h"
+#include "pv_start_04.h"
+#include "pv_start_06.h"
+#include "pv_start_09.h"
+#include "pv_start_11.h"
+#include "pv_start_13.h"
+#include "pv_start_16.h"
+#include "pv_start_17.h"
+#include "pv_start_18.h"
+#include "pv_start_19.h"
+#include "pv_start_20.h"
+#include "pv_start_21.h"
+#include "pv_start_22.h"
+#include "pv_start_23.h"
+#include "pv_start_24.h"
+#include "pv_start_27.h"
+#include "pv_start_36.h"
+#include "pv_start_38.h"
+#include "pv_start_42.h"
+#include "pv_start_43.h"
+#include "pv_start_44.h"
+#include "pv_start_45.h"
+#include "pv_start_46.h"
+#include "pv_start_47.h"
+#include "pv_start_48.h"
+#include "pv_start_49.h"
+#include "pv_start_50.h"
+#include "pv_start_51.h"
+#include "pv_start_52.h"
+#include "pv_start_54.h"
+#include "pv_start_55.h"
+#include "pv_start_56.h"
+#include "pv_start_57.h"
+#include "pv_start_58.h"
+#include "pv_start_59.h"
+#include "pv_start_60.h"
+#include "pv_start_61.h"
+#include "pv_start_62.h"
+#include "pv_start_63.h"
+#include "pv_start_64.h"
+#include "pv_start_66.h"
 
 PSP_MODULE_INFO("Diva Patch FR", 0, 1, 5);
 PSP_MAIN_THREAD_ATTR(0);
@@ -153,19 +194,12 @@ char st_text[128];
 int devkit, point;
 u16 macaddrfd[64], fwverfd[64];
 int focus, psp_model;
-char *path[140];
+char *path[200];
 int enter_button = 0;
 extern int currdev;
 extern char *cpath;
 int plus;
 
-#if _PSP_FW_VERSION == 639
-#define DEVKIT_VER      0x06030910
-#define VERSION_STR     "6.39"
-#elif _PSP_FW_VERSION == 660
-#define DEVKIT_VER      0x06060010
-#define VERSION_STR     "6.60"
-#endif
 
 #define NUM_DEL_ITEMS_CREDITS_CHANGELOG 1
 VlfText text_credits_changelog[NUM_DEL_ITEMS_CREDITS_CHANGELOG];
@@ -539,11 +573,11 @@ int install_thread2(SceSize args, void *argp)
 	WriteFile(path[120], (void *)menu_title_optn, size_menu_title_optn, 0);
 	WriteFile(path[121], (void *)menu_title_plys, size_menu_title_plys, 0);
 	WriteFile(path[122], (void *)menu_title_prvd, size_menu_title_prvd, 0);
-	sceKernelDelayThread(1200000);
-	SetProgress(50, 1);
 	WriteFile(path[123], (void *)menu_title_room, size_menu_title_room, 0);
 	WriteFile(path[124], (void *)menu_title_rtmg, size_menu_title_rtmg, 0);
 	WriteFile(path[125], (void *)menu_title_shop, size_menu_title_shop, 0);
+	sceKernelDelayThread(1200000);
+	SetProgress(25, 1);
 	WriteFile(path[126], (void *)menu_title_visl, size_menu_title_visl, 0);
 	WriteFile(path[127], (void *)pv_rank_01, size_pv_rank_01, 0);
 	WriteFile(path[128], (void *)edit_base_04, size_edit_base_04, 0);
@@ -553,9 +587,59 @@ int install_thread2(SceSize args, void *argp)
 	WriteFile(path[132], (void *)mtit_base_01, size_mtit_base_01, 0);
 	WriteFile(path[133], (void *)mtit_base_02, size_mtit_base_02, 0);
 	WriteFile(path[134], (void *)mtit_base_03, size_mtit_base_03, 0);
-	WriteFile(path[135], (void *)mtit_base_04, size_mtit_base_04, 0);
-	WriteFile(path[136], (void *)mtit_base_05, size_mtit_base_05, 0);
-	WriteFile(path[137], (void *)plst_base_01, size_plst_base_01, 0);
+	WriteFile(path[135], (void *)plst_base_01, size_plst_base_01, 0);
+	WriteFile(path[136], (void *)pv_start_01, size_pv_start_01, 0);
+	WriteFile(path[137], (void *)pv_start_04, size_pv_start_04, 0);
+	WriteFile(path[138], (void *)pv_start_06, size_pv_start_06, 0);
+	WriteFile(path[139], (void *)pv_start_09, size_pv_start_09, 0);
+	WriteFile(path[140], (void *)pv_start_11, size_pv_start_11, 0);
+	WriteFile(path[141], (void *)pv_start_13, size_pv_start_13, 0);
+	WriteFile(path[142], (void *)pv_start_16, size_pv_start_16, 0);
+	WriteFile(path[143], (void *)pv_start_17, size_pv_start_17, 0);
+	WriteFile(path[144], (void *)pv_start_18, size_pv_start_18, 0);
+	WriteFile(path[145], (void *)pv_start_19, size_pv_start_19, 0);
+	sceKernelDelayThread(1200000);
+	SetProgress(50, 1);
+	WriteFile(path[146], (void *)pv_start_20, size_pv_start_20, 0);
+	WriteFile(path[147], (void *)pv_start_21, size_pv_start_21, 0);
+	WriteFile(path[148], (void *)pv_start_22, size_pv_start_22, 0);
+	WriteFile(path[149], (void *)pv_start_23, size_pv_start_23, 0);
+	WriteFile(path[150], (void *)pv_start_24, size_pv_start_24, 0);
+	WriteFile(path[151], (void *)pv_start_27, size_pv_start_27, 0);
+	WriteFile(path[152], (void *)pv_start_36, size_pv_start_36, 0);
+	WriteFile(path[153], (void *)pv_start_37, size_pv_start_37, 0);
+	WriteFile(path[154], (void *)pv_start_38, size_pv_start_38, 0);
+	WriteFile(path[155], (void *)pv_start_39, size_pv_start_39, 0);
+	WriteFile(path[156], (void *)pv_start_40, size_pv_start_40, 0);
+	WriteFile(path[157], (void *)pv_start_41, size_pv_start_41, 0);
+	WriteFile(path[158], (void *)pv_start_42, size_pv_start_42, 0);
+	WriteFile(path[159], (void *)pv_start_43, size_pv_start_43, 0);
+	WriteFile(path[160], (void *)pv_start_44, size_pv_start_44, 0);
+	WriteFile(path[161], (void *)pv_start_45, size_pv_start_45, 0);
+	WriteFile(path[162], (void *)pv_start_46, size_pv_start_46, 0);
+	WriteFile(path[163], (void *)pv_start_47, size_pv_start_47, 0);
+	WriteFile(path[164], (void *)pv_start_48, size_pv_start_48, 0);
+	WriteFile(path[165], (void *)pv_start_49, size_pv_start_49, 0);
+	WriteFile(path[166], (void *)pv_start_50, size_pv_start_50, 0);
+	sceKernelDelayThread(1200000);
+	SetProgress(75, 1);
+	WriteFile(path[167], (void *)pv_start_51, size_pv_start_51, 0);
+	WriteFile(path[168], (void *)pv_start_52, size_pv_start_52, 0);
+	WriteFile(path[169], (void *)pv_start_53, size_pv_start_53, 0);
+	WriteFile(path[170], (void *)pv_start_54, size_pv_start_54, 0);
+	WriteFile(path[171], (void *)pv_start_55, size_pv_start_55, 0);
+	WriteFile(path[172], (void *)pv_start_56, size_pv_start_56, 0);
+	WriteFile(path[173], (void *)pv_start_57, size_pv_start_57, 0);
+	WriteFile(path[174], (void *)pv_start_58, size_pv_start_58, 0);
+	WriteFile(path[175], (void *)pv_start_59, size_pv_start_59, 0);
+	WriteFile(path[176], (void *)pv_start_60, size_pv_start_60, 0);
+	WriteFile(path[177], (void *)pv_start_61, size_pv_start_61, 0);
+	WriteFile(path[178], (void *)pv_start_62, size_pv_start_62, 0);
+	WriteFile(path[179], (void *)pv_start_63, size_pv_start_63, 0);
+	WriteFile(path[180], (void *)pv_start_64, size_pv_start_64, 0);
+	WriteFile(path[181], (void *)pv_start_65, size_pv_start_65, 0);
+	WriteFile(path[182], (void *)pv_start_66, size_pv_start_66, 0);
+	WriteFile(path[183], (void *)pv_start_edit, size_pv_start_edit, 0);
 	
 	if(sceKernelDevkitVersion() == 0x05000010 || sceKernelDevkitVersion() == 0x05050010)
 	WriteFile(path[109], (void *)divapatch5XX, size_divapatch5XX, 0);
@@ -602,13 +686,13 @@ int menu_sel(int sel)
 			break;
 
 		case 2:
-			point = 2;
+			point = 1;
 			Credits_Changelog(1);
 			return VLF_EV_RET_REMOVE_HANDLERS | VLF_EV_RET_REMOVE_OBJECTS;
 
 		case 3:
-			point = 3;
-			Credits_Changelog(0);
+			point = 2;
+			Credits_Changelog(2);
 			return VLF_EV_RET_REMOVE_HANDLERS | VLF_EV_RET_REMOVE_OBJECTS;
 		
 		case 4:
@@ -627,7 +711,7 @@ void MainMenu(int sel, int start)
 		vlfGuiRemovePicture(title_pic);
 	}
 
-	title_text = vlfGuiAddText(1, 1, "Diva Patch FR Installer v3.1      (05/01/2012)");
+	title_text = vlfGuiAddText(1, 1, "Diva Patch FR Installer v3.1      (13/01/2012)");
 	title_pic = vlfGuiAddPictureResource("ps3scan_plugin.rco", "tex_infobar_icon", 4, -2);
 	vlfGuiSetTitleBar(title_text, title_pic, 1, 1);
 
@@ -740,13 +824,21 @@ void Credits_Changelog(int changelog)
 			" - Ajouts des traductions des images pour 2nd#.\n"
 			"    (Reste les écrans avant de débuter une chanson\n"
 			"    à traduire)\n"
-			" - Correction d'accents pour Extend.\n";
+			" - Correction d'accents pour Extend.\n\n"
+			"(13/01/12)\n"
+			" - Les pv_start, ou écran avant de commancer la\n"
+			"     chanson, pour 2nd# sont traduits.\n"
+			" - Les Objets-Aides pour 2nd# sont traduits\n"
+			" - Les écrans lorsqu'on fait <<New Game>> qui\n"
+			"    concerne l'import de sauvegarde, l'auto-save,\n"
+			"    etc... sont traduits pour 2nd# et Extend (sauf\n"
+			"    un bout pour Extend où j'ai pas compris)";
 		x = 35;
 	}
 	else
 	{
 		crchtext =
-			"Diva Patch Installer v3.0\n"
+			"Diva Patch Installer v3.1\n"
 			"Copyright(C) 2011, Sonic DX\n\n"
 			"   Credits:\n"
 			"     - Codestation\n"// Plugin, Eboot reversing
@@ -758,7 +850,6 @@ void Credits_Changelog(int changelog)
 			"     - Staz\n"// fr translate
 			"     - Kienono\n"// fr translate
 			"     - Sonic-San\n";
-
 		x = 140;
 	}
 	text_credits_changelog[0] = vlfGuiAddText(x, 60, crchtext);		
@@ -909,9 +1000,55 @@ int app_main(int argc, char *argv[])
 		path[132] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_01.png";
 		path[133] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_02.png";
 		path[134] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_03.png";
-		path[135] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_04.png";
-		path[136] = "ef0:/seplugins/divapatch/diva2nd#/mtit_base_05.png";
-		path[137] = "ef0:/seplugins/divapatch/diva2nd#/plst_base_01.png";
+		path[135] = "ef0:/seplugins/divapatch/diva2nd#/plst_base_01.png";
+		path[136] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_01.png";
+		path[137] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_04.png";
+		path[138] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_06.png";
+		path[139] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_09.png";
+		path[140] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_11.png";
+		path[141] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_13.png";
+		path[142] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_16.png";
+		path[143] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_17.png";
+		path[144] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_18.png";
+		path[145] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_19.png";
+		path[146] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_20.png";
+		path[147] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_21.png";
+		path[148] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_22.png";
+		path[149] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_23.png";
+		path[150] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_24.png";
+		path[151] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_27.png";
+		path[152] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_36.png";
+		path[153] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_37.png";
+		path[154] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_38.png";
+		path[155] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_39.png";
+		path[156] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_40.png";
+		path[157] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_41.png";
+		path[158] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_42.png";
+		path[159] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_43.png";
+		path[160] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_44.png";
+		path[161] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_45.png";
+		path[162] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_46.png";
+		path[163] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_47.png";
+		path[164] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_48.png";
+		path[165] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_49.png";
+		path[166] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_50.png";
+		path[167] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_51.png";
+		path[168] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_52.png";
+		path[169] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_53.png";
+		path[170] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_54.png";
+		path[171] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_55.png";
+		path[172] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_56.png";
+		path[173] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_57.png";
+		path[174] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_58.png";
+		path[175] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_59.png";
+		path[176] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_60.png";
+		path[177] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_61.png";
+		path[178] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_62.png";
+		path[179] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_63.png";
+		path[180] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_64.png";
+		path[181] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_65.png";
+		path[182] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_66.png";
+		path[183] = "ef0:/seplugins/divapatch/diva2nd#/pv_start_edit.png";
 	}
 	else
 	{
@@ -1050,9 +1187,55 @@ int app_main(int argc, char *argv[])
 		path[132] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_01.png";
 		path[133] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_02.png";
 		path[134] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_03.png";
-		path[135] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_04.png";
-		path[136] = "ms0:/seplugins/divapatch/diva2nd#/mtit_base_05.png";
-		path[137] = "ms0:/seplugins/divapatch/diva2nd#/plst_base_01.png";		
+		path[135] = "ms0:/seplugins/divapatch/diva2nd#/plst_base_01.png";
+		path[136] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_01.png";
+		path[137] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_04.png";
+		path[138] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_06.png";
+		path[139] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_09.png";
+		path[140] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_11.png";
+		path[141] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_13.png";
+		path[142] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_16.png";
+		path[143] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_17.png";
+		path[144] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_18.png";
+		path[145] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_19.png";
+		path[146] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_20.png";
+		path[147] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_21.png";
+		path[148] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_22.png";
+		path[149] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_23.png";
+		path[150] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_24.png";
+		path[151] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_27.png";
+		path[152] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_36.png";
+		path[153] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_37.png";
+		path[154] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_38.png";
+		path[155] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_39.png";
+		path[156] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_40.png";
+		path[157] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_41.png";
+		path[158] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_42.png";
+		path[159] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_43.png";
+		path[160] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_44.png";
+		path[161] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_45.png";
+		path[162] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_46.png";
+		path[163] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_47.png";
+		path[164] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_48.png";
+		path[165] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_49.png";
+		path[166] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_50.png";
+		path[167] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_51.png";
+		path[168] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_52.png";
+		path[169] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_53.png";
+		path[170] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_54.png";
+		path[171] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_55.png";
+		path[172] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_56.png";
+		path[173] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_57.png";
+		path[174] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_58.png";
+		path[175] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_59.png";
+		path[176] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_60.png";
+		path[177] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_61.png";
+		path[178] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_62.png";
+		path[179] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_63.png";
+		path[180] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_64.png";
+		path[181] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_65.png";
+		path[182] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_66.png";
+		path[183] = "ms0:/seplugins/divapatch/diva2nd#/pv_start_edit.png";
 	}
 
 	char buf[2048];
