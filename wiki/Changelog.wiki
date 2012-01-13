@@ -1,5 +1,10 @@
 #summary Changelog du Diva Patch
 
+*13/01/12*
+  * Les pv_start, ou écran avant de commancer la chanson, pour 2nd# sont traduits.
+  * Les Objets-Aides pour 2nd# sont traduits.
+  * Les écrans lorsqu'on fait <<New Game>> qui concerne l'import de sauvegarde, l'auto-save, etc... sont traduits pour 2nd# et Extend (sauf un bout pour Extend où j'ai pas compris).
+
 *05/01/12*
   * Mise à jour de l'installer qui supporte désormais les 2 versions en un seul homebrew.
   * Ajouts des traductions des images pour 2nd#.(Reste les écrans avant de débuter une chanson à traduire)
